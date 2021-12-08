@@ -1,0 +1,143 @@
+module.exports = {
+  purge: [],
+  darkMode: false, // or 'media' or 'class'
+  theme: {
+    extend: {
+      height: {
+        '15vh': '15vh',
+        '25vh': '25vh',
+        '33vh': '33vh',
+        'half': '50vh',
+        '75vh': '75vh',
+        '80vh': '80vh',
+        '85vh': '85vh',
+        '90vh': '90vh',
+        '95vh': '95vh',
+        '105vh': '105vh',
+        '110vh': '110vh',
+        '115vh': '115vh',
+        '120vh': '120vh',
+        '125vh': '125vh',
+        '130vh': '130vh',
+        '200vh': '200vh',
+      },
+      minHeight: {
+        '15vh': '15vh',
+        '25vh': '25vh',
+        '33vh': '33vh',
+        '40vh': '40vh',
+        'half': '50vh',
+        '75vh': '75vh',
+      },
+      backgroundSize: {
+        '0': '0 0',
+        '10%': '10%',
+        '15%': '15%',
+        '20%': '20%',
+        '25%': '25%',
+        '30%': '30%',
+        '35%': '35%',
+        '40%': '40%',
+        '45%': '45%',
+        '50%': '50%',
+        '55%': '55%',
+        '60%': '60%',
+        '65%': '65%',
+        '75%': '75%',
+        '85%': '85%',
+        '95%': '75%',
+        '100%': '100%',
+        '101%': '101%',
+        '125%': '125%',
+        '150%': '150%',
+        '200%': '200%',
+        '250%': '250%',
+        '300%': '300%',
+      },
+    },
+    screens: {
+      'n': '1px',
+      // => @media (min-width: 1px) { ... }
+
+      'ns': '380px',
+      // => @media (min-width: 380px) { ... }
+
+      'sm': '640px',
+      // => @media (min-width: 640px) { ... }
+
+      'md': '768px',
+      // => @media (min-width: 768px) { ... }
+
+      'lg': '992px',
+      // => @media (min-width: 1024px) { ... }
+
+      'xl': '1280px',
+      // => @media (min-width: 1280px) { ... }
+
+      '2xl': '1536px',
+      // => @media (min-width: 1536px) { ... }
+    },
+    letterSpacing: {
+      tightest: '-.075em',
+      tighter: '-.05em',
+      tight: '-.025em',
+      normal: '0',
+      wide: '.025em',
+      wider: '.05em',
+      widest: '.1em',
+      medium: '.025em',
+      mediumer: '.3em',
+      mediumest: '.4em',
+      hard: '.5em',
+    },
+    backgroundPosition: {
+      bottom: 'bottom',
+      'bottom-4': 'center bottom 1rem',
+      center: 'center',
+      left: 'left',
+      'left-bottom': 'left bottom',
+      'left-top': 'left top',
+      right: 'right',
+      'right-bottom': 'right bottom',
+      'right-top': 'right top',
+      top: 'top',
+      '100': '0 100%',
+      '-100-bottom': '-100px bottom',
+      '-150': '-150px',
+      '70%-top': '70% top',
+      '-50%-top': '-50% top',
+      '-150-top': '-150px top',
+      '-150%-top': '-150% top',
+      '-250-top': '-250px top',
+      '-250-250': '-250px -250px',
+      '100%-right': '100% right',
+    },
+    fontSize: {
+      'xs': '.75rem',
+      'sm': '.875rem',
+      'tiny': '.875rem',
+      'base': '1rem',
+      'lg': '1.125rem',
+      'xl': '1.25rem',
+      '1.5xl': '1.375rem',
+      '2xl': '1.5rem',
+      '2.5xl': '1.7rem',
+      '3xl': '1.875rem',
+      '4xl': '2.25rem',
+      '4.5xl': '2.55rem',
+      '5xl': '3rem',
+      '5.5xl': '4.5rem',
+      '6xl': '4rem',
+      '6.5xl': '4.5rem',
+      '7xl': '5rem',
+      '8xl': '6rem',
+      '9xl': '7rem',
+      '10xl': '8rem',
+      '11xl': '9rem',
+      '12xl': '10rem',
+    }
+  },
+  plugins: [
+    require('tailwindcss-textshadow'),
+  ],
+}

@@ -1,0 +1,12 @@
+{
+    "navbar": {
+        "routes": {
+            "services": "Services",
+            "projects": "Projects",
+            "contactMe": "Contact me"
+        },
+        "test": {
+            "test": "This is su fucking crazy dude"
+        }
+    }
+}

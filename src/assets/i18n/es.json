@@ -1,0 +1,12 @@
+{
+    "navbar": {
+        "routes": {
+            "services": "Servicios",
+            "projects": "Proyectos",
+            "contactMe": "Contactame"
+        },
+        "test": {
+            "test": "Aun más loco"
+        }
+    }
+}
