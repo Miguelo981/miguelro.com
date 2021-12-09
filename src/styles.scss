@@ -1,18 +1,25 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
+
+/* * {
+  font-family: 'Readex Pro', 'Merriweather Sans', sans-serif !important;
+} */
 
 html,
 body {
   position: relative;
   height: 100%;
+  width: 100%;
 }
 
 body {
-  background: #eee;
-  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  background: #fff;
+  font-family: 'Readex Pro', 'Merriweather Sans', sans-serif;
+  font-weight: 400;
   font-size: 14px;
-  color: #000;
+  color: #fff;
   margin: 0;
   padding: 0;
 }

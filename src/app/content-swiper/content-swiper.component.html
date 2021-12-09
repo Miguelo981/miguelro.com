@@ -1,0 +1,21 @@
+<swiper
+        [config]="config"
+        (swiper)="onSwiper($event)"
+        (slideChange)="onSlideChange()"
+        #swiperController
+        >
+        <!--<ng-template swiperSlide class="bg-blue-400">Slide 1
+            <div class="mt-14">
+                
+            </div>
+        </ng-template>
+        <ng-template swiperSlide id="services" class="bg-red-400">Slide 2</ng-template>
+        <ng-template swiperSlide id="projects" class="bg-green-400">Slide 3</ng-template>
+        <ng-template swiperSlide id="contact-me">Slide 4</ng-template>
+        <ng-template swiperSlide>Slide 5</ng-template>
+        <ng-template swiperSlide>Slide 6</ng-template>-->
+
+        <ng-template swiperSlide *ngFor="let element of landingComponents">
+            <ng-template *ngComponentOutlet="element.component"></ng-template>
+        </ng-template>
+</swiper>

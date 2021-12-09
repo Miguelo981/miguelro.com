@@ -19,7 +19,11 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { ScrollToModule } from '@nicky-lenaers/ngx-scroll-to';
 import { SwiperModule } from 'swiper/angular';
-import { ShareCompDirective } from './directives/share-comp.directive';
+import { NgcCookieConsentModule } from 'ngx-cookieconsent';
+import { cookieConfig } from 'src/config/cookies.config';
+import { HomeComponent } from './home/home.component';
+import { ContentSwiperComponent } from './content-swiper/content-swiper.component';
+import { NguiInviewModule } from '@ngui/common';
 
 @NgModule({
   declarations: [
@@ -27,7 +31,8 @@ import { ShareCompDirective } from './directives/share-comp.directive';
     NavBarComponent,
     LandingPageComponent,
     PageNotFoundComponent,
-    ShareCompDirective
+    HomeComponent,
+    ContentSwiperComponent
   ],
   exports: [
   ],
@@ -52,6 +57,9 @@ import { ShareCompDirective } from './directives/share-comp.directive';
     }),
     ScrollToModule.forRoot(),
     SwiperModule,
+    BrowserAnimationsModule,
+    NguiInviewModule,
+    //NgcCookieConsentModule.forRoot(cookieConfig)
   ],
   providers: [
   ],
