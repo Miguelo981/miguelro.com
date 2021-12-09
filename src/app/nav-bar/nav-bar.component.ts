@@ -1,6 +1,7 @@
 import { Component, ContentChild, ElementRef, OnInit, ViewChild } from '@angular/core';
 import { LandingPageComponent } from '../landing-page/landing-page.component';
-import { ShareCompDirective } from '../directives/share-comp.directive';
+import { ContentSwiperComponent } from '../content-swiper/content-swiper.component';
+import { NavbarScrollService } from '../services/navbar-scroll.service';
 
 export interface MenuItem {
   label: string;
@@ -16,11 +17,21 @@ export interface MenuItem {
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
-  //@ViewChild('services', { read: LandingPageComponent, static: false }) services;
-  //@ViewChild(LandingPageComponent) landing: LandingPageComponent;
-  @ContentChild(ShareCompDirective) private sharedDirective: ShareCompDirective;
+
+  constructor(private navbarScrollService: NavbarScrollService) {
+  }
 
   menuItems = [
+    {
+      label: "navbar.routes.home",
+      icon: "help",
+      scrollToId: "home",
+      href: "#",
+      isButton: false,
+      showOnMobile: true,
+      showOnTablet: true,
+      showOnDesktop: true
+    },
     {
       label: "navbar.routes.services",
       icon: "help",
@@ -53,8 +64,6 @@ export class NavBarComponent implements OnInit {
     }
   ]
 
-  constructor() {}
-
   menuItems2: MenuItem[] = [
     {
       label: 'navbar.routes',
@@ -82,8 +91,10 @@ export class NavBarComponent implements OnInit {
   ngOnInit() {
    }
   
-  swipe(index: number, delay?: number) {
-    this.sharedDirective.shared.swiperController.swiperRef.slideTo(index, delay || 1000)
+  async swipe(index: number, delay?: number) {
+    this.navbarScrollService.changeScrollIndex(index, delay);
+
+    //this.sharedDirective.shared.swiperController.swiperRef.slideTo(index, delay || 500)
   }
 
 }

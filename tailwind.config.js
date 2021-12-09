@@ -3,6 +3,13 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
+      margin: {
+        '1/5': '20%',
+        '1/4': '25%',
+        '1/3': '33%',
+        '1/2': '50%',
+        '3/4': '75%',
+      },
       height: {
         '15vh': '15vh',
         '25vh': '25vh',

@@ -1,14 +1,15 @@
 <div> 
-    <mat-toolbar class="bg-transparent absolute z-20">
+    <mat-toolbar class="bg-transparent absolute z-50 mt-3">
       <a mat-button routerLink="/">
         <span>Site name</span>
       </a>
 
       <span class="example-spacer"></span>
 
-      <div fxShow="true" class="ml-auto" fxHide.lt-md="true">
+      <div fxShow="true" class="ml-auto items-center" fxHide.lt-md="true">
         <ng-container *ngFor="let item of menuItems; let i = index">
-          <a mat-button (click)="swipe(i)" [ngxScrollTo]="'#'+item.scrollToId" class="text-xl text-shadow-xl">{{ item.label | translate }}</a>
+          <a mat-button *ngIf="!item.isButton" (click)="swipe(i)" [ngxScrollTo]="'#'+item.scrollToId" class="text-xl text-shadow-xl">{{ item.label | translate }}</a>
+          <button mat-button *ngIf="item.isButton" class="bg-blue-600 text-xl">{{ item.label | translate }}</button>
         </ng-container>
       </div>
 
