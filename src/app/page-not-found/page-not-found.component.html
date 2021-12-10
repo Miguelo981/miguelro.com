@@ -4,8 +4,8 @@
         <source [src]="backgroundVideoSrc" type="video/mp4">
         Your browser does not support HTML5 video.
     </video>-->
-    <div class="m-auto relative justify-center" fxLayout fxFlex="85%" *ngIf="show" [@fadeInOnEnter] [@fadeOutOnLeave]>
-        <div fxLayout="column" class="z-30 text-white text-center">
+    <div class="m-auto relative justify-center" fxLayout fxFlex="85%" (nguiInview)="isShow(true)" (nguiOutview)="isShow(false)">
+        <div fxLayout="column" class="z-30 text-white text-center" *ngIf="show" [@zoomInOnEnter] [@zoomOutOnLeave]>
             <div>
                 <h2><span class="text-8xl font-bold">{{ ('errors.notFount.errorNumber' | translate) + ' ' + ('errors.text' | translate) }}</span></h2>
             </div>

@@ -1,5 +1,5 @@
 <div> 
-    <mat-toolbar class="bg-transparent absolute z-50 mt-3">
+    <mat-toolbar class="bg-transparent absolute z-50 mt-3 text-white">
       <a mat-button routerLink="/">
         <span>Site name</span>
       </a>
@@ -8,8 +8,8 @@
 
       <div fxShow="true" class="ml-auto items-center" fxHide.lt-md="true">
         <ng-container *ngFor="let item of menuItems; let i = index">
-          <a mat-button *ngIf="!item.isButton" (click)="swipe(i)" [ngxScrollTo]="'#'+item.scrollToId" class="text-xl text-shadow-xl">{{ item.label | translate }}</a>
-          <button mat-button *ngIf="item.isButton" class="bg-blue-600 text-xl">{{ item.label | translate }}</button>
+          <a mat-button *ngIf="!item.isButton" (click)="swipe(i)" [ngxScrollTo]="'#'+item.scrollToId" class="text-xl text-shadow-xl hover:text-blue-600">{{ item.label | translate }}</a>
+          <contact-me *ngIf="item.isButton"></contact-me>
         </ng-container>
       </div>
 
