@@ -17,6 +17,38 @@
             "errorType": "That page does not exist"
         }
     },
+    "contact": {
+        "me": "Contact me",
+        "label": {
+            "fullname": "Fullname",
+            "email": "Email",
+            "message": "Message"
+        },
+        "placeholder": {
+            "fullname": "Miguel Rodríguez",
+            "email": "miguel@gmail.com",
+            "message": "Lorem Ipsum is simply dummy text..."
+        },
+        "hint": {
+            "fullname": "Not more then 60 characters long.",
+            "message": "Not more then 1000 characters long."
+        },
+        "errors": {
+            "required": {
+                "fullname": "Fullname is required",
+                "email": "Email is required",
+                "message": "Message is required"
+            },
+            "length": {
+                "fullname": "You have more than 60 characters",
+                "message": "You have more than 1000 characters"
+            }
+        },
+        "buttons": {
+            "submit": "Send message",
+            "close": "X Close"
+        }
+    },
     "home": {
         "title": "Miguelo",
         "subTitle": "Webs rápidas y límpias",

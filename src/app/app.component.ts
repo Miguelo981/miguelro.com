@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
-import { NgcCookieConsentService } from 'ngx-cookieconsent';
+//import { NgcCookieConsentService } from 'ngx-cookieconsent';
 import { defaultLanguage } from 'src/config/languages.config';
 
 @Component({

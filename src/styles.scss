@@ -1,6 +1,7 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+@import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
 
 /* * {
@@ -22,4 +23,9 @@ body {
   color: #fff;
   margin: 0;
   padding: 0;
+}
+
+.bg-contact-backdrop {
+  background-color: rgba(0,0,0,0.5);
+  backdrop-filter: blur(2px);
 }

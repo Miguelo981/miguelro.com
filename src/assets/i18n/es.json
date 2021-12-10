@@ -4,7 +4,7 @@
             "home": "Inicio",
             "services": "Servicios",
             "projects": "Proyectos",
-            "contactMe": "Contactame"
+            "contactMe": "Contáctame"
         },
         "test": {
             "test": "Aun más loco"
@@ -15,6 +15,38 @@
         "notFount": {
             "errorNumber": "404",
             "errorType": "Página no encontrada."
+        }
+    },
+    "contact": {
+        "me": "Contáctame",
+        "label": {
+            "fullname": "Nombre completo",
+            "email": "Email",
+            "message": "Mensaje"
+        },
+        "placeholder": {
+            "fullname": "Miguel Rodríguez",
+            "email": "miguel@gmail.com",
+            "message": "Lorem Ipsum is simply dummy text..."
+        },
+        "hint": {
+            "fullname": "Máximo 60 caracteres.",
+            "message": "Máximo 1000 caracteres."
+        },
+        "errors": {
+            "required": {
+                "fullname": "Nombre completo es obligatorio.",
+                "email": "Email es obligatorio.",
+                "message": "Mensaje es obligatorio."
+            },
+            "length": {
+                "fullname": "Tiene más de 60 caracteres.",
+                "message": "Tiene más de 1000 caracteres."
+            }
+        },
+        "buttons": {
+            "submit": "Enviar mensaje",
+            "close": "X Cerrar"
         }
     },
     "home": {
