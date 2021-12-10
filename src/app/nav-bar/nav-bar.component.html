@@ -6,9 +6,17 @@
 
       <span class="example-spacer"></span>
 
-      <div fxShow="true" class="ml-auto items-center" fxHide.lt-md="true">
+      <div class="items-center ml-auto">
+        <!--<mat-slide-toggle [formControl]="toggleControl" class="mr-8">
+        </mat-slide-toggle><mat-icon>bedtime</mat-icon>-->
+        <div class="switch_box box_2 items-center">
+          <input type="checkbox" [formControl]="toggleControl" class="switch_2" />
+        </div>
+      </div>
+
+      <div fxShow="true" class="items-center" fxHide.lt-md="true">
         <ng-container *ngFor="let item of menuItems; let i = index">
-          <a mat-button *ngIf="!item.isButton" (click)="swipe(i)" [ngxScrollTo]="'#'+item.scrollToId" class="text-xl text-shadow-xl hover:text-blue-600">{{ item.label | translate }}</a>
+          <a mat-button *ngIf="!item.isButton" (click)="swipe(i)" [ngxScrollTo]="'#'+item.scrollToId" class="text-white text-xl text-shadow-xl hover:text-blue-600">{{ item.label | translate }}</a>
           <contact-me *ngIf="item.isButton"></contact-me>
         </ng-container>
       </div>

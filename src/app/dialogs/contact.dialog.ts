@@ -11,6 +11,7 @@ import { Location } from '@angular/common';
 })
 export class ContactDialog implements OnInit {
     public contactForm: FormGroup;
+    isLoading = false;
 
     constructor(@Inject(MAT_DIALOG_DATA) public data: { name: string },
         public dialogRef: MatDialogRef<ContactDialog>,
@@ -48,6 +49,8 @@ export class ContactDialog implements OnInit {
           email: contactFormValue.email,
           message: contactFormValue.message
         }
+
+        this.isLoading = true;
 
         // TODO Make API call here
      
