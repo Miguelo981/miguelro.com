@@ -1,5 +1,6 @@
-import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
-import { fadeInAnimation, fadeInDownOnEnterAnimation, fadeInLeftOnEnterAnimation, fadeInOnEnterAnimation, fadeOutOnLeaveAnimation } from 'angular-animations';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+import { fadeInDownOnEnterAnimation, fadeInLeftOnEnterAnimation, fadeInOnEnterAnimation, fadeOutOnLeaveAnimation } from 'angular-animations';
+import { NavbarScrollService } from '../services/navbar-scroll.service';
 
 @Component({
   selector: 'app-home',
@@ -16,7 +17,7 @@ export class HomeComponent implements OnInit, OnDestroy {
   show = false;
   backgroundVideoSrc = "assets/videos/bg-video.mp4";
 
-  constructor() {
+  constructor(private navbarScrollService: NavbarScrollService) {
    }
 
   ngOnInit(): void {
@@ -32,6 +33,10 @@ export class HomeComponent implements OnInit, OnDestroy {
       this.show = state;
     }, 1500) ); */
     this.show = state;
+  }
+
+  swipe(index) {
+    this.navbarScrollService.changeScrollIndex(index, 750);
   }
 
 }

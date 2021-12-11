@@ -1,4 +1,7 @@
 {
+    "loading": {
+        "text": "Cargando..."
+    },
     "navbar": {
         "routes": {
             "home": "Inicio",

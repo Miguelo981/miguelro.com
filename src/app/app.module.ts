@@ -23,6 +23,8 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { ContactDialog } from './dialogs/contact.dialog';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/config/material.module';
+import { LoadingComponent } from './loading/loading.component';
+import { TeximateModule } from 'ngx-teximate';
 
 @NgModule({
   declarations: [
@@ -35,6 +37,7 @@ import { MaterialModule } from 'src/config/material.module';
     ContactMeComponent,
     ServicesComponent,
     ContactDialog,
+    LoadingComponent,
   ],
   exports: [
   ],
@@ -58,6 +61,7 @@ import { MaterialModule } from 'src/config/material.module';
     SwiperModule,
     BrowserAnimationsModule,
     NguiInviewModule,
+    TeximateModule,
     //NgcCookieConsentModule.forRoot(cookieConfig)
   ],
   providers: [

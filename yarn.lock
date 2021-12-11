@@ -4422,6 +4422,20 @@ neo-async@^2.6.2:
   resolved "https://registry.yarnpkg.com/neo-async/-/neo-async-2.6.2.tgz#b4aafb93e3aeb2d8174ca53cf163ab7d7308305f"
   integrity sha512-Yd3UES5mWCSqR+qNT93S3UoYUkqAZ9lLg8a7g9rimsWmYGK8cVToA4/sF3RrshdyV3sAGMXVUmpMYOw+dLpOuw==
 
+ng-animate@^1.0.0:
+  version "1.0.0"
+  resolved "https://registry.yarnpkg.com/ng-animate/-/ng-animate-1.0.0.tgz#59b0ae69a14ab88ac10fea5ae92406f95615b3c7"
+  integrity sha512-30l80kCkAelXEbQ0RKCCQo+5NOXWHQx3+HwtN+oarWhP6ISbmx/LtMGbEGYSwSTUj6NQZ+u07sFxlEsoC8AMDw==
+  dependencies:
+    tslib "^2.0.0"
+
+ngx-teximate@^0.3.0:
+  version "0.3.0"
+  resolved "https://registry.yarnpkg.com/ngx-teximate/-/ngx-teximate-0.3.0.tgz#9477f3cb1e97a1bbd216a826e5f77ea2c48b2755"
+  integrity sha512-SakxLEwL+THOrZu+65RRDbUSIA3DwqwiLFnRONeg5A6FGcuVt3mbIGLQ7mKNHAHSzNKUbqodgDZxLc+BaJsepg==
+  dependencies:
+    tslib "^1.9.0"
+
 nice-napi@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/nice-napi/-/nice-napi-1.0.2.tgz#dc0ab5a1eac20ce548802fc5686eaa6bc654927b"
