@@ -2,6 +2,9 @@
     "loading": {
         "text": "Loading..."
     },
+    "tooltips": {
+        "languageSelector": "Scroll to change the language."
+    },
     "navbar": {
         "routes": {
             "home": "Home",

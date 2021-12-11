@@ -1,0 +1,10 @@
+<div class="flex items-center" matTooltip="{{'tooltips.languageSelector' | translate}}" [matTooltipShowDelay]="1000">
+    <swiper [config]="config" (slideChange)="onSlideChange()" #swiperController class="z-10">
+        <ng-template swiperSlide *ngFor="let lang of languages; let i = index" class="flex relative justify-center h-full w-full">
+            <span class="cursor-pointer text-2xl font-medium mt-auto mb-auto" >{{ lang.toUpperCase() }}</span>
+        </ng-template>
+    </swiper>
+    <div class="relative">
+        <img class="w-4 relative -left-4 cursor-pointer z-20" (click)="swipe(selectedIndex)" src="assets/img/icons/white-down-arrow.svg">
+    </div>
+</div>

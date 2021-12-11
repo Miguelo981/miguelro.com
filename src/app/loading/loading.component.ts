@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { AfterViewInit, Component, Input, OnInit, ViewChild } from '@angular/core';
 import { bounceIn } from 'ng-animate';
 import { Teximate, TextAnimation } from 'ngx-teximate';
 
@@ -7,32 +7,29 @@ import { Teximate, TextAnimation } from 'ngx-teximate';
   templateUrl: './loading.component.html',
   styleUrls: ['./loading.component.scss']
 })
-export class LoadingComponent implements OnInit {
+export class LoadingComponent implements AfterViewInit {
   @ViewChild(Teximate) teximate: Teximate;
   @Input() show: boolean = true;
+
+  private inAnimation: TextAnimation = {
+    id: 'enter-animation',
+    animation: bounceIn,
+    delay: 50,
+    type: 'letter'
+  };
+
+  private outAnimation: TextAnimation = {
+    id: 'leave-animation',
+    animation: bounceIn,
+    delay: 50,
+    type: 'letter'
+  };
 
   constructor() {
   }
 
-  ngOnInit(): void {
-  }
-
   ngAfterViewInit() {
-    const inAnimation: TextAnimation = {
-      id: 'enter-animation',
-      animation: bounceIn,
-      delay: 50,
-      type: 'letter'
-    };
-
-    const outAnimation: TextAnimation = {
-      id: 'leave-animation',
-      animation: bounceIn,
-      delay: 50,
-      type: 'letter'
-    };
-
-    this.playEnterAnimation(inAnimation);
+    this.playEnterAnimation(this.inAnimation);
     //this.playLeaveAnimation(outAnimation);
   }
 
