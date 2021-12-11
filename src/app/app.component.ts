@@ -2,7 +2,7 @@ import { DOCUMENT } from '@angular/common';
 import { Component, HostBinding, Inject } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 //import { NgcCookieConsentService } from 'ngx-cookieconsent';
-import { defaultLanguage } from 'src/config/languages.config';
+import { defaultLanguage, languages } from 'src/config/languages.config';
 import { DarkmodeService } from './services/darkmode.service';
 
 @Component({
@@ -12,15 +12,15 @@ import { DarkmodeService } from './services/darkmode.service';
 })
 export class AppComponent {
   @HostBinding('class') className = '';
+
   title = 'miguelo-platform';
-  languages = ['es', 'es'];
   selectedLang = defaultLanguage;
 
   constructor(@Inject(DOCUMENT) private document: Document,
     private translateService: TranslateService,
-    private darkModeService: DarkmodeService,
+    private darkModeService: DarkmodeService
     /* private ccService: NgcCookieConsentService */) {
-    this.translateService.addLangs(this.languages);
+    this.translateService.addLangs(languages);
     this.translateService.setDefaultLang(this.selectedLang);
 
     this.darkModeService.currentMode.subscribe((darkMode) => {

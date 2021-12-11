@@ -1,4 +1,10 @@
 {
+    "loading": {
+        "text": "Cargando..."
+    },
+    "tooltips": {
+        "languageSelector": "Desliza para cambiar el idioma."
+    },
     "navbar": {
         "routes": {
             "home": "Inicio",

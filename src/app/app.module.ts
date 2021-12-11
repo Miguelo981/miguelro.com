@@ -18,11 +18,13 @@ import { HomeComponent } from './home/home.component';
 import { ContentSwiperComponent } from './content-swiper/content-swiper.component';
 import { NguiInviewModule } from '@ngui/common';
 import { ContactMeComponent } from './contact-me/contact-me.component';
-import { ServicesComponent } from './services/services.component';
 import { MatDialogRef } from '@angular/material/dialog';
 import { ContactDialog } from './dialogs/contact.dialog';
 import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { MaterialModule } from 'src/config/material.module';
+import { LoadingComponent } from './loading/loading.component';
+import { TeximateModule } from 'ngx-teximate';
+import { LanguageSelectorComponent } from './language-selector/language-selector.component';
 
 @NgModule({
   declarations: [
@@ -33,8 +35,9 @@ import { MaterialModule } from 'src/config/material.module';
     HomeComponent,
     ContentSwiperComponent,
     ContactMeComponent,
-    ServicesComponent,
     ContactDialog,
+    LoadingComponent,
+    LanguageSelectorComponent,
   ],
   exports: [
   ],
@@ -58,6 +61,7 @@ import { MaterialModule } from 'src/config/material.module';
     SwiperModule,
     BrowserAnimationsModule,
     NguiInviewModule,
+    TeximateModule,
     //NgcCookieConsentModule.forRoot(cookieConfig)
   ],
   providers: [

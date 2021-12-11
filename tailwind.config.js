@@ -2,6 +2,7 @@ module.exports = {
   content: ["./src/**/*.{html,js,ts}"],
   theme: {
     extend: {
+      animation: ['group-hover'],
       margin: {
         '1/5': '20%',
         '1/4': '25%',

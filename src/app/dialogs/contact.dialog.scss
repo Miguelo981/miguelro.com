@@ -1,3 +1,5 @@
+@import "../../assets/scss/variables.scss";
+
 .mat-form-field-wrapper
 .mat-form-field-flex {
     padding-left: 0.75em;
@@ -25,8 +27,8 @@
     height: 64px;
     margin: 8px;
     border-radius: 50%;
-    border: 6px solid rgb(37 99 235 / 1);
-    border-color: rgb(37 99 235 / 1) transparent rgb(37 99 235 / 1) transparent;
+    border: 6px solid $app-blue;
+    border-color: $app-blue transparent $app-blue transparent;
     animation: lds-dual-ring 1.2s linear infinite;
   }
   @keyframes lds-dual-ring {
