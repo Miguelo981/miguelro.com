@@ -1,9 +1,12 @@
-import { DOCUMENT } from '@angular/common';
+import { DOCUMENT, Location } from '@angular/common';
 import { Component, HostBinding, Inject } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 //import { NgcCookieConsentService } from 'ngx-cookieconsent';
 import { defaultLanguage, languages } from 'src/config/languages.config';
 import { DarkmodeService } from './services/darkmode.service';
+import { LocalStorageService } from './services/local-storage.service';
+import { first, skip } from 'rxjs/operators';
+import { defaultLocalStorage } from 'src/config/storage.config';
 
 @Component({
   selector: 'app-root',
@@ -18,25 +21,44 @@ export class AppComponent {
 
   constructor(@Inject(DOCUMENT) private document: Document,
     private translateService: TranslateService,
-    private darkModeService: DarkmodeService
+    private darkModeService: DarkmodeService,
+    private _localStorageService: LocalStorageService,
+    private location: Location,
     /* private ccService: NgcCookieConsentService */) {
+    this._localStorageService.loadInfo();
+    this._localStorageService.appData$
+      .pipe(first())
+      .subscribe(app => {
+        if (app === null) {
+          this._localStorageService.setInfo(defaultLocalStorage);
+        }
+
+        this.setThemeClass(app!.theme.isDark);
+      });
+    
     this.translateService.addLangs(languages);
-    this.translateService.setDefaultLang(this.selectedLang);
 
-    this.darkModeService.currentMode.subscribe((darkMode) => {
-      const darkClassName = 'dark-mode';
-      this.className = darkMode ? darkClassName : '';
-      this.document.body.classList.remove(darkClassName);
+    this._localStorageService.appData$
+      .subscribe(app => {
+        this.translateService.setDefaultLang(app!.language.lang);
+        this.location.replaceState("/"+app!.language.lang);
+      });
 
-      if (darkMode) {
-        this.document.body.classList.add(darkClassName);
-      }
-      /* this.overlay.getContainerElement().classList.remove(darkClassName);
+    this.darkModeService.currentMode
+      .pipe(skip(1))
+      .subscribe((darkMode) => {
+        this.setThemeClass(darkMode);
 
-      if (darkMode) {
-        this.overlay.getContainerElement().classList.add(darkClassName);
-      } */
-    });
+        this._localStorageService.appData$
+          .pipe(first())
+          .subscribe(app => {
+            this._localStorageService.setInfo({
+              language: app!.language,
+              theme: { isDark: darkMode },
+              video: app!.video,
+            });
+          });
+      });
 
     /* this.translateService
       .get(['cookie.header', 'cookie.message', 'cookie.dismiss', 'cookie.allow', 'cookie.deny', 'cookie.link', 'cookie.policy'])
@@ -58,6 +80,16 @@ export class AppComponent {
         this.ccService.destroy(); // remove previous cookie bar (with default messages)
         this.ccService.init(this.ccService.getConfig()); // update config with translated messages
       }); */
+  }
+
+  setThemeClass(darkMode: boolean) {
+    const darkClassName = 'dark-mode';
+    this.className = darkMode ? darkClassName : '';
+    this.document.body.classList.remove(darkClassName);
+
+    if (darkMode) {
+      this.document.body.classList.add(darkClassName);
+    }
   }
 
 }

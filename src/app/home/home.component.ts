@@ -1,5 +1,7 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit, ViewChild } from '@angular/core';
 import { fadeInDownOnEnterAnimation, fadeInLeftOnEnterAnimation, fadeInOnEnterAnimation, fadeOutOnLeaveAnimation } from 'angular-animations';
+import { first } from 'rxjs/operators';
+import { LocalStorageService } from '../services/local-storage.service';
 import { NavbarScrollService } from '../services/navbar-scroll.service';
 
 @Component({
@@ -13,14 +15,26 @@ import { NavbarScrollService } from '../services/navbar-scroll.service';
     fadeInLeftOnEnterAnimation(),
   ],
 })
-export class HomeComponent implements OnInit, OnDestroy {
+export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
+  @ViewChild('bgVideo') bgVideo;
+  isVideoPlay: boolean;
   show = false;
   backgroundVideoSrc = "assets/videos/bg-video.mp4";
 
-  constructor(private navbarScrollService: NavbarScrollService) {
+  constructor(private navbarScrollService: NavbarScrollService,
+    private _localStorageService: LocalStorageService) {
    }
 
   ngOnInit(): void {
+  }
+
+  ngAfterViewInit(): void {
+    this._localStorageService.appData$
+    .pipe(first())
+    .subscribe(app => {
+      this.isVideoPlay = app!.video.isPlay;
+      this.pauseOrPlay();
+    });
   }
 
   ngOnDestroy() {
@@ -38,5 +52,29 @@ export class HomeComponent implements OnInit, OnDestroy {
   swipe(index) {
     this.navbarScrollService.changeScrollIndex(index, 750);
   }
+
+  setVideoState(state: boolean) {
+    this.isVideoPlay = state;
+
+    this._localStorageService.appData$
+      .pipe(first())
+      .subscribe(app => {
+        this._localStorageService.setInfo({
+          language: app!.language,
+          theme: app!.theme,
+          video: { isPlay: this.isVideoPlay },
+        });
+      });
+
+    this.pauseOrPlay()
+  }
+
+  pauseOrPlay(){
+    if (this.isVideoPlay) {
+      this.bgVideo.nativeElement.pause();
+    } else {
+      this.bgVideo.nativeElement.play();
+    }
+}
 
 }

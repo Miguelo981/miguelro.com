@@ -16,9 +16,7 @@ export class PageNotFoundComponent implements OnInit {
   show = false;
   backgroundVideoSrc = "assets/videos/bg-video.mp4";
 
-  constructor(private translateService: TranslateService) {
-    this.translateService.setDefaultLang(defaultLanguage);
-  }
+  constructor() {}
 
   ngOnInit(): void {
   }
