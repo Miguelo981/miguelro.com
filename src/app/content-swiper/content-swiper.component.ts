@@ -67,9 +67,9 @@ export class ContentSwiperComponent implements OnInit, AfterViewInit {
 
   ngAfterViewInit(): void {
     this.navbarScrollService.currentIndex
-    .subscribe(index => {
-      this.swiperController.swiperRef.slideTo(index.index, index.delay);
-    });
+      .subscribe(index => {
+        this.swiperController.swiperRef.slideTo(index.index, index.delay);
+      });
   }
 
   ngOnDestroy() {

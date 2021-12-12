@@ -1,6 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl } from '@angular/forms';
-import { DarkmodeService } from '../services/darkmode.service';
 import { NavbarScrollService } from '../services/navbar-scroll.service';
 
 export interface MenuItem {
@@ -17,14 +15,9 @@ export interface MenuItem {
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
-  toggleControl = new FormControl(false);
 
-  constructor(private navbarScrollService: NavbarScrollService,
-    private darkModeService: DarkmodeService) {
-      this.toggleControl.valueChanges
-        .subscribe((darkMode) => {
-          this.darkModeService.changeDarkMode(darkMode);
-        });
+  constructor(private navbarScrollService: NavbarScrollService) {
+      
   }
 
   menuItems = [

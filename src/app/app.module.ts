@@ -25,6 +25,7 @@ import { MaterialModule } from 'src/config/material.module';
 import { LoadingComponent } from './loading/loading.component';
 import { TeximateModule } from 'ngx-teximate';
 import { LanguageSelectorComponent } from './language-selector/language-selector.component';
+import { DarkTogglerComponent } from './dark-toggler/dark-toggler.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { LanguageSelectorComponent } from './language-selector/language-selector
     ContactDialog,
     LoadingComponent,
     LanguageSelectorComponent,
+    DarkTogglerComponent,
   ],
   exports: [
   ],
