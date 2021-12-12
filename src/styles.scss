@@ -4,11 +4,7 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
 @import "assets/scss/dark-theme.scss";
-
-@import "~swiper/scss";
-@import "~swiper/css/effect-fade";
-@import "~swiper/css/navigation";
-@import "~swiper/css/pagination";
+@import "assets/scss/swiper.scss";
 
 /* @use '~@angular/material' as mat;
 @import "~@angular/material/theming";

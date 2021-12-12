@@ -3,7 +3,7 @@ import { originalProjectList } from 'src/mocks/projects/projects.mocks';
 import SwiperCore, { Mousewheel, SwiperOptions } from 'swiper';
 import { ProjectThumbnail } from '../models/project-thumbnail.model';
 
-SwiperCore.use([Mousewheel])
+SwiperCore.use([Mousewheel, ])
 
 @Component({
   selector: 'project-list',
