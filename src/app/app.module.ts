@@ -26,6 +26,8 @@ import { LoadingComponent } from './loading/loading.component';
 import { TeximateModule } from 'ngx-teximate';
 import { LanguageSelectorComponent } from './language-selector/language-selector.component';
 import { DarkTogglerComponent } from './dark-toggler/dark-toggler.component';
+import { ProjectThumbnailComponent } from './project-thumbnail/project-thumbnail.component';
+import { ProjectListComponent } from './project-list/project-list.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +42,8 @@ import { DarkTogglerComponent } from './dark-toggler/dark-toggler.component';
     LoadingComponent,
     LanguageSelectorComponent,
     DarkTogglerComponent,
+    ProjectThumbnailComponent,
+    ProjectListComponent,
   ],
   exports: [
   ],
