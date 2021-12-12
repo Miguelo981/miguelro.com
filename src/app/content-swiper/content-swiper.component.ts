@@ -5,6 +5,7 @@ import { defaultLanguage } from 'src/config/languages.config';
 import SwiperCore, { Mousewheel, SwiperOptions } from 'swiper';
 import { HomeComponent } from '../home/home.component';
 import { PageNotFoundComponent } from '../page-not-found/page-not-found.component';
+import { ProjectListComponent } from '../project-list/project-list.component';
 import { NavbarScrollService } from '../services/navbar-scroll.service';
 
 SwiperCore.use([Mousewheel]);
@@ -35,7 +36,7 @@ export class ContentSwiperComponent implements OnInit, AfterViewInit {
       component: HomeComponent,
     },
     {
-      component: PageNotFoundComponent,
+      component: ProjectListComponent,
     },
     {
       component: PageNotFoundComponent,

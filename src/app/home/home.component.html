@@ -1,6 +1,10 @@
 <nav-bar></nav-bar>
 <div class="h-screen flex relative justify-center">
-    <button class="absolute w-14 h-14 z-30 left-auto top-1/2 text-white" (click)="setVideoState(!isVideoPlay)">PAUSE</button>
+    <button mat-fab class="absolute w-14 h-14 z-30 left-0 top-1/2 text-white" id="play-pause" (click)="setVideoState(!isVideoPlay)">
+        <mat-icon *ngIf="!isVideoPlay">pause</mat-icon>
+        <mat-icon *ngIf="isVideoPlay">play_arrow</mat-icon>
+    </button>
+    <!--<button class="absolute w-14 h-14 z-30 left-auto top-1/2 text-white" (click)="setVideoState(!isVideoPlay)">PAUSE</button>-->
     <div class="bg-black bg-opacity-75 absolute h-screen w-full z-20" [@fadeInOnEnter]></div>
     <video autoplay muted loop id="bg-home-video" class="absolute z-10" #bgVideo>
         <source [src]="backgroundVideoSrc" type="video/mp4">

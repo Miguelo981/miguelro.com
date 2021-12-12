@@ -47,5 +47,10 @@ $dark-body-color: #fff;
     ::placeholder {
         color: rgba($color: $dark-body-color, $alpha: 0.25);
     }
+  
+  #play-pause {
+    background-color: $dark-bg;
+    color: $dark-body-color;
+  }
 
 }
