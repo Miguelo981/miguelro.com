@@ -4,6 +4,7 @@
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
 @import "assets/scss/dark-theme.scss";
+@import "assets/scss/swiper.scss";
 
 /* @use '~@angular/material' as mat;
 @import "~@angular/material/theming";
@@ -49,4 +50,9 @@ body {
 .bg-contact-backdrop {
   background-color: rgba(0,0,0,0.5);
   backdrop-filter: blur(2px);
+}
+
+#play-pause {
+  background-color: $dark-body-color;
+  color: $dark-bg;
 }

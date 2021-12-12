@@ -16,6 +16,27 @@
             "test": "Aun más loco"
         }
     },
+    "projects": {
+        "visit": "Visitar la web",
+        "technologies": "Tecnologías",
+        "clients": {
+            "cubpaper": {
+                "description": "Fabricantes de sobres y especialistas Europeos en envío y embalaje postal."
+            },
+            "avemFinance": {
+                "description": "Avem es la conexión del inversor con el dominio Polkadot a través de un intercambio descentralizado, una plataforma de lanzamiento y productos DeFi construidos sobre la red Shiden."
+            },
+            "themarSolutions": {
+                "description": "Themar es una empresa que desarrolla soluciones personalizadas de proyectos Blockchain y DLT."
+            },
+            "miguelro": {
+                "description": ""
+            },
+            "cryptomaster": {
+                "description": "Escuela especializada en cryptoeconomía y finanzas descentralizadas. Te enseñarán cómo multiplicar tus ahorros manteniendo el riesgo siempre bajo control."
+            }
+        }
+    },
     "errors": {
         "text": "ERROR",
         "notFount": {

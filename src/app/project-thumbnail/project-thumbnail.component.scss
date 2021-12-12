@@ -1,0 +1,29 @@
+@import "../../assets/scss/variables.scss";
+
+.m-btn {
+    background-image: linear-gradient(
+        to right,
+        $app-blue,
+        $app-purple
+    );
+    color: white;
+}
+
+.m-btn:hover,
+.m-btn:focus {
+    background-image: linear-gradient(
+        to left,
+        $app-blue,
+        $app-purple
+    );
+    color: white;
+}
+
+.m-btn:disabled {
+    background-image: linear-gradient(
+        to right,
+        transparentize($app-blue, .5),
+        transparentize($app-purple, .5)
+    );
+    color: transparentize(white, .5);
+}

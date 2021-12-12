@@ -73,6 +73,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
     if (this.isVideoPlay) {
       this.bgVideo.nativeElement.pause();
     } else {
+      this.bgVideo.nativeElement.muted = true; 
       this.bgVideo.nativeElement.play();
     }
 }

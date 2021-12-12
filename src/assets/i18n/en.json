@@ -16,6 +16,27 @@
             "test": "This is su fucking crazy dude"
         }
     },
+    "projects": {
+        "visit": "Watch the website",
+        "technologies": "Technologies",
+        "clients": {
+            "cubpaper": {
+                "description": "Mailers of envelopes and European specialists in postal shipping and packaging."
+            },
+            "avemFinance": {
+                "description": "Avem is the investor’s connection with the Polkadot domain through a decentralized exchange, launchpad and DeFi products built on top of Shiden Network."
+            },
+            "themarSolutions": {
+                "description": "Themar is company that develop custom Blockchain and DLT project solutions."
+            },
+            "miguelro": {
+                "description": ""
+            },
+            "cryptomaster": {
+                "description": "School specialized in cryptoeconomics and decentralized finance. They will teach you how to multiply your savings while keeping the risk always under control."
+            }
+        }
+    },
     "errors": {
         "text": "ERROR",
         "notFount": {
