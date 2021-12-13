@@ -37,12 +37,6 @@ export class ContentSwiperComponent implements OnInit, AfterViewInit {
     },
     {
       component: ProjectListComponent,
-    },
-    {
-      component: PageNotFoundComponent,
-    },
-    {
-      component: PageNotFoundComponent,
     }
   ]
 

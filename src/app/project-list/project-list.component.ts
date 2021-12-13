@@ -24,15 +24,15 @@ export class ProjectListComponent implements OnInit {
     mousewheel: true,
     speed: 500
   };
-
+  
   constructor() {
     this.projectList = [...originalProjectList];
-
+    
     for (const index of Array(Math.round(this.projectList.length / this.ctaWaitAmount)).keys()) {
       this.projectList.splice(((index+1)*this.ctaWaitAmount)-1, 0, {} as any)
     }
   }
-
+  
   ngOnInit(): void {
   }
 

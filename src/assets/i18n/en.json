@@ -37,6 +37,10 @@
             }
         }
     },
+    "cta": {
+        "title": "",
+        "description": ""
+    },
     "errors": {
         "text": "ERROR",
         "notFount": {
