@@ -29,8 +29,8 @@ export class AppComponent {
     this._localStorageService.appData$
       .pipe(first())
       .subscribe(app => {
-        if (app === null) {
-          this._localStorageService.setInfo(defaultLocalStorage);
+        if (app === null || !app!.language) {
+        this._localStorageService.setInfo(defaultLocalStorage);
         }
 
         this.setThemeClass(app!.theme.isDark);

@@ -5,6 +5,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
 @import "assets/scss/dark-theme.scss";
 @import "assets/scss/swiper.scss";
+@import "assets/scss/variables.scss";
 
 /* @use '~@angular/material' as mat;
 @import "~@angular/material/theming";
@@ -45,6 +46,7 @@ body {
   color: #000;
   margin: 0;
   padding: 0;
+  border-color: #000;
 }
 
 .bg-contact-backdrop {
@@ -55,4 +57,32 @@ body {
 #play-pause {
   background-color: $dark-body-color;
   color: $dark-bg;
+}
+
+.m-btn {
+  background-image: linear-gradient(
+      to right,
+      $app-blue,
+      $app-purple
+  );
+  color: white;
+}
+
+.m-btn:hover,
+.m-btn:focus {
+  background-image: linear-gradient(
+      to left,
+      $app-blue,
+      $app-purple
+  );
+  color: white;
+}
+
+.m-btn:disabled {
+  background-image: linear-gradient(
+      to right,
+      transparentize($app-blue, .5),
+      transparentize($app-purple, .5)
+  );
+  color: transparentize(white, .5);
 }

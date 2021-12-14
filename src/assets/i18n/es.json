@@ -1,4 +1,7 @@
 {
+    "utils": {
+        "knowMore": "Saber más"
+    },
     "loading": {
         "text": "Cargando..."
     },
@@ -15,6 +18,19 @@
         "test": {
             "test": "Aun más loco"
         }
+    },
+    "aboutMe": {
+        "title": "Sobre mi"
+    },
+    "services": {
+
+    },
+    "skills": {
+        "title": "Mis habilidades",
+        "languages": "Lenguajes",
+        "frameworks": "Frameworks",
+        "dbs": "Bases de datos",
+        "programs": "Programas"
     },
     "projects": {
         "visit": "Visitar la web",

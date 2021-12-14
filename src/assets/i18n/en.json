@@ -1,4 +1,7 @@
 {
+    "utils": {
+        "knowMore": "To know more"
+    },
     "loading": {
         "text": "Loading..."
     },
@@ -15,6 +18,19 @@
         "test": {
             "test": "This is su fucking crazy dude"
         }
+    },
+    "aboutMe": {
+        "title": "About me"
+    },
+    "services": {
+
+    },
+    "skills": {
+        "title": "My skills",
+        "languages": "Languages",
+        "frameworks": "Frameworks",
+        "dbs": "Databases",
+        "programs": "Programs"
     },
     "projects": {
         "visit": "Watch the website",
@@ -38,8 +54,8 @@
         }
     },
     "cta": {
-        "title": "",
-        "description": ""
+        "title": "Call to action",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
     },
     "errors": {
         "text": "ERROR",

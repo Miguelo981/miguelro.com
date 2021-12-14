@@ -16,7 +16,6 @@ $angular-dark-theme: mat.define-dark-theme(
     ),
   )
 ); */
-
 $dark-bg: #1f1f1f;
 $dark-body-color: #fff;
 
@@ -24,6 +23,7 @@ $dark-body-color: #fff;
   //@include mat.all-component-colors($angular-dark-theme);
   background-color: $dark-bg;
   color: $dark-body-color;
+  border-color: $dark-body-color;
 
   .mat-dialog-container {
     background-color: $dark-bg;
