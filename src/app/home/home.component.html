@@ -34,8 +34,13 @@
             <div class="mb-6">
                 <h2><span class="text-3xl">{{ 'home.subTitle' | translate }}</span></h2>
             </div>
-            <div class="mb-12">
+            <div class="mb-6">
                 <p class="text-xl whitespace-preline font-extralight">{{ 'home.description' | translate }}</p>
+            </div>
+            <div class="mb-12">
+                <button mat-raised-button class="m-btn w-72 h-16">
+                    <span class="text-3xl p-4 text-white">{{ 'contact.me' | translate }}</span>
+                </button>
             </div>
             <div>
                 <img class="animate-bounce cursor-pointer text-2.5xl mr-auto ml-auto" (click)="swipe(1)" src="assets/img/icons/white-down-arrow.svg">

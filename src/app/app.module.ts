@@ -29,6 +29,11 @@ import { DarkTogglerComponent } from './dark-toggler/dark-toggler.component';
 import { ProjectThumbnailComponent } from './project-thumbnail/project-thumbnail.component';
 import { ProjectListComponent } from './project-list/project-list.component';
 import { CtaComponent } from './cta/cta.component';
+import { ServicesComponent } from './services-component/services.component';
+import { TestimonialsComponent } from './testimonials/testimonials.component';
+import { SkillsComponent } from './skills/skills.component';
+import { NewsletterComponent } from './newsletter/newsletter.component';
+import { AboutMeComponent } from './about-me/about-me.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +51,11 @@ import { CtaComponent } from './cta/cta.component';
     ProjectThumbnailComponent,
     ProjectListComponent,
     CtaComponent,
+    ServicesComponent,
+    TestimonialsComponent,
+    SkillsComponent,
+    NewsletterComponent,
+    AboutMeComponent,
   ],
   exports: [
   ],

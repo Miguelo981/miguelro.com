@@ -3,10 +3,13 @@ import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { defaultLanguage } from 'src/config/languages.config';
 import SwiperCore, { Mousewheel, SwiperOptions } from 'swiper';
+import { AboutMeComponent } from '../about-me/about-me.component';
 import { HomeComponent } from '../home/home.component';
 import { PageNotFoundComponent } from '../page-not-found/page-not-found.component';
 import { ProjectListComponent } from '../project-list/project-list.component';
+import { ServicesComponent } from '../services-component/services.component';
 import { NavbarScrollService } from '../services/navbar-scroll.service';
+import { SkillsComponent } from '../skills/skills.component';
 
 SwiperCore.use([Mousewheel]);
 
@@ -36,8 +39,14 @@ export class ContentSwiperComponent implements OnInit, AfterViewInit {
       component: HomeComponent,
     },
     {
+      component: AboutMeComponent,
+    },
+    {
+      component: ServicesComponent,
+    },
+    {
       component: ProjectListComponent,
-    }
+    },
   ]
 
   constructor(private translateService: TranslateService,
