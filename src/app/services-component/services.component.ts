@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { fadeInDownOnEnterAnimation, fadeInLeftOnEnterAnimation, fadeInOnEnterAnimation, fadeOutOnLeaveAnimation } from 'angular-animations';
+import { LocalStorageService } from '../services/local-storage.service';
 
 @Component({
   selector: 'services-component',
@@ -15,7 +16,7 @@ import { fadeInDownOnEnterAnimation, fadeInLeftOnEnterAnimation, fadeInOnEnterAn
 export class ServicesComponent implements OnInit {
   show = false;
 
-  constructor() { }
+  constructor(public _localStorageService: LocalStorageService) { }
 
   ngOnInit(): void {
   }

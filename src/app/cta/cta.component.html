@@ -1,8 +1,11 @@
-<div id="cta-bg" class="w-screen h-screen bg-repeat">
-    <div class="flex flex-col space-y-8 justify-center items-center h-full relative z-10">
-        <h3 class="text-5xl font-bold">{{ 'cta.title' | translate }}</h3>
-        <span class="text-xl font-light w-1/2 text-center">{{ 'cta.description' | translate }}</span>
-        <contact-me class="transform scale-150 text-white"></contact-me>
+<div id="cta-bgs" class="w-screen h-screen bg-repeat bg-cover" [style.background-image]="'url(./assets/img/bgs/dot-pattern.png)'">
+    <div class="flex justify-center items-center h-full">
+        <div class="flex flex-col space-y-6 bg-black bg-opacity-50 justify-center items-center w-full text-white">
+            <h3 class="text-5xl font-bold mt-12">{{ 'cta.title' | translate }}</h3>
+            <span class="text-3xl font-light w-1/2 text-center">{{ 'cta.description' | translate }}</span>
+            <contact-me class="transform scale-150"></contact-me>
+            <div class="mb-12"></div>
+        <div>
     </div>
 </div>
 <!--[style.background-image]="'url(./assets/img/bgs/city-pattern.png)'"-->
