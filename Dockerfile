@@ -12,5 +12,5 @@ RUN yarn run build
 ### Server
 FROM nginx:alpine
 COPY --from=node /app/dist/miguelo-platform /usr/share/nginx/html
-COPY nginx.conf  /etc/nginx/conf.d/default.conf
+COPY /nginx.conf  /etc/nginx/conf.d/default.conf
 EXPOSE 80
