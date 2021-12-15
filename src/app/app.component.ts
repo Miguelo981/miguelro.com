@@ -19,6 +19,8 @@ export class AppComponent {
   title = 'miguelo-platform';
   selectedLang = defaultLanguage;
 
+  //TODO Contact me throw Telegram, Reset swiper2 index on slide 3, add vertical pagination, add profile pic
+
   constructor(@Inject(DOCUMENT) private document: Document,
     private translateService: TranslateService,
     private darkModeService: DarkmodeService,

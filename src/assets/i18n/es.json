@@ -10,7 +10,7 @@
     },
     "navbar": {
         "routes": {
-            "home": "Inicio",
+            "home": "Sobre mi",
             "services": "Servicios",
             "projects": "Proyectos",
             "contactMe": "Contáctame"
@@ -54,8 +54,8 @@
         }
     },
     "cta": {
-        "title": "Call to action",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+        "title": "Tú traes la idea, yo la hago realidad.",
+        "description": "Creemos tu sitio web perfecto hoy mismo."
     },
     "errors": {
         "text": "ERROR",

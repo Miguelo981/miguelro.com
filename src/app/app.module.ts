@@ -34,6 +34,7 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { SkillsComponent } from './skills/skills.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { AboutMeComponent } from './about-me/about-me.component';
+import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 
 @NgModule({
   declarations: [
@@ -56,6 +57,7 @@ import { AboutMeComponent } from './about-me/about-me.component';
     SkillsComponent,
     NewsletterComponent,
     AboutMeComponent,
+    ScrollToTopComponent,
   ],
   exports: [
   ],

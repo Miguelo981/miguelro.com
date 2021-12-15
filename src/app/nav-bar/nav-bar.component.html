@@ -17,7 +17,7 @@
       <!-- Menu options -->
       <div fxShow="true" class="items-center" fxHide.lt-md="true">
         <ng-container *ngFor="let item of menuItems; let i = index">
-          <a mat-button *ngIf="!item.isButton" (click)="swipe(i)" [ngxScrollTo]="'#'+item.scrollToId" class="text-white text-xl text-shadow-xl hover:text-blue-600">{{ item.label | translate }}</a>
+          <a mat-button *ngIf="!item.isButton" (click)="swipe(i+1)" [ngxScrollTo]="'#'+item.scrollToId" class="text-white text-xl text-shadow-xl hover:text-blue-600">{{ item.label | translate }}</a>
           <contact-me *ngIf="item.isButton"></contact-me>
         </ng-container>
       </div>

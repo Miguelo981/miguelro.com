@@ -1,6 +1,6 @@
-<div class="h-screen flex flex-col justify-center items-center">
+<div class="h-screen flex flex-col justify-center items-center bg-no-repeat bg-cover" [style.background-image]="'url(./assets/img/bgs/pattern-1.png)'">
     <div class="flex justify-center w-11/12" (nguiInview)="isShow(true)" (nguiOutview)="isShow(false)">
-            <div class="flex-col pr-24 w-5/12" *ngIf="show" [@fadeInLeftOnEnter]>
+            <div class="flex-col pr-24" *ngIf="show" [@fadeInLeftOnEnter]>
                 <h2 class="font-bold text-5xl mr-auto mb-10">{{ 'aboutMe.title' | translate }}</h2>
                 <div class="mb-8">
                     <h2><span class="text-3xl">{{ 'home.subTitle' | translate }}</span></h2>
@@ -16,10 +16,10 @@
                     <mat-icon>keyboard_arrow_right</mat-icon>
                 </button>
                 <div class="mt-10">
-                    <img class="animate-bounce cursor-pointer text-2.5xl mr-auto ml-auto" src="assets/img/icons/white-down-arrow.svg">
+                    <img class="animate-bounce cursor-pointer text-2.5xl mr-auto ml-auto" [ngClass]="(_localStorageService.appData$ | async)!.theme.isDark ? '' : 'text-black'" src="assets/img/icons/white-down-arrow.svg">
                 </div>
             </div>
-            <div class="flex-col border-l-2 pl-24">
+            <div class="flex-col border-l-2 pl-24" [ngClass]="(_localStorageService.appData$ | async)!.theme.isDark ? '' : 'border-black'">
                 <skills></skills>
             </div>
     </div>

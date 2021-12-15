@@ -12,7 +12,7 @@ SwiperCore.use([Mousewheel, ])
 })
 export class ProjectListComponent implements OnInit {
   @ViewChild('projectSwiperController') private projectSwiperController;
-  public ctaWaitAmount = 3;
+  public ctaWaitAmount = 4;
   projectList: ProjectThumbnail[] = [];
 
   config: SwiperOptions = {
