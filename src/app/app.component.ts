@@ -19,6 +19,8 @@ export class AppComponent {
   title = 'miguelo-platform';
   selectedLang = defaultLanguage;
 
+  //TODO Contact me throw Telegram
+
   constructor(@Inject(DOCUMENT) private document: Document,
     private translateService: TranslateService,
     private darkModeService: DarkmodeService,
