@@ -1,10 +1,15 @@
+### Website build
 FROM node:latest as node
 
 WORKDIR /app
 COPY . .
 RUN yarn install
-RUN yarn run build --prod
 
+ENV NODE_ENV production
+
+RUN yarn run build
+
+### Server
 FROM nginx:alpine
-
-COPY --from=node /app/dist/demo-app /usr/share/nginx/html
+COPY nginx.conf /etc/nginx/nginx.conf
+COPY --from=node /app/dist/miguelo-platform /usr/share/nginx/html
