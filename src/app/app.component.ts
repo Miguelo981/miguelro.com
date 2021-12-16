@@ -21,14 +21,11 @@ export class AppComponent {
   title = 'miguelo-platform';
   selectedLang = defaultLanguage;
 
-  //TODO Contact me throw Telegram, Reset swiper2 index on slide 3, add vertical pagination, add profile pic, add favicon, default bg img before video is loaded
-
   constructor(@Inject(DOCUMENT) private document: Document,
     private translateService: TranslateService,
     private darkModeService: DarkmodeService,
     private _localStorageService: LocalStorageService,
     private location: Location,
-    private renderer:Renderer2,
     /* private ccService: NgcCookieConsentService */) {
       this.insertGoogleAnalyticsScript();
     this._localStorageService.loadInfo();
