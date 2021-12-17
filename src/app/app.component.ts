@@ -1,5 +1,5 @@
 import { DOCUMENT, Location } from '@angular/common';
-import { Component, HostBinding, Inject } from '@angular/core';
+import { Component, HostBinding, Inject, Renderer2 } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 //import { NgcCookieConsentService } from 'ngx-cookieconsent';
 import { defaultLanguage, languages } from 'src/config/languages.config';
@@ -7,6 +7,8 @@ import { DarkmodeService } from './services/darkmode.service';
 import { LocalStorageService } from './services/local-storage.service';
 import { first, skip } from 'rxjs/operators';
 import { defaultLocalStorage } from 'src/config/storage.config';
+import { googleAnalytiscscripts } from 'src/config/google/google-analytics.config';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -19,14 +21,13 @@ export class AppComponent {
   title = 'miguelo-platform';
   selectedLang = defaultLanguage;
 
-  //TODO Contact me throw Telegram, Reset swiper2 index on slide 3, add vertical pagination, add profile pic
-
   constructor(@Inject(DOCUMENT) private document: Document,
     private translateService: TranslateService,
     private darkModeService: DarkmodeService,
     private _localStorageService: LocalStorageService,
     private location: Location,
     /* private ccService: NgcCookieConsentService */) {
+      this.insertGoogleAnalyticsScript();
     this._localStorageService.loadInfo();
     this._localStorageService.appData$
       .pipe(first())
@@ -92,6 +93,12 @@ export class AppComponent {
     if (darkMode) {
       this.document.body.classList.add(darkClassName);
     }
+  }
+
+  insertGoogleAnalyticsScript() {
+    if (!environment.production) return;
+
+    googleAnalytiscscripts.forEach(script => this.document.head.appendChild(script));
   }
 
 }
