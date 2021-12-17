@@ -1,5 +1,5 @@
 ### Website build
-FROM node:latest as node
+FROM node:16-alpine3.14 as node
 WORKDIR /app
 COPY . .
 RUN yarn install
