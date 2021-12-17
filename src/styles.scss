@@ -1,6 +1,10 @@
 @import "tailwindcss/base";
 @import "tailwindcss/components";
 @import "tailwindcss/utilities";
+
+@import "~primeicons/primeicons.css";
+@import "~primeng/resources/primeng.min.css";
+
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 @import url('https://fonts.googleapis.com/css2?family=Readex+Pro:wght@200;300;400;500;600;700&display=swap');
 @import "assets/scss/dark-theme.scss";
@@ -49,6 +53,14 @@ body {
   border-color: #000;
 }
 
+.bubble-box {
+  background-color: #fff;
+}
+
+.app-text-blue {
+  color: $app-blue;
+}
+
 .bg-m-green {
   --tw-bg-opacity: 1;
   background-color: rgba( $app-green, var(--tw-bg-opacity));
@@ -64,26 +76,41 @@ body {
   color: $dark-bg;
 }
 
-.m-btn {
+.m-grad-1 {
   background-image: linear-gradient(
       to right,
       $app-blue,
       $app-purple
   );
-  color: white;
 }
 
-.m-btn:hover,
-.m-btn:focus {
+.m-grad-btn-1 {
   background-image: linear-gradient(
-      to left,
+      to right,
       $app-blue,
       $app-purple
   );
-  color: white;
+  color: #fff;
+  transition: 0.5s;
+  background-size: 150% auto;
+  display: block;
+  border-color: transparent;
 }
 
-.m-btn:disabled {
+.m-grad-btn-1:hover,
+.m-grad-btn-1:focus {
+  /* background-image: linear-gradient(
+      to left,
+      $app-blue,
+      $app-purple
+  ); */
+  color: #fff;
+  background-position: right center;
+  text-decoration: none;
+  border-color: transparent;
+}
+
+.m-grad-btn-1:disabled {
   background-image: linear-gradient(
       to right,
       transparentize($app-blue, .5),

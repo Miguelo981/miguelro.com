@@ -4,7 +4,9 @@
         "keywords": []
     },
     "utils": {
-        "knowMore": "To know more"
+        "knowMore": "To know more",
+        "cancel": "Cancel",
+        "reset": "Reset"
     },
     "loading": {
         "text": "Loading..."
@@ -24,7 +26,8 @@
         }
     },
     "aboutMe": {
-        "title": "About me"
+        "title": "About me",
+        "socialTitle": "My social networks"
     },
     "services": {
 

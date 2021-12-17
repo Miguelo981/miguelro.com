@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { ContactDialog } from '../dialogs/contact.dialog';
 
@@ -8,6 +8,8 @@ import { ContactDialog } from '../dialogs/contact.dialog';
   styleUrls: ['./contact-me.component.scss']
 })
 export class ContactMeComponent implements OnInit {
+  @Input('btnClass') btnClass: string;
+  @Input('txtClass') txtClass: string;
 
   constructor(public contactDialogRef: MatDialog) { }
 
