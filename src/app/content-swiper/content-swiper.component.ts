@@ -2,7 +2,7 @@ import { AfterViewInit, Component, OnInit, ViewChild } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import { defaultLanguage } from 'src/config/languages.config';
-import SwiperCore, { Mousewheel, SwiperOptions } from 'swiper';
+import SwiperCore, { Mousewheel, Pagination, SwiperOptions } from 'swiper';
 import { AboutMeComponent } from '../about-me/about-me.component';
 import { HomeComponent } from '../home/home.component';
 import { PageNotFoundComponent } from '../page-not-found/page-not-found.component';
@@ -11,7 +11,7 @@ import { ServicesComponent } from '../services-component/services.component';
 import { NavbarScrollService } from '../services/navbar-scroll.service';
 import { SkillsComponent } from '../skills/skills.component';
 
-SwiperCore.use([Mousewheel]);
+SwiperCore.use([Mousewheel, Pagination]);
 
 @Component({
   selector: 'content-swiper',
@@ -27,7 +27,7 @@ export class ContentSwiperComponent implements OnInit, AfterViewInit {
     spaceBetween: 0,
     direction: 'vertical',
     navigation: false,
-    //pagination: { clickable: true },
+    pagination: { clickable: true },
     //scrollbar: { draggable: true },
     scrollbar: false,
     mousewheel: true,
@@ -63,7 +63,9 @@ export class ContentSwiperComponent implements OnInit, AfterViewInit {
     console.log(swiper);
   }
   onSlideChange() {
-    console.log('slide change');
+    if (this.swiperController.swiperRef.realIndex === 3) return;
+    
+    this.navbarScrollService.changeScrollIndex(this.swiperController.swiperRef.realIndex, 1000);
   }
 
   ngOnInit(): void {

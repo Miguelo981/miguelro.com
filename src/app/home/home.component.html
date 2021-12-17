@@ -20,7 +20,7 @@
         </div>
     </div>-->
     <div class="relative" fxLayout fxFlex="85%" (nguiInview)="isShow(true)" (nguiOutview)="isShow(false)">
-        <div fxLayout="column" fxFlex="50%" class="mt-auto mb-24 mr-auto z-30 text-white text-left" *ngIf="show" [@fadeInLeftOnEnter]>
+        <div fxLayout="column" fxFlex="50%" class="mt-auto mb-24 mr-auto z-30 text-left text-white" *ngIf="show" [@fadeInLeftOnEnter]>
             <div class="mb-2 flex items-center space-x-2">
                 <h1><span class="text-8xl font-bold">Miguel</span></h1>
                 <button mat-mini-fab class="w-14 h-14 text-white top-2.5" [ngStyle]="{transform: 'scale(1.3)'}" id="play-pause" (click)="setVideoState(!isVideoPlay)">
@@ -34,10 +34,15 @@
             <div class="mb-6">
                 <p class="text-xl whitespace-preline font-extralight">{{ 'home.description' | translate }}</p>
             </div>
-            <div class="mb-12">
-                <button mat-raised-button class="m-btn w-72 h-16">
-                    <span class="text-3xl p-4 text-white">{{ 'contact.me' | translate }}</span>
+            <div class="flex mb-12 space-x-5">
+                <button mat-raised-button class="m-btn w-56 h-14">
+                    <span class="text-2.5xl p-4 text-white">{{ 'contact.me' | translate }}</span>
                 </button>
+                <a href="https://t.me/miguelodev" target="_blank">
+                    <button mat-raised-button class="bg-m-green hover:bg-opacity-75 h-14">
+                        <span class="text-2xl p-4 font-semibold text-gray-900">{{ 'contact.chat' | translate }}</span>
+                    </button>
+                </a>
             </div>
             <div class="">
                 <img class="animate-bounce cursor-pointer text-2.5xl mr-auto ml-auto" (click)="swipe(1)" src="assets/img/icons/white-down-arrow.svg">

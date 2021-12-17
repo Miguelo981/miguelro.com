@@ -1,8 +1,8 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
-import SwiperCore, { EffectFade, Navigation, Pagination, SwiperOptions } from 'swiper';
+import SwiperCore, { Autoplay, EffectFade, Pagination, SwiperOptions } from 'swiper';
 import { ProjectThumbnail } from '../models/project-thumbnail.model';
 
-SwiperCore.use([EffectFade, Navigation, Pagination]);
+SwiperCore.use([EffectFade, Pagination, Autoplay]);
 
 @Component({
   selector: 'project-thumbnail',
@@ -18,7 +18,8 @@ export class ProjectThumbnailComponent implements OnInit {
     spaceBetween: 0,
     effect: 'fade',
     loop: true,
-    navigation: true,
+    navigation: false,
+    autoplay: { delay: 5000 },
     pagination: { clickable: true },
     scrollbar: false,
     speed: 500

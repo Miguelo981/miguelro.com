@@ -49,6 +49,11 @@ body {
   border-color: #000;
 }
 
+.bg-m-green {
+  --tw-bg-opacity: 1;
+  background-color: rgba( $app-green, var(--tw-bg-opacity));
+}
+
 .bg-contact-backdrop {
   background-color: rgba(0,0,0,0.5);
   backdrop-filter: blur(2px);
