@@ -5,7 +5,7 @@ import { LandingPageComponent } from './landing-page/landing-page.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 const routes: Routes = [
-  { path: ':lang', component: AppComponent },
+  { path: ':lang', component: LandingPageComponent },
   { path: '**', component: PageNotFoundComponent },
 ];
 

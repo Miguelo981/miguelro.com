@@ -1,0 +1,10 @@
+<swiper
+[config]="config"
+#projectSwiperController
+class="w-full h-full"
+>
+    <ng-template swiperSlide *ngFor="let project of projectList; let i = index;">
+        <project-thumbnail [projectThumbnail]="project" class="bg-white" *ngIf="(i+1) % ctaWaitAmount != 0"></project-thumbnail>
+        <cta *ngIf="(i+1) % ctaWaitAmount == 0"></cta>
+    </ng-template>
+</swiper>

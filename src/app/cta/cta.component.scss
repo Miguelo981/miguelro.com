@@ -1,0 +1,29 @@
+@import "../../assets/scss/variables.scss";
+
+#cta-bg {
+    position: relative;
+}
+
+#cta-bg:before {
+    content: ' ';
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0.8;
+    background-image:
+    //linear-gradient(to right top, transparentize(#fff, 0.5), transparentize(#fff, 0.5)),
+    //linear-gradient(to right top, transparentize($app-blue, 0.5), transparentize($app-purple, 0.5)),
+    url('../../assets/img/bgs/irregular-pattern.png');
+    /* background-image: linear-gradient(
+        to right top,
+        transparentize($app-blue, 0.5),
+        transparentize($app-purple, 0.5)
+    ); */
+    opacity: 0.6;
+    background-position: 50% 0;
+    background-repeat: repeat;
+}

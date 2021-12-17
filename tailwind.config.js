@@ -1,8 +1,25 @@
 module.exports = {
-  purge: [],
-  darkMode: false, // or 'media' or 'class'
+  content: ["./src/**/*.{html,js,ts}"],
   theme: {
     extend: {
+      animation: ['group-hover'],
+      margin: {
+        '1/5': '20%',
+        '1/4': '25%',
+        '1/3': '33%',
+        '1/2': '50%',
+        '3/4': '75%',
+      },
+      padding: {
+        '1/5': '20%',
+        '1/4': '25%',
+        '1/3': '33%',
+        '1/2': '50%',
+        '3/4': '75%',
+      },
+      width: {
+        'half-screen': '50vh',
+      },
       height: {
         '15vh': '15vh',
         '25vh': '25vh',

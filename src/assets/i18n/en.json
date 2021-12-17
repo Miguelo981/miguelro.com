@@ -1,12 +1,134 @@
 {
+    "meta": {
+        "description": "",
+        "keywords": []
+    },
+    "utils": {
+        "knowMore": "To know more",
+        "cancel": "Cancel",
+        "reset": "Reset",
+        "comingsoon": "Coming Soon"
+    },
+    "loading": {
+        "text": "Loading..."
+    },
+    "tooltips": {
+        "languageSelector": "Scroll to change the language."
+    },
     "navbar": {
         "routes": {
+            "home": "About me",
             "services": "Services",
             "projects": "Projects",
-            "contactMe": "Contact me"
+            "contactMe": "Contact me",
+            "testimonials": "Testimonials"
         },
         "test": {
             "test": "This is su fucking crazy dude"
         }
+    },
+    "aboutMe": {
+        "title": "About me",
+        "socialTitle": "My social networks"
+    },
+    "services": {
+        "title": "Services",
+        "services": {
+            "webDev": {
+                "title": "Web Development",
+                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+            },
+            "apiDev": {
+                "title": "API Development",
+                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+            },
+            "responsiveDev": {
+                "title": "Responsive Web",
+                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+            }
+        }
+    },
+    "skills": {
+        "title": "My skills",
+        "languages": "Languages",
+        "frameworks": "Frameworks",
+        "dbs": "Databases",
+        "programs": "Programs"
+    },
+    "projects": {
+        "visit": "Watch the website",
+        "technologies": "Technologies",
+        "clients": {
+            "cubpaper": {
+                "description": "Mailers of envelopes and European specialists in postal shipping and packaging."
+            },
+            "avemFinance": {
+                "description": "Avem is the investor’s connection with the Polkadot domain through a decentralized exchange, launchpad and DeFi products built on top of Shiden Network."
+            },
+            "themarSolutions": {
+                "description": "Themar is company that develop custom Blockchain and DLT project solutions."
+            },
+            "miguelro": {
+                "description": ""
+            },
+            "cryptomaster": {
+                "description": "School specialized in cryptoeconomics and decentralized finance. They will teach you how to multiply your savings while keeping the risk always under control."
+            }
+        }
+    },
+    "cta": {
+        "title": "You bring the idea, I make it real.",
+        "description": "Let's create your perfect website today."
+    },
+    "errors": {
+        "text": "ERROR",
+        "notFount": {
+            "errorNumber": "404",
+            "errorType": "That page does not exist"
+        }
+    },
+    "contact": {
+        "chat": "Chat with me",
+        "me": "Contact me",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "label": {
+            "fullname": "Fullname",
+            "email": "Email",
+            "message": "Message"
+        },
+        "placeholder": {
+            "fullname": "Miguel Rodríguez",
+            "email": "miguel@gmail.com",
+            "message": "Lorem Ipsum is simply dummy text..."
+        },
+        "hint": {
+            "fullname": "Not more then 60 characters long.",
+            "message": "Not more then 1000 characters long."
+        },
+        "errors": {
+            "required": {
+                "fullname": "Fullname is required",
+                "email": "Email is required",
+                "message": "Message is required"
+            },
+            "length": {
+                "fullname": "You have more than 60 characters",
+                "message": "You have more than 1000 characters"
+            }
+        },
+        "buttons": {
+            "submit": "Send message",
+            "close": "Close X"
+        }
+    },
+    "home": {
+        "title": "Miguelo",
+        "subTitle": "Fast and clean websites",
+        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    },
+    "footer": {
+        "copyright": "©",
+        "brandName": "Miguelodev",
+        "rights": "All rights reserved"
     }
 }

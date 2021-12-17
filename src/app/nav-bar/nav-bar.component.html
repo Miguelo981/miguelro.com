@@ -1,23 +1,40 @@
 <div> 
-    <mat-toolbar class="bg-transparent absolute z-20">
+    <mat-toolbar class="bg-transparent absolute z-50 mt-3 text-white">
+      <!-- Website logo -->
       <a mat-button routerLink="/">
         <span>Site name</span>
       </a>
 
       <span class="example-spacer"></span>
 
-      <div fxShow="true" class="ml-auto" fxHide.lt-md="true">
+      <!-- Dark mode selector -->
+      <div class="items-center ml-auto">
+        <!--<mat-slide-toggle [formControl]="toggleControl" class="mr-8">
+        </mat-slide-toggle><mat-icon>bedtime</mat-icon>-->
+        <dark-toggler></dark-toggler>
+      </div>
+
+      <!-- Menu options -->
+      <div fxShow="true" class="items-center" fxHide.lt-md="true">
         <ng-container *ngFor="let item of menuItems; let i = index">
-          <a mat-button (click)="swipe(i)" [ngxScrollTo]="'#'+item.scrollToId" class="text-xl text-shadow-xl">{{ item.label | translate }}</a>
+          <a mat-button *ngIf="!item.isButton" (click)="swipe(i+1)" class="text-white text-xl text-shadow-xl hover:text-blue-600">{{ item.label | translate }}</a>
+          <contact-me *ngIf="item.isButton"></contact-me>
         </ng-container>
       </div>
 
+      <!-- Language selector -->
+      <div fxShow="true" class="items-center" fxHide.lt-md="true">
+          <language-selector></language-selector>
+      </div>
+
+      <!-- Responsive menu bar toggler -->
       <div fxShow="true" class="ml-auto" fxHide.gt-sm="true">
         <button mat-icon-button [matMenuTriggerFor]="dropMenu">
           <mat-icon>menu</mat-icon>
         </button>
       </div>
 
+      <!-- Responsive Menu bar -->
       <mat-menu #dropMenu="matMenu">
         <ng-container *ngFor="let item of menuItems">
             <button mat-menu-item>
@@ -26,6 +43,6 @@
             </button>
             <mat-divider></mat-divider>
         </ng-container>
-    </mat-menu>
+      </mat-menu>
     </mat-toolbar>
 </div>

@@ -1,0 +1,19 @@
+/* Style the video: 100% width and height to cover the entire window */
+#bg-home-video {
+    right: 0;
+    bottom: 0;
+    //min-width: 100%;
+    min-height: 100vh;
+    object-fit: cover;
+  }
+
+  /* .mat-button-wrapper {
+    padding-top: -0.8rem !important;
+    line-height: 50% !important;
+}
+
+.mat-icon {
+    width: 2.5rem;
+    height: 2.5rem;
+    font-size: 2.5rem;
+} */
