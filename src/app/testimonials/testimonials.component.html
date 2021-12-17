@@ -1,1 +1,10 @@
-<p>testimonials works!</p>
+<div class="h-screen w-screen flex relative">
+    <div class="m-auto relative justify-center" fxLayout fxFlex="85%" (nguiInview)="isShow(true)" (nguiOutview)="isShow(false)">
+        <div fxLayout="column" class="z-30 text-center" *ngIf="show" [@zoomInOnEnter] [@zoomOutOnLeave]>
+            <div>
+                <h2><span class="text-8xl font-bold">{{ 'utils.comingsoon' | translate }}</span></h2>
+            </div>
+        </div>
+    </div>
+    
+</div>

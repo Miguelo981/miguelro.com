@@ -17,6 +17,9 @@ module.exports = {
         '1/2': '50%',
         '3/4': '75%',
       },
+      width: {
+        'half-screen': '50vh',
+      },
       height: {
         '15vh': '15vh',
         '25vh': '25vh',

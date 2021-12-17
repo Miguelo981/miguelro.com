@@ -6,8 +6,8 @@
     "utils": {
         "knowMore": "Saber más",
         "cancel": "Cancelar",
-        "reset": "Resturar"
-
+        "reset": "Resturar",
+        "comingsoon": "Próximamente"
     },
     "loading": {
         "text": "Cargando..."
@@ -20,7 +20,8 @@
             "home": "Sobre mi",
             "services": "Servicios",
             "projects": "Proyectos",
-            "contactMe": "Contáctame"
+            "contactMe": "Contáctame",
+            "testimonials": "Testimonios"
         },
         "test": {
             "test": "Aun más loco"
@@ -31,7 +32,21 @@
         "socialTitle": "Mis redes sociales"
     },
     "services": {
-
+        "title": "Servicios",
+        "services": {
+            "webDev": {
+                "title": "Web Development",
+                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+            },
+            "apiDev": {
+                "title": "API Development",
+                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+            },
+            "responsiveDev": {
+                "title": "Responsive Web",
+                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+            }
+        }
     },
     "skills": {
         "title": "Mis habilidades",
@@ -110,6 +125,11 @@
         "title": "Miguelo",
         "subTitle": "Webs rápidas y límpias",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    },
+    "footer": {
+        "copyright": "©",
+        "brandName": "Miguelodev",
+        "rights": "Todos los derechos reservados"
     },
     "cookie": {
         "header": "Cookies used on the website!",

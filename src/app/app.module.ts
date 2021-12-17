@@ -35,6 +35,8 @@ import { SkillsComponent } from './skills/skills.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { AboutMeComponent } from './about-me/about-me.component';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
+import { FooterComponent } from './footer/footer.component';
+import { LastActionComponent } from './last-action/last-action.component';
 
 @NgModule({
   declarations: [
@@ -58,6 +60,8 @@ import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
     NewsletterComponent,
     AboutMeComponent,
     ScrollToTopComponent,
+    FooterComponent,
+    LastActionComponent,
   ],
   exports: [
   ],
