@@ -7,5 +7,8 @@ export interface AppData {
     },
     video: {
         isPlay: boolean,
-    }
+    },
+    layout: {
+      innerWidth: number,
+    },
 }

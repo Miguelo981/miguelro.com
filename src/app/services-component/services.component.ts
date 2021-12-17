@@ -1,6 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import {  fadeInOnEnterAnimation, fadeInUpOnEnterAnimation, fadeOutOnLeaveAnimation } from 'angular-animations';
+import { breakPoints } from 'src/config/breakpoints.config';
+import { services } from 'src/mocks/services/services.mock';
+import SwiperCore, { Navigation, SwiperOptions } from 'swiper';
 import { LocalStorageService } from '../services/local-storage.service';
+
+SwiperCore.use([Navigation]);
 
 @Component({
   selector: 'services-component',
@@ -14,38 +19,17 @@ import { LocalStorageService } from '../services/local-storage.service';
 })
 export class ServicesComponent implements OnInit {
   show = false;
-  services = [
-    {
-      title: "services.services.webDev.title",
-      description: "services.services.webDev.description",
-      icon: "code",
-    },
-    {
-      title: "services.services.apiDev.title",
-      description: "services.services.apiDev.description",
-      icon: "database",
-    },
-    {
-      title: "services.services.responsiveDev.title",
-      description: "services.services.responsiveDev.description",
-      icon: "mobile",
-    },
-    {
-      title: "services.services.webDev.title",
-      description: "services.services.webDev.description",
-      icon: "code",
-    },
-    {
-      title: "services.services.apiDev.title",
-      description: "services.services.apiDev.description",
-      icon: "database",
-    },
-    {
-      title: "services.services.responsiveDev.title",
-      description: "services.services.responsiveDev.description",
-      icon: "mobile",
-    },
-  ]
+  services = services;
+  md = breakPoints.md;
+
+  config: SwiperOptions = {
+    slidesPerView: 1,
+    spaceBetween: 30,
+    direction: 'horizontal',
+    //navigation: true,
+    pagination: { clickable: true },
+    speed: 500
+  };
 
   constructor(public _localStorageService: LocalStorageService) { }
 
@@ -54,6 +38,10 @@ export class ServicesComponent implements OnInit {
 
   isShow(state: boolean) {
     this.show = state;
+  }
+
+  getCols() {
+    return [...Array(services.length / 2).keys()];
   }
 
 }

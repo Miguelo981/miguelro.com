@@ -1,4 +1,4 @@
-import { Skill } from "src/app/models/skill.model"
+import { Skill, SkillList } from "src/app/models/skill.model"
 
 export const programmingLanguages: Skill[] = [
     {
@@ -125,5 +125,24 @@ export const dbs: Skill[] = [
         name: "MySQL",
         icon: "/assets/img/icons/sql.png",
         delay: 5750
+    },
+]
+
+export const mockedSkillList: SkillList[] = [
+    {
+        title: 'skills.languages',
+        skills: programmingLanguages
+    },
+    {
+        title: 'skills.frameworks',
+        skills: frameworks
+    },
+    {
+        title: 'skills.programs',
+        skills: programs
+    },
+    {
+        title: 'skills.dbs',
+        skills: dbs
     },
 ]
