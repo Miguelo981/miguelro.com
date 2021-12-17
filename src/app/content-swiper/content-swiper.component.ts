@@ -49,12 +49,12 @@ export class ContentSwiperComponent implements OnInit, AfterViewInit {
     {
       component: ProjectListComponent,
     },
-    {
+    /* {
       component: TestimonialsComponent
     },
     {
       component: LastActionComponent
-    }
+    } */
   ]
 
   constructor(private translateService: TranslateService,

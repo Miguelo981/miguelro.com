@@ -9,5 +9,8 @@ export const defaultLocalStorage: AppData = {
     },
     video: {
         isPlay: true,
-    }
+    },
+    layout: {
+        innerWidth: 1000,
+    },
 }

@@ -1,5 +1,5 @@
 import { DOCUMENT, Location } from '@angular/common';
-import { Component, HostBinding, Inject, Renderer2 } from '@angular/core';
+import { Component, HostBinding, HostListener, Inject, Renderer2 } from '@angular/core';
 import { TranslateService } from '@ngx-translate/core';
 //import { NgcCookieConsentService } from 'ngx-cookieconsent';
 import { defaultLanguage, languages } from 'src/config/languages.config';
@@ -18,8 +18,10 @@ import { environment } from 'src/environments/environment';
 export class AppComponent {
   @HostBinding('class') className = '';
 
+  innerWidth: number;
   title = 'miguelo-platform';
   selectedLang = defaultLanguage;
+  
 
   constructor(@Inject(DOCUMENT) private document: Document,
     private translateService: TranslateService,
@@ -59,6 +61,7 @@ export class AppComponent {
               language: app!.language,
               theme: { isDark: darkMode },
               video: app!.video,
+              layout: app!.layout,
             });
           });
       });
@@ -83,6 +86,22 @@ export class AppComponent {
         this.ccService.destroy(); // remove previous cookie bar (with default messages)
         this.ccService.init(this.ccService.getConfig()); // update config with translated messages
       }); */
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event) {
+    this.innerWidth = window.innerWidth;
+
+    this._localStorageService.appData$
+      .pipe(first())
+      .subscribe(app => {
+        this._localStorageService.setInfo({
+          language: app!.language,
+          theme: app!.theme,
+          video: app!.video,
+          layout: { innerWidth: this.innerWidth },
+        });
+      });
   }
 
   setThemeClass(darkMode: boolean) {

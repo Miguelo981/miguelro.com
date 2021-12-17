@@ -55,7 +55,8 @@ export class LanguageSelectorComponent implements OnInit, AfterViewInit {
         this._localStorageService.setInfo({
           language: { lang: this.selectedLanguage },
           theme: app!.theme,
-          video: app!.video
+          video: app!.video,
+          layout: app!.layout,
         });
       });
   }

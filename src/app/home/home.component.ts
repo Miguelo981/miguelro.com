@@ -63,6 +63,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
           language: app!.language,
           theme: app!.theme,
           video: { isPlay: this.isVideoPlay },
+          layout: app!.layout,
         });
       });
 

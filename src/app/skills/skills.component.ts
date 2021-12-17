@@ -2,8 +2,9 @@ import { Component, OnInit } from '@angular/core';
 import { fadeInDownOnEnterAnimation, fadeInRightOnEnterAnimation } from 'angular-animations';
 import { Observable, Subject } from 'rxjs';
 import { delay, first } from 'rxjs/operators';
-import { dbs, frameworks, programmingLanguages, programs } from 'src/mocks/skills/skills.mock';
-import { Skill } from '../models/skill.model';
+import { mockedSkillList } from 'src/mocks/skills/skills.mock';
+import { Skill, SkillList } from '../models/skill.model';
+
 
 @Component({
   selector: 'skills',
@@ -15,10 +16,7 @@ import { Skill } from '../models/skill.model';
   ]
 })
 export class SkillsComponent implements OnInit {
-  programmingLanguages: Skill[] = programmingLanguages;
-  frameworks: Skill[] = frameworks;
-  programs: Skill[] = programs;
-  dbs: Skill[] = dbs;
+  skillList: SkillList[] = mockedSkillList;
   show = false;
 
   constructor() { }
