@@ -25,6 +25,10 @@ $dark-body-color: #fff;
   color: $dark-body-color;
   border-color: $dark-body-color;
 
+  .bubble-box {
+    background-color: $dark-bg;
+  }
+
   .mat-dialog-container {
     background-color: $dark-bg;
   }

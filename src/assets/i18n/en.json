@@ -4,7 +4,10 @@
         "keywords": []
     },
     "utils": {
-        "knowMore": "To know more"
+        "knowMore": "To know more",
+        "cancel": "Cancel",
+        "reset": "Reset",
+        "comingsoon": "Coming Soon"
     },
     "loading": {
         "text": "Loading..."
@@ -17,17 +20,33 @@
             "home": "About me",
             "services": "Services",
             "projects": "Projects",
-            "contactMe": "Contact me"
+            "contactMe": "Contact me",
+            "testimonials": "Testimonials"
         },
         "test": {
             "test": "This is su fucking crazy dude"
         }
     },
     "aboutMe": {
-        "title": "About me"
+        "title": "About me",
+        "socialTitle": "My social networks"
     },
     "services": {
-
+        "title": "Services",
+        "services": {
+            "webDev": {
+                "title": "Web Development",
+                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+            },
+            "apiDev": {
+                "title": "API Development",
+                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+            },
+            "responsiveDev": {
+                "title": "Responsive Web",
+                "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s"
+            }
+        }
     },
     "skills": {
         "title": "My skills",
@@ -106,5 +125,10 @@
         "title": "Miguelo",
         "subTitle": "Fast and clean websites",
         "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+    },
+    "footer": {
+        "copyright": "©",
+        "brandName": "Miguelodev",
+        "rights": "All rights reserved"
     }
 }

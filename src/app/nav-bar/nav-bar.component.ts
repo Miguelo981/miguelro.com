@@ -52,6 +52,16 @@ export class NavBarComponent implements OnInit {
       showOnDesktop: true
     },
     {
+      label: "navbar.routes.testimonials",
+      icon: "help",
+      scrollToId: "testimonials",
+      href: "#",
+      isButton: false,
+      showOnMobile: true,
+      showOnTablet: true,
+      showOnDesktop: true
+    },
+    {
       label: "navbar.routes.contactMe",
       icon: "help",
       scrollToId: "contact-me",

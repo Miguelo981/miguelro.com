@@ -37,6 +37,10 @@ export class ContactDialog implements OnInit {
         this.location.back();
     }
 
+    public reset() {
+        this.contactForm.reset();
+    }
+
     public createContact = (contactFormValue: ContactMeForm) => {
         if (!this.contactForm.valid) return;
         

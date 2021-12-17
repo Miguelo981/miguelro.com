@@ -1,20 +1,36 @@
-<div class="h-screen flex flex-col justify-center items-center bg-no-repeat bg-cover" [style.background-image]="'url(./assets/img/bgs/pattern-1.png)'">
+<div class="h-screen flex flex-col justify-center items-center bg-no-repeat bg-cover space-y-16" [style.background-image]="'url(./assets/img/bgs/pattern-1.png)'">
     <div class="flex justify-center w-11/12" (nguiInview)="isShow(true)" (nguiOutview)="isShow(false)">
-            <div class="flex-col pr-24" *ngIf="show" [@fadeInLeftOnEnter]>
+            <div class="pr-24 justify-end" fxLayout="column" fxFlex="40%" *ngIf="show" [@fadeInLeftOnEnter]>
                 <h2 class="font-bold text-5xl mr-auto mb-10">{{ 'aboutMe.title' | translate }}</h2>
-                <div class="mb-8">
-                    <h2><span class="text-3xl">{{ 'home.subTitle' | translate }}</span></h2>
-                    <p>{{ 'cta.description' | translate }}</p>
-                    <p>{{ 'cta.description' | translate }}</p>
+                <div class="flex flex-row items-center space-x-5 mb-8">
+                    <div class="relative">
+                        <!--<div class="rounded-full w-48 h-48 bg-blue-600 absolute z-0"></div>
+                        <div class="rounded-full w-44 h-44 bg-blue-800 absolute z-10"></div>-->
+                        <img class="w-40 h-auto rounded-full shadow-2xl relative z-20" src="assets/img/profiles/Miguel Angel.png" alt="Miguel Angel Rodriguez profile pic">
+                    </div>
+                    <div class="mb-8 bubble-box rounded-tl-2xl rounded-tr-2xl rounded-br-2xl p-4 shadow-2xl">
+                        <h2><span class="text-2xl">{{ 'home.subTitle' | translate }}</span></h2>
+                        <p>{{ 'cta.description' | translate }}</p>
+                        <p>{{ 'cta.description' | translate }}</p>
+                    </div>
                 </div>
                 <div class="mb-8">
                     <h2><span class="text-3xl">{{ 'home.subTitle' | translate }}</span></h2>
-                    <p>{{ 'cta.description' | translate }}</p>
+                    <p>{{ 'home.description' | translate }}</p>
                 </div>
-                <button mat-raised-button class="m-btn">
+                <!-- Social Medias -->
+                <div class="mb-8 space-y-4">
+                    <h2><span class="text-3xl">{{ 'aboutMe.socialTitle' | translate }}</span></h2>
+                    <div class="flex flex-row space-x-8">
+                        <div *ngFor="let social of socialMedias">
+                            <a [href]="social.href" target="_blank" class="pi text-4.5xl text-gray-900 transition ease-in hover:scale-125 duration-200" [ngClass]="'pi-' + social.icon"></a>
+                        </div>
+                    </div>
+                </div>
+                <!-- <button mat-raised-button class="m-grad-btn-1 w-1/2">
                     <span class="text-xl p-4">{{ 'utils.knowMore' | translate }}</span>
                     <mat-icon>keyboard_arrow_right</mat-icon>
-                </button>
+                </button> -->
                 <div class="mt-10">
                     <img class="animate-bounce cursor-pointer text-2.5xl mr-auto ml-auto" [ngClass]="(_localStorageService.appData$ | async)!.theme.isDark ? '' : 'text-black'" src="assets/img/icons/white-down-arrow.svg">
                 </div>
@@ -23,4 +39,5 @@
                 <skills></skills>
             </div>
     </div>
+    <contact-me [btnClass]="'w-56 h-14'" [txtClass]="'text-2.5xl p-4'"></contact-me>
 </div>

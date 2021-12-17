@@ -5,7 +5,7 @@
         <mat-icon *ngIf="isVideoPlay">play_arrow</mat-icon>
     </button>-->
     <!--<div class="bg-no-repeat bg-cover absolute h-screen w-full z-30" [style.background-image]="'url(./assets/img/bgs/pattern-4.png)'"></div>-->
-    <div class="bg-black bg-opacity-70 absolute h-screen w-full z-20" [@fadeInOnEnter]></div>
+    <div class="bg-black bg-opacity-70 absolute h-screen w-screen z-20" [@fadeInOnEnter]></div>
     <video autoplay muted loop id="bg-home-video" class="absolute z-10" #bgVideo>
         <source [src]="backgroundVideoSrc" type="video/mp4">
         Your browser does not support HTML5 video.
@@ -35,12 +35,14 @@
                 <p class="text-xl whitespace-preline font-extralight">{{ 'home.description' | translate }}</p>
             </div>
             <div class="flex mb-12 space-x-5">
-                <button mat-raised-button class="m-btn w-56 h-14">
+                <!--<button mat-raised-button class="m-grad-btn-1 w-56 h-14">
                     <span class="text-2.5xl p-4 text-white">{{ 'contact.me' | translate }}</span>
-                </button>
+                </button>-->
+                <contact-me [btnClass]="'w-56 h-14'" [txtClass]="'text-2.5xl p-4'"></contact-me>
                 <a href="https://t.me/miguelodev" target="_blank">
                     <button mat-raised-button class="bg-m-green hover:bg-opacity-75 h-14">
                         <span class="text-2xl p-4 font-semibold text-gray-900">{{ 'contact.chat' | translate }}</span>
+                        <mat-icon>telegram</mat-icon>
                     </button>
                 </a>
             </div>
