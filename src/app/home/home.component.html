@@ -20,7 +20,7 @@
         </div>
     </div>-->
     <div class="relative" fxLayout fxFlex="85%" (nguiInview)="isShow(true)" (nguiOutview)="isShow(false)">
-        <div fxLayout="column" fxFlex.gt-lg="50%" fxFlex.lt-lg="100%" class="mt-auto n:mb-0 lg:mb-24 mr-auto z-30 text-left text-white" *ngIf="show" [@fadeInLeftOnEnter]>
+        <div fxLayout="column" fxFlex.gt-md="50%" fxFlex.lt-md="100%" class="mt-auto n:mb-0 lg:mb-24 mr-auto z-30 text-left text-white" *ngIf="show" [@fadeInLeftOnEnter]>
             <div class="mb-2 flex items-center space-x-2">
                 <h1><span class="n:text-6xl lg:text-8xl font-bold">Miguel</span></h1>
                 <button mat-mini-fab class="text-white top-2.5" [ngStyle]="{transform: 'scale(1.3)'}" id="play-pause" (click)="setVideoState(!isVideoPlay)">
