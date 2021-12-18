@@ -34,7 +34,7 @@ export class AppComponent {
     this._localStorageService.appData$
       .pipe(first())
       .subscribe(app => {
-        if (app === null || !app!.language) {
+        if (app === null || !app!.language || !app!.layout || !app!.theme || !app!.video) {
         this._localStorageService.setInfo(defaultLocalStorage);
         }
 
