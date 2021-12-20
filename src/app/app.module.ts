@@ -38,6 +38,8 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 import { FooterComponent } from './footer/footer.component';
 import { LastActionComponent } from './last-action/last-action.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 @NgModule({
   declarations: [
@@ -87,6 +89,12 @@ import { LastActionComponent } from './last-action/last-action.component';
     TeximateModule,
     NguiInviewModule,
     LazyLoadImageModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
     //NgcCookieConsentModule.forRoot(cookieConfig)
   ],
   providers: [
