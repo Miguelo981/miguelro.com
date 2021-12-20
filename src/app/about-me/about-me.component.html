@@ -1,6 +1,6 @@
 <div class="h-screen flex flex-col justify-center items-center bg-no-repeat bg-cover n:space-y-2 lg:space-y-16" [style.background-image]="'url(./assets/img/bgs/pattern-1.webp)'">
     <div class="flex n:flex-col lg:flex-row justify-center w-11/12" (nguiInview)="isShow(true)" (nguiOutview)="isShow(false)">
-            <div class="n:pr-0 lg:pr-24 justify-end" fxLayout="column" fxFlex.lt-lg="100%" fxFlex.gt-lg="40%" *ngIf="show" [@fadeInLeftOnEnter]>
+            <div class="n:pr-0 lg:pr-24 justify-end" fxLayout="column" fxFlex.lt-lg="100%" fxFlex.gt-md="40%" *ngIf="show" [@fadeInLeftOnEnter]>
                 <h2 class="font-bold n:text-3xl lg:text-5xl mr-auto n:mb-4 lg: mb-10">{{ 'aboutMe.title' | translate }}</h2>
                 <div class="flex flex-row items-center space-x-5 n:mb-4 lg:mb-8">
                     <div class="relative">

@@ -6,7 +6,7 @@
             <h3 class="n:text-xl lg:text-3xl font-medium n:mb-0 lg:mb-4">{{ skillList.title | translate }}:</h3>
             <div class="flex flex-wrap n:gap-2 lg:gap-8 items-center mb-4">
                 <div *ngFor="let skill of skillList.skills; let i = index;">
-                    <img [lazyLoad]="skill.icon" [alt]="skill.name" class="n:w-5 sm:w-8 lg:w-10 h-auto filter drop-shadow-xl transition ease-in hover:scale-125 duration-200">
+                    <img [src]="skill.icon" [alt]="skill.name" class="n:w-5 sm:w-8 lg:w-10 h-auto filter drop-shadow-xl transition ease-in hover:scale-125 duration-200">
                 </div>
             </div>
         </div>
