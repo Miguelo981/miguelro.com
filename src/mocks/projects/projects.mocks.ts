@@ -7,32 +7,32 @@ export const originalProjectList: ProjectThumbnail[] = [
       isPublished: true,
       description: "projects.clients.avemFinance.description",
       thumbs: [
-        "/assets/img/projects/avem/avem-mockup-1.png",
-        "/assets/img/projects/avem/avem-mockup-3.png",
-        "/assets/img/projects/avem/avem-mockup-2.png",
-        "/assets/img/projects/avem/avem-mockup-4.png",
-        "/assets/img/projects/avem/avem-mockup-5.png",
+        "/assets/img/projects/avem/avem-mockup-1.webp",
+        "/assets/img/projects/avem/avem-mockup-3.webp",
+        "/assets/img/projects/avem/avem-mockup-2.webp",
+        "/assets/img/projects/avem/avem-mockup-4.webp",
+        "/assets/img/projects/avem/avem-mockup-5.webp",
       ],
       usedTechnologies: [
         {
           name: "VueJs",
-          icon: "/assets/img/icons/vuejs.png",
+          icon: "/assets/img/icons/vuejs.webp",
         },
         {
           name: "Vuebootstrap",
-          icon: "/assets/img/icons/vuebootstrap.png",
+          icon: "/assets/img/icons/vuebootstrap.webp",
         },
         {
           name: "TailwindCss",
-          icon: "/assets/img/icons/tailwindcss.png",
+          icon: "/assets/img/icons/tailwindcss.webp",
         },
         {
           name: "Docker",
-          icon: "/assets/img/icons/docker.png",
+          icon: "/assets/img/icons/docker.webp",
         },
         {
           name: "AdobeXd",
-          icon: "/assets/img/icons/adobexd.png",
+          icon: "/assets/img/icons/adobexd.webp",
         }
       ]
     },
@@ -42,31 +42,31 @@ export const originalProjectList: ProjectThumbnail[] = [
       isPublished: true,
       description: "projects.clients.themarSolutions.description",
       thumbs: [
-        "/assets/img/projects/themar/themar-mockup-1.png",
-        "/assets/img/projects/themar/themar-mockup-4.png",
-        "/assets/img/projects/themar/themar-mockup-2.png",
-        "/assets/img/projects/themar/themar-mockup-3.png",
+        "/assets/img/projects/themar/themar-mockup-1.webp",
+        "/assets/img/projects/themar/themar-mockup-4.webp",
+        "/assets/img/projects/themar/themar-mockup-2.webp",
+        "/assets/img/projects/themar/themar-mockup-3.webp",
       ],
       usedTechnologies: [
         {
           name: "VueJs",
-          icon: "/assets/img/icons/vuejs.png",
+          icon: "/assets/img/icons/vuejs.webp",
         },
         {
           name: "Vuebootstrap",
-          icon: "/assets/img/icons/vuebootstrap.png",
+          icon: "/assets/img/icons/vuebootstrap.webp",
         },
         {
           name: "TailwindCss",
-          icon: "/assets/img/icons/tailwindcss.png",
+          icon: "/assets/img/icons/tailwindcss.webp",
         },
         {
           name: "Docker",
-          icon: "/assets/img/icons/docker.png",
+          icon: "/assets/img/icons/docker.webp",
         },
         {
           name: "AdobeXd",
-          icon: "/assets/img/icons/adobexd.png",
+          icon: "/assets/img/icons/adobexd.webp",
         }
       ]
     },
@@ -76,32 +76,32 @@ export const originalProjectList: ProjectThumbnail[] = [
       isPublished: false,
       description: "projects.clients.cryptomaster.description",
       thumbs: [
-        "/assets/img/projects/cryptomaster/cryptomaster-mockup-5.png",
-        "/assets/img/projects/cryptomaster/cryptomaster-mockup-4.png",
-        "/assets/img/projects/cryptomaster/cryptomaster-mockup-1.png",
-        "/assets/img/projects/cryptomaster/cryptomaster-mockup-2.png",
-        "/assets/img/projects/cryptomaster/cryptomaster-mockup-3.png",
+        "/assets/img/projects/cryptomaster/cryptomaster-mockup-5.webp",
+        "/assets/img/projects/cryptomaster/cryptomaster-mockup-4.webp",
+        "/assets/img/projects/cryptomaster/cryptomaster-mockup-1.webp",
+        "/assets/img/projects/cryptomaster/cryptomaster-mockup-2.webp",
+        "/assets/img/projects/cryptomaster/cryptomaster-mockup-3.webp",
       ],
       usedTechnologies: [
         {
           name: "VueJs",
-          icon: "/assets/img/icons/vuejs.png",
+          icon: "/assets/img/icons/vuejs.webp",
         },
         {
           name: "Vuebootstrap",
-          icon: "/assets/img/icons/vuebootstrap.png",
+          icon: "/assets/img/icons/vuebootstrap.webp",
         },
         {
           name: "TailwindCss",
-          icon: "/assets/img/icons/tailwindcss.png",
+          icon: "/assets/img/icons/tailwindcss.webp",
         },
         {
           name: "Docker",
-          icon: "/assets/img/icons/docker.png",
+          icon: "/assets/img/icons/docker.webp",
         },
         {
           name: "AdobeXd",
-          icon: "/assets/img/icons/adobexd.png",
+          icon: "/assets/img/icons/adobexd.webp",
         }
       ]
     },
@@ -111,24 +111,24 @@ export const originalProjectList: ProjectThumbnail[] = [
       isPublished: false,
       description: "projects.clients.miguelro.description",
       thumbs: [
-        "/assets/img/projects/miguelro/miguelro-mockup-1.png",
+        "/assets/img/projects/miguelro/miguelro-mockup-1.webp",
       ],
       usedTechnologies: [
         {
           name: "Angular",
-          icon: "/assets/img/icons/angular.png",
+          icon: "/assets/img/icons/angular.webp",
         },
         {
           name: "material",
-          icon: "/assets/img/icons/material.png",
+          icon: "/assets/img/icons/material.webp",
         },
         {
           name: "TailwindCss",
-          icon: "/assets/img/icons/tailwindcss.png",
+          icon: "/assets/img/icons/tailwindcss.webp",
         },
         {
           name: "Docker",
-          icon: "/assets/img/icons/docker.png",
+          icon: "/assets/img/icons/docker.webp",
         }
       ]
     },
@@ -138,20 +138,20 @@ export const originalProjectList: ProjectThumbnail[] = [
       isPublished: true,
       description: "projects.clients.cubpaper.description",
       thumbs: [
-        "/assets/img/projects/cubpaper/cubpaper-mockup-1.png",
+        "/assets/img/projects/cubpaper/cubpaper-mockup-1.webp",
       ],
       usedTechnologies: [
         {
           name: "Wordpress",
-          icon: "/assets/img/icons/wordpress.png",
+          icon: "/assets/img/icons/wordpress.webp",
         },
         {
           name: "Elementor",
-          icon: "/assets/img/icons/elementor.png",
+          icon: "/assets/img/icons/elementor.webp",
         },
         {
           name: "AdobeXd",
-          icon: "/assets/img/icons/adobexd.png",
+          icon: "/assets/img/icons/adobexd.webp",
         }
       ]
     }

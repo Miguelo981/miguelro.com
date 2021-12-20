@@ -15,6 +15,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { TeximateModule } from 'ngx-teximate';
 import { MaterialModule } from 'src/config/material.module';
 import { NguiInviewModule } from '@ngui/common';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -84,7 +85,8 @@ import { LastActionComponent } from './last-action/last-action.component';
     SwiperModule,
     BrowserAnimationsModule,
     TeximateModule,
-    NguiInviewModule
+    NguiInviewModule,
+    LazyLoadImageModule,
     //NgcCookieConsentModule.forRoot(cookieConfig)
   ],
   providers: [
