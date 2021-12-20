@@ -18,7 +18,7 @@
             <h3 class="font-medium n:text-lg lg:text-xl text-white mb-4">{{ 'projects.technologies' | translate}}:</h3>
             <div class="flex flex-row space-x-5 items-center">
                 <div *ngFor="let tech of projectThumbnail.usedTechnologies">
-                    <img [lazyLoad]="tech.icon" [alt]="tech.name" class="n:w-6 lg:w-12 h-auto filter drop-shadow-xl transition ease-in hover:scale-125 duration-200">
+                    <img [src]="tech.icon" [alt]="tech.name" class="n:w-6 lg:w-12 h-auto filter drop-shadow-xl transition ease-in hover:scale-125 duration-200">
                 </div>
             </div>
         </div>
@@ -30,6 +30,6 @@
         class="w-full h-full"
         >
         <ng-template swiperSlide *ngFor="let thumb of projectThumbnail.thumbs;">
-            <img [lazyLoad]="thumb" class="object-cover w-full h-full">
+            <img [src]="thumb" class="object-cover w-full h-full">
         </ng-template>
 </swiper>

@@ -1,12 +1,12 @@
 <div class="h-screen flex flex-col justify-center items-center bg-no-repeat bg-cover n:space-y-2 lg:space-y-16" [style.background-image]="'url(./assets/img/bgs/pattern-1.webp)'">
-    <div class="flex n:flex-col lg:flex-row justify-center w-11/12" (nguiInview)="isShow(true)" (nguiOutview)="isShow(false)">
-            <div class="n:pr-0 lg:pr-24 justify-end" fxLayout="column" fxFlex.lt-lg="100%" fxFlex.gt-md="40%" *ngIf="show" [@fadeInLeftOnEnter]>
+    <div fxLayout.lt-md="column" fxLayout.gt-lg="row" class="justify-center w-11/12" (nguiInview)="isShow(true)" (nguiOutview)="isShow(false)">
+            <div class="n:pr-0 lg:pr-24 justify-end" fxLayout="column" fxFlex.lt-md="100%" fxFlex.gt-lg="40%" *ngIf="show" [@fadeInLeftOnEnter]>
                 <h2 class="font-bold n:text-3xl lg:text-5xl mr-auto n:mb-4 lg: mb-10">{{ 'aboutMe.title' | translate }}</h2>
                 <div class="flex flex-row items-center space-x-5 n:mb-4 lg:mb-8">
                     <div class="relative">
                         <!--<div class="rounded-full w-48 h-48 bg-blue-600 absolute z-0"></div>
                         <div class="rounded-full w-44 h-44 bg-blue-800 absolute z-10"></div>-->
-                        <img class="n:w-20 lg:w-40 h-auto rounded-full shadow-2xl relative z-20" [lazyLoad]="'assets/img/profiles/Miguel Angel.webp'" alt="Miguel Angel Rodriguez profile pic">
+                        <img class="n:w-20 lg:w-40 h-auto rounded-full shadow-2xl relative z-20" [src]="'assets/img/profiles/Miguel Angel.webp'" alt="Miguel Angel Rodriguez profile pic">
                     </div>
                     <div class="bubble-box rounded-tl-2xl rounded-tr-2xl rounded-br-2xl p-4 shadow-2xl">
                         <h2 class="n:text-xl lg:text-2xl">{{ 'home.subTitle' | translate }}</h2>
@@ -31,10 +31,10 @@
                     <mat-icon>keyboard_arrow_right</mat-icon>
                 </button> -->
                 <div class="mt-10 n:hidden lg:block">
-                    <img class="animate-bounce cursor-pointer text-2.5xl mr-auto ml-auto" [ngClass]="(_localStorageService.appData$ | async)!.theme.isDark ? '' : 'text-black'" [lazyLoad]="'assets/img/icons/white-down-arrow.svg'">
+                    <img class="animate-bounce cursor-pointer text-2.5xl mr-auto ml-auto" [ngClass]="(_localStorageService.appData$ | async)!.theme.isDark ? '' : 'text-black'" [src]="'assets/img/icons/white-down-arrow.svg'">
                 </div>
             </div>
-            <div class="lg:border-l-2 n:pl-0 lg:pl-24 n:border-l-0" fxFlex.lt-lg="100%" fxFlex.gt-lg="40%" [ngClass]="(_localStorageService.appData$ | async)!.theme.isDark ? '' : 'border-black'">
+            <div class="lg:border-l-2 n:pl-0 lg:pl-24 n:border-l-0" fxFlex.lt-md="100%" fxFlex.gt-lg="40%" [ngClass]="(_localStorageService.appData$ | async)!.theme.isDark ? '' : 'border-black'">
                 <skills></skills>
             </div>
     </div>
