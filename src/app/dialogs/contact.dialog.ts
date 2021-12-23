@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ContactMeForm } from '../models/forms/contact-me.model';
 import { Location } from '@angular/common';
+import { ContactFormService } from '../services/contact-form/contact-form.service';
 
 @Component({
     selector: 'contact-dialog',
@@ -15,11 +16,12 @@ export class ContactDialog implements OnInit {
 
     constructor(@Inject(MAT_DIALOG_DATA) public data: { name: string },
         public dialogRef: MatDialogRef<ContactDialog>,
-        private location: Location) { }
+        private location: Location,
+        private contactFormService: ContactFormService) { }
 
     ngOnInit() {
         this.contactForm = new FormGroup({
-            fullname: new FormControl('', [Validators.required, Validators.maxLength(60)]),
+            full_name: new FormControl('', [Validators.required, Validators.maxLength(60)]),
             email: new FormControl('', [Validators.required, Validators.email]),
             message: new FormControl('', [Validators.required, Validators.maxLength(1000)])
         });
@@ -49,14 +51,23 @@ export class ContactDialog implements OnInit {
 
     private executeContactFormCreation = (contactFormValue: ContactMeForm) => {
         const contactForm: ContactMeForm = {
-          fullname: contactFormValue.fullname,
-          email: contactFormValue.email,
-          message: contactFormValue.message
+            full_name: contactFormValue.full_name,
+            email: contactFormValue.email,
+            message: contactFormValue.message
         }
 
         this.isLoading = true;
 
-        // TODO Make API call here
+        this.contactFormService.createForm(contactForm)
+            .subscribe(response => {
+                console.log(response)
+                this.isLoading = false;
+            },
+            (error => {
+              console.log(error);
+              this.isLoading = false;
+            }));
+
      
         /* let apiUrl = 'api/owner';
         this.repository.create(apiUrl, owner)

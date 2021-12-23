@@ -17,16 +17,16 @@
         <div>
             <form [formGroup]="contactForm" autocomplete="off" novalidate (ngSubmit)="createContact(contactForm.value)" 
                 fxLayout="column wrap" fxLayoutAlign="center center" fxLayoutGap="10px">
-                <!-- Fullname form field -->
+                <!-- full_name form field -->
                 <mat-form-field class="w-full">
-                    <mat-label align="end">{{ 'contact.label.fullname' | translate }}</mat-label>
-                    <input matInput class="contact-input" type="text" [placeholder]="'contact.placeholder.fullname' | translate" formControlName="fullname" id="fullname">
-                    <button *ngIf="contactForm.value.fullname" matSuffix mat-icon-button aria-label="Clear" (click)="contactForm.controls['fullname'].reset()">
+                    <mat-label align="end">{{ 'contact.label.full_name' | translate }}</mat-label>
+                    <input matInput class="contact-input" type="text" [placeholder]="'contact.placeholder.full_name' | translate" formControlName="full_name" id="full_name">
+                    <button *ngIf="contactForm.value.full_name" matSuffix mat-icon-button aria-label="Clear" (click)="contactForm.controls['full_name'].reset()">
                         <mat-icon>close</mat-icon>
                     </button>
-                    <mat-hint align="end">{{ 'contact.hint.fullname' | translate }}</mat-hint>
-                    <mat-error *ngIf="hasError('fullname', 'required')">{{ 'contact.errors.required.fullname' | translate }}</mat-error>
-                    <mat-error *ngIf="hasError('fullname', 'maxlength')">{{ 'contact.errors.length.fullname' | translate }}</mat-error>
+                    <mat-hint align="end">{{ 'contact.hint.full_name' | translate }}</mat-hint>
+                    <mat-error *ngIf="hasError('full_name', 'required')">{{ 'contact.errors.required.full_name' | translate }}</mat-error>
+                    <mat-error *ngIf="hasError('full_name', 'maxlength')">{{ 'contact.errors.length.full_name' | translate }}</mat-error>
                 </mat-form-field>
 
                 <!-- Email form field -->

@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { SwiperModule } from 'swiper/angular';
 //import { NgcCookieConsentModule } from 'ngx-cookieconsent';
@@ -40,6 +40,7 @@ import { FooterComponent } from './footer/footer.component';
 import { LastActionComponent } from './last-action/last-action.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
+import { ApiKeyInterceptor } from './interceptors/api-key.interceptor';
 
 @NgModule({
   declarations: [
@@ -95,6 +96,7 @@ import { environment } from '../environments/environment';
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
+    HttpClientModule,
     //NgcCookieConsentModule.forRoot(cookieConfig)
   ],
   providers: [
@@ -103,6 +105,11 @@ import { environment } from '../environments/environment';
       useValue: {}
     },
     ContactDialog,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ApiKeyInterceptor,
+      multi: true,
+    }
   ],
   bootstrap: [AppComponent]
 })
