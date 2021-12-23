@@ -4,7 +4,10 @@
 
 export const environment = {
   production: false,
-  cookieDomain: 'localhost'
+  cookieDomain: 'localhost',
+  backendHost: "http://localhost:4000",
+  backendVersion: "/v1",
+  apiKey: 'test',
 };
 
 /*

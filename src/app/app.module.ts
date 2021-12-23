@@ -4,7 +4,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
-import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { HttpClient, HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { SwiperModule } from 'swiper/angular';
 //import { NgcCookieConsentModule } from 'ngx-cookieconsent';
@@ -15,6 +15,7 @@ import { ReactiveFormsModule, FormsModule } from '@angular/forms';
 import { TeximateModule } from 'ngx-teximate';
 import { MaterialModule } from 'src/config/material.module';
 import { NguiInviewModule } from '@ngui/common';
+import { LazyLoadImageModule } from 'ng-lazyload-image';
 
 import { AppComponent } from './app.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
@@ -37,6 +38,9 @@ import { AboutMeComponent } from './about-me/about-me.component';
 import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 import { FooterComponent } from './footer/footer.component';
 import { LastActionComponent } from './last-action/last-action.component';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
+import { ApiKeyInterceptor } from './interceptors/api-key.interceptor';
 
 @NgModule({
   declarations: [
@@ -84,7 +88,15 @@ import { LastActionComponent } from './last-action/last-action.component';
     SwiperModule,
     BrowserAnimationsModule,
     TeximateModule,
-    NguiInviewModule
+    NguiInviewModule,
+    LazyLoadImageModule,
+    ServiceWorkerModule.register('ngsw-worker.js', {
+      enabled: environment.production,
+      // Register the ServiceWorker as soon as the app is stable
+      // or after 30 seconds (whichever comes first).
+      registrationStrategy: 'registerWhenStable:30000'
+    }),
+    HttpClientModule,
     //NgcCookieConsentModule.forRoot(cookieConfig)
   ],
   providers: [
@@ -93,6 +105,11 @@ import { LastActionComponent } from './last-action/last-action.component';
       useValue: {}
     },
     ContactDialog,
+    {
+      provide: HTTP_INTERCEPTORS,
+      useClass: ApiKeyInterceptor,
+      multi: true,
+    }
   ],
   bootstrap: [AppComponent]
 })

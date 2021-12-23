@@ -1,5 +1,5 @@
 export interface ContactMeForm {
-    fullname: string;
+    full_name: string;
     email: string;
     message: string;
 }
