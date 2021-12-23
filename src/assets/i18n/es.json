@@ -139,5 +139,10 @@
         "deny": "Decline",
         "link": "Learn more",
         "policy": "Cookie Policy"
+    },
+    "response": {
+        "contactForm": {
+            "created": "Formulario envíado con éxito."
+        }
     }
 }

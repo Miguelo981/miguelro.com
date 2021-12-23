@@ -130,5 +130,10 @@
         "copyright": "©",
         "brandName": "Miguelodev",
         "rights": "All rights reserved"
+    },
+    "response": {
+        "contactForm": {
+            "created": "Form successfully sent."
+        }
     }
 }
