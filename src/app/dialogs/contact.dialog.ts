@@ -3,6 +3,7 @@ import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { MatDialogRef, MAT_DIALOG_DATA } from '@angular/material/dialog';
 import { ContactMeForm } from '../models/forms/contact-me.model';
 import { Location } from '@angular/common';
+import { ContactFormService } from '../services/contact-form/contact-form.service';
 
 @Component({
     selector: 'contact-dialog',
@@ -15,7 +16,8 @@ export class ContactDialog implements OnInit {
 
     constructor(@Inject(MAT_DIALOG_DATA) public data: { name: string },
         public dialogRef: MatDialogRef<ContactDialog>,
-        private location: Location) { }
+        private location: Location,
+        private contactFormService: ContactFormService) { }
 
     ngOnInit() {
         this.contactForm = new FormGroup({
@@ -55,6 +57,8 @@ export class ContactDialog implements OnInit {
         }
 
         this.isLoading = true;
+
+        this.contactFormService.createForm(contactForm)
 
         // TODO Make API call here
      

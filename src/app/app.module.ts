@@ -95,6 +95,7 @@ import { environment } from '../environments/environment';
       // or after 30 seconds (whichever comes first).
       registrationStrategy: 'registerWhenStable:30000'
     }),
+    HttpClientModule,
     //NgcCookieConsentModule.forRoot(cookieConfig)
   ],
   providers: [

@@ -1,0 +1,2 @@
+export const apiHost =/*  process.env.API_HOST || */ /* "http://api.miguelo.dev" */ "http://212.227.149.142:4000" //"http://localhost:4000"
+export const apiVersion = /* process.env.API_VERSION || */ "/v1"
