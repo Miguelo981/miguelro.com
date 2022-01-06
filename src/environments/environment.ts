@@ -5,7 +5,7 @@
 export const environment = {
   production: false,
   cookieDomain: 'localhost',
-  backendHost: "http://localhost:4000",
+  backendHost: "https://api.miguelo.dev",//"http://localhost:4000",
   backendVersion: "/v1",
   apiKey: 'test',
 };
