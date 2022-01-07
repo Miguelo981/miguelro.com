@@ -1,17 +1,17 @@
-<div fxLayout="column" class="contact-dialog-card p-4 aspect-square relative rounded-xl">
+<div fxLayout="column" class="n:w-full lg:w-120 p-4 aspect-square relative rounded-xl">
     <div *ngIf="isLoading" class="lds-dual-ring absolute top-1/2 left-1/2" style="transform: translate(-50%,-50%);"></div>
     <div [ngClass]="isLoading ? 'blur-sm' : ''">
         <!-- Dialog header -->
         <div class="flex justify-between mb-4 items-center">
             <div class="mr-auto">
-                <h2 class="font-semibold text-3xl">{{ 'navbar.routes.contactMe' | translate }}</h2>
+                <h2 class="font-semibold n:text-xl lg:text-3xl">{{ 'navbar.routes.contactMe' | translate }}</h2>
             </div>
             <div class="ml-auto">
                 <span class="cursor-pointer hover:text-blue-600" (click)="onNoClick()">{{ 'contact.buttons.close' | translate }}</span>
             </div>
         </div>
         <div class="mb-8">
-            <p>{{ 'contact.description' | translate }}</p>
+            <p class="n:text-xs lg:text-base">{{ 'contact.description' | translate }}</p>
         </div>
         <!-- Contact form -->
         <div>

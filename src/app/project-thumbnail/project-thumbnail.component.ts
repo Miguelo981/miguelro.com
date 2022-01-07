@@ -1,6 +1,8 @@
 import { Component, Input, OnInit, ViewChild } from '@angular/core';
+import { breakPoints } from 'src/config/breakpoints.config';
 import SwiperCore, { Autoplay, EffectFade, Pagination, SwiperOptions } from 'swiper';
 import { ProjectThumbnail } from '../models/project-thumbnail.model';
+import { LocalStorageService } from '../services/local-storage.service';
 
 SwiperCore.use([EffectFade, Pagination, Autoplay]);
 
@@ -24,8 +26,9 @@ export class ProjectThumbnailComponent implements OnInit {
     scrollbar: false,
     speed: 500
   };
+  md = breakPoints.md;
 
-  constructor() { }
+  constructor(public _localStorageService: LocalStorageService) { }
 
   ngOnInit(): void {
   }

@@ -2,5 +2,10 @@
     <ng-container [share-comp]="landing"></ng-container>
 </nav-bar>-->
 <loading [show]="isLoading"></loading>
-<content-swiper></content-swiper>
+<content-swiper *ngIf="(_localStorageService.appData$ | async)!.layout.innerWidth >= md"></content-swiper>
+<div *ngIf="(_localStorageService.appData$ | async)!.layout.innerWidth < md">
+    <app-home></app-home>
+    <about-me></about-me>
+    <services-component></services-component>
+</div>
 <!-- Footer -->
