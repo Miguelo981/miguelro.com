@@ -73,7 +73,8 @@ export class ContactDialog implements OnInit {
             .subscribe(response => {
                 this.translateService.get(response.i18n)
                     .subscribe(lang => {
-                        this.openSnackBar(lang)
+                        this.openSnackBar(lang);
+                        this.onNoClick();
                     })
                 this.isLoading = false;
             });
