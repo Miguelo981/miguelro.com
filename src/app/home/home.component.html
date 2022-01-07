@@ -34,13 +34,13 @@
             <div class="mb-6">
                 <p class="n:text-sm lg:text-xl whitespace-preline font-extralight">{{ 'home.description' | translate }}</p>
             </div>
-            <div class="flex n:flex-col lg:flex-row mb-12 n:space-y-5 lg:space-y-0 lg:space-x-5 items-center">
+            <div class="flex n:flex-col sm:flex-row mb-12 n:space-y-5 sm:space-y-0 sm:space-x-5 items-center">
                 <!--<button mat-raised-button class="m-grad-btn-1 w-56 h-14">
                     <span class="text-2.5xl p-4 text-white">{{ 'contact.me' | translate }}</span>
                 </button>-->
                 <contact-me [btnClass]="'w-56 h-14'" [txtClass]="'n:text-2xl lg:text-2.5xl p-4'"></contact-me>
                 <a href="https://t.me/miguelodev" target="_blank">
-                    <button mat-raised-button class="bg-m-green hover:bg-opacity-75 h-14">
+                    <button mat-raised-button class="bg-m-green hover:bg-opacity-75 h-14 n:w-1/3-screen ns:w-half-screen sm:w-full">
                         <span class="n:text-1.5xl lg:text-2xl p-4 font-semibold text-gray-900">{{ 'contact.chat' | translate }}</span>
                         <mat-icon>telegram</mat-icon>
                     </button>
