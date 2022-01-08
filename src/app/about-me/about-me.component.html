@@ -1,4 +1,4 @@
-<div class="min-h-screen flex flex-col justify-center items-center bg-no-repeat bg-cover n:space-y-2 lg:space-y-16" [style.background-image]="'url(./assets/img/bgs/pattern-1.webp)'">
+<div id="about-me" class="min-h-screen flex flex-col justify-center items-center bg-no-repeat bg-cover n:space-y-2 lg:space-y-16" [style.background-image]="'url(./assets/img/bgs/waves-pattern.webp)'">
     <div fxLayout.lt-md="column" fxLayout.gt-lg="row" class="justify-center w-11/12" (nguiInview)="isShow(true)" (nguiOutview)="isShow(false)">
             <div class="n:pr-0 lg:pr-24 justify-end" fxLayout="column" fxFlex.lt-md="100%" fxFlex.gt-lg="40%" *ngIf="show" [@fadeInLeftOnEnter]>
                 <h2 class="font-bold n:text-3xl lg:text-5xl mr-auto n:mb-4 lg: mb-10">{{ 'aboutMe.title' | translate }}</h2>
@@ -22,7 +22,7 @@
                     <h2><span class="n:text-xl lg:text-3xl">{{ 'aboutMe.socialTitle' | translate }}:</span></h2>
                     <div class="flex flex-row space-x-8">
                         <div *ngFor="let social of socialMedias">
-                            <a [href]="social.href" target="_blank" class="pi n:text-2xl lg:text-4.5xl text-gray-900 transition ease-in hover:scale-125 duration-200" [ngClass]="'pi-' + social.icon"></a>
+                            <a [href]="social.href" target="_blank" class="pi n:text-2xl lg:text-4.5xl text-m-green transition ease-in hover:scale-125 duration-200" [ngClass]="'pi-' + social.icon"></a>
                         </div>
                     </div>
                 </div>

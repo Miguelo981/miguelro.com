@@ -17,7 +17,7 @@ export class ScrollToTopComponent implements OnInit {
 
   //TODO Check If I am in different slide than home
 
-  onWindowScroll(): void {
+  /* onWindowScroll(): void {
       if (window.pageYOffset || this.document.documentElement.scrollTop || this.document.body.scrollTop > 100) {
           this.windowScrolled = true;
       }
@@ -33,7 +33,7 @@ export class ScrollToTopComponent implements OnInit {
               window.scrollTo(0, currentScroll - (currentScroll / 8));
           }
       })();
-  }
+  } */
 
   ngOnInit(): void {
   }

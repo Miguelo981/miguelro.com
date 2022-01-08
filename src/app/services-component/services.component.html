@@ -1,18 +1,18 @@
 
-<div class="flex flex-col h-screen justify-center items-center bg-no-repeat bg-cover relative text-white" [style.background-image]="'url(./assets/img/bgs/pattern-5.webp)'" (nguiInview)="isShow(true)" (nguiOutview)="isShow(false)">
+<div class="flex flex-col h-screen justify-center items-center bg-no-repeat bg-cover relative text-white" (nguiInview)="isShow(true)" (nguiOutview)="isShow(false)"> <!--[style.background-image]="'url(./assets/img/bgs/pattern-5.webp)'"-->
     <div class="bg-black bg-opacity-50 absolute h-screen w-full z-10" *ngIf="show" [@fadeInOnEnter] [@fadeOutOnLeave]></div>
     <div fxLayout="column" fxFlex="85%" class="relative justify-center z-20">
         <div class="n:mb-6 lg:mb-12">
             <h2 class="n:text-3xl md:text-4.5xl lg:text-6xl text-center font-bold">{{ 'services.title' | translate }}</h2>
         </div>
         <div fxLayout="row wrap" class="gap-5 justify-center" *ngIf="show && (_localStorageService.appData$ | async)!.layout.innerWidth >= md" [@fadeInUpOnEnter] [@fadeOutOnLeave]>
-            <div *ngFor="let serviceBox of services" fxFlex="30%">
-                <div class="flex flex-col justify-center items-center bubble-box rounded-2xl shadow-md p-6 border-transparent border-2 transition ease-in hover:shadow-blue-800 hover:border-2 hover:border-blue-800 duration-400">
+            <div *ngFor="let serviceBox of services" fxFlex="25%">
+                <div class="flex flex-col justify-center items-center bubble-box rounded-2xl shadow-md p-6 border-transparent border-2 transition ease-in hover:shadow-m-green hover:border-2 hover:border-m-green duration-400">
                     <div class="rounded-full bg-gray-100 bg-opacity-50 n:w-10 lg:w-20 n:h-10 lg:h-20 flex items-center justify-center mb-8">
-                        <div class="pi n:text-xl md:text-2xl lg:text-4.5xl text-blue-800 mb-8 mt-8" [ngClass]="'pi-' + serviceBox.icon"></div>
+                        <div class="pi n:text-xl md:text-2xl lg:text-4.5xl text-m-green mb-8 mt-8" [ngClass]="'pi-' + serviceBox.icon"></div>
                     </div>
                     <h3 class="n:text-lg md:text-xl lg:text-2xl font-semibold mb-4">{{ serviceBox.title | translate }}</h3>
-                    <p class="n:text-xs md:text-tiny lg:text-base font-light text-center">{{ serviceBox.description | translate }}</p>
+                    <p class="n:text-xs lg:text-base font-light text-center">{{ serviceBox.description | translate }}</p>
                 </div>
             </div>
         </div>
@@ -22,7 +22,7 @@
                     <div fxLayout="column" class="gap-5 space-y-10 justify-center items-center">
                         <div *ngFor="let i of [0, 1]" class="flex flex-col w-80 justify-center items-center bubble-box rounded-2xl shadow-md p-6 border-transparent border-2 transition ease-in hover:shadow-blue-800 hover:border-2 hover:border-blue-800 duration-400">
                             <div class="rounded-full bg-gray-100 bg-opacity-50 n:w-10 lg:w-20 n:h-10 lg:h-20 flex items-center justify-center mb-8">
-                                <div class="pi n:text-xl md:text-2xl lg:text-4.5xl text-blue-800 mb-8 mt-8" [ngClass]="'pi-' + services[col + i].icon"></div>
+                                <div class="pi n:text-xl md:text-2xl lg:text-4.5xl text-m-green mb-8 mt-8" [ngClass]="'pi-' + services[col + i].icon"></div>
                             </div>
                             <h3 class="n:text-lg md:text-xl lg:text-2xl font-semibold mb-4">{{ services[col + i].title | translate }}</h3>
                             <p class="n:text-xs md:text-tiny lg:text-base font-light text-center">{{ services[col + i].description | translate }}</p>

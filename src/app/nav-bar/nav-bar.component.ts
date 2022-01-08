@@ -1,4 +1,6 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { NavbarScrollService } from '../services/navbar-scroll.service';
 
 export interface MenuItem {
@@ -16,15 +18,15 @@ export interface MenuItem {
 })
 export class NavBarComponent implements OnInit {
 
-  constructor(private navbarScrollService: NavbarScrollService) {
+  constructor(private navbarScrollService: NavbarScrollService, private scroller: ViewportScroller, private router: Router) {
       
   }
 
   menuItems = [
     {
-      label: "navbar.routes.home",
+      label: "navbar.routes.aboutMe",
       icon: "help",
-      scrollToId: "home",
+      scrollToId: "about-me",
       href: "#",
       isButton: false,
       showOnMobile: true,
@@ -97,13 +99,17 @@ export class NavBarComponent implements OnInit {
     },
   ];
 
-  ngOnInit() {
-   }
+  ngOnInit() {}
   
   swipe(index: number, delay?: number) {
     this.navbarScrollService.changeScrollIndex(index, delay);
 
     //this.sharedDirective.shared.swiperController.swiperRef.slideTo(index, delay || 500)
+  }
+
+  scrollTo(id: string) {
+    //this.scroller.scrollToAnchor(id);
+    this.router.navigate([], { fragment: id });
   }
 
 }

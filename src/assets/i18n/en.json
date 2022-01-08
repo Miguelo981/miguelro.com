@@ -17,7 +17,7 @@
     },
     "navbar": {
         "routes": {
-            "home": "About me",
+            "aboutMe": "About me",
             "services": "Services",
             "projects": "Projects",
             "contactMe": "Contact me",
