@@ -2,7 +2,7 @@
     <div *ngIf="show" class="flex flex-col justify-start h-full n:space-y-2 lg:space-y-6" [@fadeInRightOnEnter]>
         <h2 class="n:text-3xl lg:text-5xl font-bold mr-auto">{{ 'skills.title' | translate }}</h2>
         <div class="flex flex-col justify-start">
-        <div *ngFor="let skillList of skillList">
+        <div *ngFor="let skillList of skillList" class="mb-6">
             <h3 class="n:text-xl lg:text-3xl font-medium n:mb-0 lg:mb-4">{{ skillList.title | translate }}:</h3>
             <div class="flex flex-wrap n:gap-2 lg:gap-8 items-center mb-4">
                 <div *ngFor="let skill of skillList.skills; let i = index;">
@@ -10,5 +10,10 @@
                 </div>
             </div>
         </div>
+        <h3 class="mr-auto ml-auto mb-8 text-2xl">{{ 'aboutMe.projects' | translate }}</h3>
+        <!-- <div class="mt-10 n:hidden lg:block flex flex-col justify-items-center">
+            
+        </div> -->
+        <img class="animate-bounce cursor-pointer text-2.5xl mr-auto ml-auto" (click)="swipe(4)" [ngClass]="(_localStorageService.appData$ | async)!.theme.isDark ? '' : 'text-black'" [src]="'assets/img/icons/white-down-arrow.svg'">
     </div>
 </div>
