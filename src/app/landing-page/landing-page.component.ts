@@ -58,7 +58,7 @@ export class LandingPageComponent implements OnInit, SEOMetaTags {
     this.translate.get('meta')
       .pipe(first())
       .subscribe((data:any)=> {
-        this.titleService.setTitle('Miguelo Dev'); // Route data
+        this.titleService.setTitle(data.title); // Route data
 
         this.metaTagService.addTags([
           { name: 'keywords', content: data.keywords.join(",") },
