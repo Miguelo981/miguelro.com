@@ -35,6 +35,11 @@ export class AboutMeComponent implements OnInit {
   constructor(public _localStorageService: LocalStorageService) { }
 
   ngOnInit(): void {
+    /* document.getElementById("about-me")!.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest"
+    }); */
   }
 
   isShow(state: boolean) {

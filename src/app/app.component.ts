@@ -19,7 +19,7 @@ export class AppComponent {
   @HostBinding('class') className = '';
 
   innerWidth: number;
-  title = 'miguelo-platform';
+  title = 'Miguelo DEV';
   selectedLang = defaultLanguage;
   
 

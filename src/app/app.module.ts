@@ -35,7 +35,6 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { SkillsComponent } from './skills/skills.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { AboutMeComponent } from './about-me/about-me.component';
-import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 import { FooterComponent } from './footer/footer.component';
 import { LastActionComponent } from './last-action/last-action.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
@@ -63,7 +62,6 @@ import { ApiKeyInterceptor } from './interceptors/api-key.interceptor';
     SkillsComponent,
     NewsletterComponent,
     AboutMeComponent,
-    ScrollToTopComponent,
     FooterComponent,
     LastActionComponent,
   ],

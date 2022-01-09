@@ -5,7 +5,7 @@
         <mat-icon *ngIf="isVideoPlay">play_arrow</mat-icon>
     </button>-->
     <!--<div class="bg-no-repeat bg-cover absolute h-screen w-full z-30" [style.background-image]="'url(./assets/img/bgs/pattern-4.webp)'"></div>-->
-    <div class="bg-black bg-opacity-70 absolute h-screen w-screen z-20" [@fadeInOnEnter]></div>
+    <div class="bg-black bg-opacity-80 absolute h-screen w-screen z-20" [@fadeInOnEnter]></div>
     <video autoplay muted loop id="bg-home-video" class="absolute z-10" #bgVideo>
         <source [src]="backgroundVideoSrc" type="video/mp4">
         Your browser does not support HTML5 video.
@@ -21,15 +21,15 @@
     </div>-->
     <div class="relative" fxLayout fxFlex="85%" (nguiInview)="isShow(true)" (nguiOutview)="isShow(false)">
         <div fxLayout="column" fxFlex.gt-md="50%" fxFlex.lt-md="100%" class="mt-auto n:mb-0 lg:mb-24 mr-auto z-30 text-left text-white" *ngIf="show" [@fadeInLeftOnEnter]>
-            <div class="mb-2 flex items-center space-x-2">
-                <h1><span class="n:text-6xl lg:text-8xl font-bold">Miguel</span></h1>
+            <div class="flex items-center space-x-2">
+                <h1 class="n:text-6xl lg:text-8xl font-bold">Miguel</h1>
                 <button mat-mini-fab class="text-white top-2.5" [ngStyle]="{transform: 'scale(1.3)'}" id="play-pause" (click)="setVideoState(!isVideoPlay)">
                     <mat-icon *ngIf="!isVideoPlay">pause</mat-icon>
                     <mat-icon *ngIf="isVideoPlay">play_arrow</mat-icon>
                 </button>
             </div>
-            <div class="mb-6">
-                <h2><span class="n:text-xl lg:text-3xl">{{ 'home.subTitle' | translate }}</span></h2>
+            <div class="mb-2 n:w-full lg:w-2/3">
+                <h2 class="n:text-xl lg:text-5xl font-bold leading-tight">{{ 'home.subTitle' | translate }}</h2>
             </div>
             <div class="mb-6">
                 <p class="n:text-sm lg:text-xl whitespace-preline font-extralight">{{ 'home.description' | translate }}</p>

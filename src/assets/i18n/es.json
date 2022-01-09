@@ -1,7 +1,10 @@
 {
     "meta": {
+        "title": "▷ Experto En Desarrollo Web En España | Miguelo DEV",
         "description": "",
-        "keywords": ["miguelo desarrollador"]
+        "keywords": [
+            "miguelo desarrollador"
+        ]
     },
     "utils": {
         "knowMore": "Saber más",
@@ -17,7 +20,7 @@
     },
     "navbar": {
         "routes": {
-            "home": "Sobre mi",
+            "aboutMe": "Sobre mi",
             "services": "Servicios",
             "projects": "Proyectos",
             "contactMe": "Contáctame",
@@ -29,7 +32,15 @@
     },
     "aboutMe": {
         "title": "Sobre mi",
-        "socialTitle": "Mis redes sociales"
+        "subTitle": "¿Quienes Somos?",
+        "socialTitle": "Mis redes sociales",
+        "summary1": "Mi nombre es Miguel Ángel y mi objetivo es ayudar a las marcas a establecer una presencia en línea para que puedan ",
+        "summary2": "llegar de manera efectiva a su audiencia y convertir nuevos clientes.",
+        "description1": "Como programador, me especializo en la implementación de infraestructuras y desarrollo web, como landing pages o toda clase de automatización de procesos.\n\nHe programado de todo, desde aplicaciones web completas hasta exchanges descentralizados en tiempo record. Nuestra gran atención a los detalles  ",
+        "description2": "garantiza que los productos estén optimizados para el rendimiento y la usabilidad en una multitud de dispositivos",
+        "description3": " utilizados por los consumidores en la actualidad.",
+        "description4": "¡Charlemos sobre sus necesidades y veamos si podemos ayudarlo a digitalizar tu negocio!",
+        "projects": "Algunos de mis Trabajos"
     },
     "services": {
         "title": "Servicios",
@@ -90,7 +101,7 @@
     "contact": {
         "chat": "Chatea conmigo",
         "me": "Contáctame",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "description": "Estamos disponibles de lunes a sábado. Para los mensajes recibidos fuera del horario laboral, espere una respuesta cuando se reanude el horario laboral normal.",
         "label": {
             "fullname": "Nombre completo",
             "email": "Email",
@@ -123,8 +134,8 @@
     },
     "home": {
         "title": "Miguelo",
-        "subTitle": "Webs rápidas y límpias",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        "subTitle": "DIGITALIZAMOS TU NEGOCIO DESDE 0",
+        "description": "Nos especializamos en crear y maquetar sitios web que se ven geniales, cargan rápido y son fáciles de administrar, lo que atrae a los usuarios con diseños limpios, modernos y adaptables a cualquier dispositivo."
     },
     "footer": {
         "copyright": "©",

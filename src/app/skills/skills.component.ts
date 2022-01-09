@@ -4,6 +4,8 @@ import { Observable, Subject } from 'rxjs';
 import { delay, first } from 'rxjs/operators';
 import { mockedSkillList } from 'src/mocks/skills/skills.mock';
 import { Skill, SkillList } from '../models/skill.model';
+import { LocalStorageService } from '../services/local-storage.service';
+import { NavbarScrollService } from '../services/navbar-scroll.service';
 
 
 @Component({
@@ -19,7 +21,8 @@ export class SkillsComponent implements OnInit {
   skillList: SkillList[] = mockedSkillList;
   show = false;
 
-  constructor() { }
+  constructor(public _localStorageService: LocalStorageService,
+    private navbarScrollService: NavbarScrollService) { }
 
   ngOnInit(): void {
   }
@@ -50,5 +53,9 @@ export class SkillsComponent implements OnInit {
 
   isShow(state: boolean) {
     this.show = state;
+  }
+
+  swipe(index) {
+    this.navbarScrollService.changeScrollIndex(index, 750);
   }
 }

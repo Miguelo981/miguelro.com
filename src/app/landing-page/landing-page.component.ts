@@ -6,6 +6,8 @@ import * as moment from 'moment';
 import { TranslatePipe, TranslateService } from '@ngx-translate/core';
 import { first } from 'rxjs/operators';
 import { CanonicalService } from '../services/canonical.service';
+import { LocalStorageService } from '../services/local-storage.service';
+import { breakPoints } from 'src/config/breakpoints.config';
 
 @Component({
   selector: 'landing-page',
@@ -14,12 +16,14 @@ import { CanonicalService } from '../services/canonical.service';
 })
 export class LandingPageComponent implements OnInit, SEOMetaTags {
   isLoading = true;
+  md = breakPoints.md;
 
   constructor(private router: Router,
     private translate: TranslateService,
     private canonicalService: CanonicalService,
     private metaTagService: Meta,
-    private titleService: Title) {
+    private titleService: Title,
+    public _localStorageService: LocalStorageService) {
     
       this.insertSEOMetaTags();
       this.canonicalService.setCanonicalURL();
@@ -54,7 +58,7 @@ export class LandingPageComponent implements OnInit, SEOMetaTags {
     this.translate.get('meta')
       .pipe(first())
       .subscribe((data:any)=> {
-        this.titleService.setTitle('Miguelo Dev'); // Route data
+        this.titleService.setTitle(data.title); // Route data
 
         this.metaTagService.addTags([
           { name: 'keywords', content: data.keywords.join(",") },

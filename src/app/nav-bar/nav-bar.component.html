@@ -8,16 +8,16 @@
       <span class="example-spacer"></span>
 
       <!-- Dark mode selector -->
-      <div class="items-center ml-auto">
+      <div class="items-center ml-auto mr-4">
         <!--<mat-slide-toggle [formControl]="toggleControl" class="mr-8">
         </mat-slide-toggle><mat-icon>bedtime</mat-icon>-->
         <dark-toggler></dark-toggler>
       </div>
 
       <!-- Menu options -->
-      <div fxShow="true" class="items-center" fxHide.lt-md="true">
+      <div fxShow="true" class="items-center space-x-5" fxHide.lt-md="true">
         <ng-container *ngFor="let item of menuItems; let i = index">
-          <a mat-button *ngIf="!item.isButton" (click)="swipe(i+1)" class="text-white text-xl text-shadow-xl hover:text-blue-600">{{ item.label | translate }}</a>
+          <a *ngIf="!item.isButton" (click)="swipe(i+1)" class="text-white text-xl text-shadow-xl hover:text-m-green cursor-pointer">{{ item.label | translate }}</a>
           <contact-me *ngIf="item.isButton"></contact-me>
         </ng-container>
       </div>
@@ -37,7 +37,7 @@
       <!-- Responsive Menu bar -->
       <mat-menu #dropMenu="matMenu">
         <ng-container *ngFor="let item of menuItems">
-            <button mat-menu-item>
+            <button mat-menu-item (click)="scrollTo(item.scrollToId)">
                 <mat-icon class="mr">{{item.icon}}</mat-icon>
                 {{item.label | translate}}
             </button>

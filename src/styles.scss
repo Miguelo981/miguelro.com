@@ -62,6 +62,20 @@ body {
   color: $app-blue;
 }
 
+.text-m-green {
+  --tw-bg-opacity: 1;
+  color: rgba( $app-green, var(--tw-bg-opacity));
+}
+
+.border-m-green {
+  border-color: $app-green;
+}
+
+.shadow-m-green {
+  --tw-bg-opacity: 0.1;
+  box-shadow: 0 25px 25px -12px rgb( $app-green, 0.25);
+}
+
 .bg-m-green {
   --tw-bg-opacity: 1;
   background-color: rgba( $app-green, var(--tw-bg-opacity));
