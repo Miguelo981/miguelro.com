@@ -6,6 +6,7 @@ import { ProjectListComponent } from './project-list/project-list.component';
 import { ProjectPageComponent } from './project-page/project-page.component';
 
 const routes: Routes = [
+  { path: '', redirectTo: '/es', pathMatch: 'full' },
   { path: ':lang', component: LandingPageComponent },
   { path: ':lang/project-list', component: ProjectListComponent },
   { path: ':lang/project/:id', component: ProjectPageComponent },

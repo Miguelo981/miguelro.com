@@ -19,7 +19,8 @@
         "knowMore": "Saber más",
         "cancel": "Cancelar",
         "reset": "Resturar",
-        "comingsoon": "Próximamente"
+        "comingsoon": "Próximamente",
+        "goBack": "Volver"
     },
     "loading": {
         "text": "Cargando..."
