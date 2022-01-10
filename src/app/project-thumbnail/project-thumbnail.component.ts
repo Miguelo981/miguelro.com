@@ -13,6 +13,7 @@ SwiperCore.use([EffectFade, Pagination, Autoplay]);
 })
 export class ProjectThumbnailComponent implements OnInit {
   @Input() projectThumbnail: ProjectThumbnail;
+  @Input() goBack: boolean = false;
   @ViewChild('projectSwiperController') private projectSwiperController;
 
   config: SwiperOptions = {

@@ -9,6 +9,7 @@ import { first, skip } from 'rxjs/operators';
 import { defaultLocalStorage } from 'src/config/storage.config';
 import { googleAnalytiscscripts } from 'src/config/google/google-analytics.config';
 import { environment } from 'src/environments/environment';
+import { ActivatedRoute, Event, NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -21,16 +22,18 @@ export class AppComponent {
   innerWidth: number;
   title = 'Miguelo DEV';
   selectedLang = defaultLanguage;
-  
+  isLoading = false;
 
   constructor(@Inject(DOCUMENT) private document: Document,
     private translateService: TranslateService,
     private darkModeService: DarkmodeService,
     private _localStorageService: LocalStorageService,
     private location: Location,
+    private router: Router,
     /* private ccService: NgcCookieConsentService */) {
     this.insertGoogleAnalyticsScript();
     this._localStorageService.loadInfo();
+
     this._localStorageService.appData$
       .pipe(first())
       .subscribe(app => {
@@ -65,6 +68,19 @@ export class AppComponent {
             });
           });
       });
+
+      this.router.events.subscribe((event: Event) => {
+        if (event instanceof NavigationStart) {
+          this.isLoading = true;
+        }
+    
+        if (event instanceof NavigationError || event instanceof NavigationCancel || event instanceof NavigationEnd) {
+          /* new Promise( () => setTimeout(() => {
+            this.isLoading = false;
+          }, 2000) ); */
+          this.isLoading = false;
+        }
+      })
 
     /* this.translateService
       .get(['cookie.header', 'cookie.message', 'cookie.dismiss', 'cookie.allow', 'cookie.deny', 'cookie.link', 'cookie.policy'])

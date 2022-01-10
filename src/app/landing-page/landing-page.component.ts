@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Meta, Title } from '@angular/platform-browser';
-import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router } from '@angular/router';
+import { ActivatedRoute, NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router } from '@angular/router';
 import { SEOMetaTags } from '../models/interfaces/seo-meta-tags.interface';
 import * as moment from 'moment';
 import { TranslateService } from '@ngx-translate/core';
@@ -23,7 +23,8 @@ export class LandingPageComponent implements OnInit, SEOMetaTags {
     private canonicalService: CanonicalService,
     private metaTagService: Meta,
     private titleService: Title,
-    public _localStorageService: LocalStorageService) {
+    public _localStorageService: LocalStorageService,
+    private route: ActivatedRoute) {
     
       this.insertSEOMetaTags();
       this.canonicalService.setCanonicalURL();
@@ -31,7 +32,22 @@ export class LandingPageComponent implements OnInit, SEOMetaTags {
       this.router.events
         .subscribe((event) => {
           this.navigationInterceptor(event)
-        })
+        });
+      
+      const lang = this.route.snapshot.paramMap.get('lang');
+
+      if (lang) {
+        this._localStorageService.appData$
+        .pipe(first())
+        .subscribe(app => {
+          this._localStorageService.setInfo({
+            language: { lang: lang },
+            theme: app!.theme,
+            video: app!.video,
+            layout: app!.layout,
+          });
+        });
+      }
   }
   ngOnInit(): void {
   }
@@ -43,15 +59,7 @@ export class LandingPageComponent implements OnInit, SEOMetaTags {
 
   // Shows and hides the loading spinner during RouterEvent changes
   navigationInterceptor(event): void {
-    if (event instanceof NavigationStart) {
-      this.isLoading = true;
-    }
-
-    if (event instanceof NavigationError || event instanceof NavigationCancel || event instanceof NavigationEnd) {
-      new Promise( () => setTimeout(() => {
-        this.isLoading = false;
-      }, 2000) );
-    }
+    
   }
 
   insertSEOMetaTags(): void {

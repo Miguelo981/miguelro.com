@@ -17,7 +17,8 @@
         "knowMore": "To know more",
         "cancel": "Cancel",
         "reset": "Reset",
-        "comingsoon": "Coming Soon"
+        "comingsoon": "Coming Soon",
+        "goBack": "Go Back"
     },
     "loading": {
         "text": "Loading..."
