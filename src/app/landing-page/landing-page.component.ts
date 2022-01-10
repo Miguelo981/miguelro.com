@@ -3,7 +3,7 @@ import { Meta, Title } from '@angular/platform-browser';
 import { NavigationCancel, NavigationEnd, NavigationError, NavigationStart, Router } from '@angular/router';
 import { SEOMetaTags } from '../models/interfaces/seo-meta-tags.interface';
 import * as moment from 'moment';
-import { TranslatePipe, TranslateService } from '@ngx-translate/core';
+import { TranslateService } from '@ngx-translate/core';
 import { first } from 'rxjs/operators';
 import { CanonicalService } from '../services/canonical.service';
 import { LocalStorageService } from '../services/local-storage.service';
@@ -55,7 +55,7 @@ export class LandingPageComponent implements OnInit, SEOMetaTags {
   }
 
   insertSEOMetaTags(): void {
-    this.translate.get('meta')
+    this.translate.get('meta.homepage')
       .pipe(first())
       .subscribe((data:any)=> {
         this.titleService.setTitle(data.title); // Route data

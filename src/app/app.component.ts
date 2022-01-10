@@ -29,7 +29,7 @@ export class AppComponent {
     private _localStorageService: LocalStorageService,
     private location: Location,
     /* private ccService: NgcCookieConsentService */) {
-      this.insertGoogleAnalyticsScript();
+    this.insertGoogleAnalyticsScript();
     this._localStorageService.loadInfo();
     this._localStorageService.appData$
       .pipe(first())
@@ -46,7 +46,7 @@ export class AppComponent {
     this._localStorageService.appData$
       .subscribe(app => {
         this.translateService.setDefaultLang(app!.language.lang);
-        this.location.replaceState("/"+app!.language.lang);
+        //this.location.replaceState("/"+app!.language.lang);
       });
 
     this.darkModeService.currentMode
@@ -119,5 +119,4 @@ export class AppComponent {
 
     googleAnalytiscscripts.forEach(script => this.document.head.appendChild(script));
   }
-
 }
