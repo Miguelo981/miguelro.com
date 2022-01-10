@@ -42,7 +42,6 @@ export class SkillsComponent implements OnInit {
       .pipe(first(),
          delay(list[index].delay || 1000))
       .subscribe(data => {
-        console.log(data)
           result.next(true);
           result.complete();
         });

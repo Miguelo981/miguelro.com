@@ -31,6 +31,7 @@ export class ContentSwiperComponent implements OnInit, AfterViewInit {
     navigation: false,
     pagination: { clickable: true },
     //scrollbar: { draggable: true },
+    allowTouchMove: false,
     scrollbar: false,
     mousewheel: true,
     speed: 500
@@ -46,9 +47,9 @@ export class ContentSwiperComponent implements OnInit, AfterViewInit {
     {
       component: ServicesComponent,
     },
-    {
+    /* {
       component: ProjectListComponent,
-    },
+    }, */
     /* {
       component: TestimonialsComponent
     },
@@ -68,7 +69,7 @@ export class ContentSwiperComponent implements OnInit, AfterViewInit {
   }
 
   onSwiper(swiper) {
-    console.log(swiper);
+    //console.log(swiper);
   }
   onSlideChange() {
     if (this.swiperController.swiperRef.realIndex === 3) return;

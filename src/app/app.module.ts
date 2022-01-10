@@ -40,6 +40,8 @@ import { LastActionComponent } from './last-action/last-action.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ApiKeyInterceptor } from './interceptors/api-key.interceptor';
+import { ChatWithMeComponent } from './chat-with-me/chat-with-me.component';
+import { ProjectPageComponent } from './project-page/project-page.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +66,8 @@ import { ApiKeyInterceptor } from './interceptors/api-key.interceptor';
     AboutMeComponent,
     FooterComponent,
     LastActionComponent,
+    ChatWithMeComponent,
+    ProjectPageComponent,
   ],
   exports: [
   ],
