@@ -38,7 +38,7 @@
       <mat-menu #dropMenu="matMenu">
         <ng-container *ngFor="let item of menuItems">
             <button mat-menu-item (click)="scrollTo(item.scrollToId)">
-                <mat-icon class="mr">{{item.icon}}</mat-icon>
+                <mat-icon class="mr">{{item.Icon}}</mat-icon>
                 {{item.label | translate}}
             </button>
             <mat-divider></mat-divider>

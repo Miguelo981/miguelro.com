@@ -4,18 +4,18 @@
         <div class="flex flex-col n:pl-5 lg:pl-10 n:py-5 lg:py-10 n:pr-5 lg:pr-0 h-full">
             <div class="border-l-2 border-white n:mt-auto lg:mt-0 n:mb-4 lg:mb-12">
                 <div class="ml-6 n:mb-2 lg:mb-4">
-                    <h2 class="text-white n:text-2.5xl lg:text-5xl font-medium">{{ projectThumbnail.title }}</h2>
+                    <h2 class="text-white n:text-2.5xl lg:text-5xl font-medium">{{ projectThumbnail.Title }}</h2>
                 </div>
                 <div class="ml-6 n:mb-2 lg:mb-4">
-                    <a [href]="projectThumbnail.isPublished ? projectThumbnail.href : ''" target="_blank">
-                        <button mat-raised-button class="m-grad-btn-1" [disabled]="!projectThumbnail.isPublished">
+                    <a [href]="projectThumbnail.IsPublished ? projectThumbnail.Href : ''" target="_blank">
+                        <button mat-raised-button class="m-grad-btn-1" [disabled]="!projectThumbnail.IsPublished">
                             <span class="text-xl p-4">{{ 'projects.visit' | translate }}</span>
                             <mat-icon>keyboard_arrow_right</mat-icon>
                         </button>
                     </a>
                 </div>
                 <div *ngIf="goBack" class="ml-6 mb-4 ">
-                    <a href="/" class="text-base flex items-center">
+                    <a href="/" class="text-base flex items-center hover:text-blue-500">
                         <mat-icon>keyboard_arrow_left</mat-icon>
                         {{ 'utils.goBack' | translate }}
                     </a>
@@ -23,15 +23,15 @@
             </div>
             <!--n:mt-auto lg:mt-0-->
             <div class="n:w-full lg:w-3/4 mb-2">
-                <p class="text-white n:text-tiny lg:text-lg font-light">{{ projectThumbnail.description | translate }}</p>
+                <p class="text-white n:text-tiny lg:text-lg font-light">{{ projectThumbnail.Description | translate }}</p>
             </div>
 
             <div class="n:mt-0 lg:mt-auto flex flex-col">
                 <h3 class="font-medium n:text-lg lg:text-xl text-white mb-4">{{ 'projects.technologies' | translate}}:
                 </h3>
                 <div class="flex flex-row space-x-5 items-center">
-                    <div *ngFor="let tech of projectThumbnail.usedTechnologies">
-                        <img [src]="tech.icon" [alt]="tech.name"
+                    <div *ngFor="let tech of projectThumbnail.UsedTechnologies">
+                        <img [src]="tech.Icon" [alt]="tech.Name"
                             class="n:w-6 lg:w-12 h-auto filter drop-shadow-xl transition ease-in hover:scale-125 duration-200">
                     </div>
                 </div>
@@ -39,7 +39,7 @@
         </div>
     </div>
     <swiper [config]="config" #projectSwiperController class="w-full h-full">
-        <ng-template swiperSlide *ngFor="let thumb of projectThumbnail.thumbs;">
+        <ng-template swiperSlide *ngFor="let thumb of projectThumbnail.Thumbs;">
             <img [src]="thumb" class="object-cover w-full h-full">
         </ng-template>
     </swiper>

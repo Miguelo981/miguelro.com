@@ -8,7 +8,7 @@ import { RequestService } from '../request/request.service';
   providedIn: 'root'
 })
 export class ProjectService {
-  endPoint = "/project/"
+  endPoint = "/project-thumbnail/"
   headers: HttpHeaders;
   constructor(private requestService: RequestService) {
   }

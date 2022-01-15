@@ -42,6 +42,7 @@ import { environment } from '../environments/environment';
 import { ApiKeyInterceptor } from './interceptors/api-key.interceptor';
 import { ChatWithMeComponent } from './chat-with-me/chat-with-me.component';
 import { ProjectPageComponent } from './project-page/project-page.component';
+import { ProjectPreviewComponent } from './project-preview/project-preview.component';
 
 @NgModule({
   declarations: [
@@ -68,6 +69,7 @@ import { ProjectPageComponent } from './project-page/project-page.component';
     LastActionComponent,
     ChatWithMeComponent,
     ProjectPageComponent,
+    ProjectPreviewComponent,
   ],
   exports: [
   ],

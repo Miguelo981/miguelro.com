@@ -6,5 +6,5 @@
             <chat-with-me></chat-with-me>
         </div>
     </div>
-    <project-thumbnail [projectThumbnail]="selectedProject" [goBack]="true"></project-thumbnail>
+    <project-thumbnail *ngIf="selectedProject" [projectThumbnail]="selectedProject" [goBack]="true"></project-thumbnail>
 </div>

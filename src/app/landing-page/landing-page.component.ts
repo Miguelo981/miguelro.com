@@ -69,12 +69,12 @@ export class LandingPageComponent implements OnInit, SEOMetaTags {
         this.titleService.setTitle(data.title); // Route data
 
         this.metaTagService.addTags([
-          { name: 'keywords', content: data.keywords.join(",") },
-          { name: 'robots', content: 'index, follow' },
-          { name: 'author', content: 'Miguel Ángel Rodríguez' },
-          { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-          { name: 'date', content: moment(new Date()).format('YYYY-MM-DD'), scheme: 'YYYY-MM-DD' },
-          { name: 'description', content: data.description },
+          {Name: 'keywords', content: data.keywords.join(",") },
+          {Name: 'robots', content: 'index, follow' },
+          {Name: 'author', content: 'Miguel Ángel Rodríguez' },
+          {Name: 'viewport', content: 'width=device-width, initial-scale=1' },
+          {Name: 'date', content: moment(new Date()).format('YYYY-MM-DD'), scheme: 'YYYY-MM-DD' },
+          {Name: 'description', content: data.description },
           { charset: 'UTF-8' }
         ]);
       });
