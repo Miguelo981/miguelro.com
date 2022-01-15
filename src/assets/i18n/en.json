@@ -72,6 +72,7 @@
         "programs": "Programs"
     },
     "projects": {
+        "title": "My Projects",
         "visit": "Watch the website",
         "technologies": "Technologies",
         "clients": {

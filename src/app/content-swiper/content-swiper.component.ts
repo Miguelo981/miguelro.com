@@ -8,6 +8,7 @@ import { HomeComponent } from '../home/home.component';
 import { LastActionComponent } from '../last-action/last-action.component';
 import { PageNotFoundComponent } from '../page-not-found/page-not-found.component';
 import { ProjectListComponent } from '../project-list/project-list.component';
+import { ProjectPreviewComponent } from '../project-preview/project-preview.component';
 import { ServicesComponent } from '../services-component/services.component';
 import { NavbarScrollService } from '../services/navbar-scroll.service';
 import { SkillsComponent } from '../skills/skills.component';
@@ -46,6 +47,9 @@ export class ContentSwiperComponent implements OnInit, AfterViewInit {
     },
     {
       component: ServicesComponent,
+    },
+    {
+      component: ProjectPreviewComponent
     },
     /* {
       component: ProjectListComponent,

@@ -6,7 +6,7 @@ import { NavbarScrollService } from '../services/navbar-scroll.service';
 
 export interface MenuItem {
   label: string;
-  icon: string;
+ Icon: string;
   showOnMobile?: boolean;
   showOnTablet?: boolean;
   showOnDesktop?: boolean;
@@ -26,9 +26,9 @@ export class NavBarComponent implements OnInit {
   menuItems = [
     {
       label: "navbar.routes.aboutMe",
-      icon: "help",
+     Icon: "help",
       scrollToId: "about-me",
-      href: "#",
+      Href: "#",
       isButton: false,
       showOnMobile: true,
       showOnTablet: true,
@@ -36,9 +36,9 @@ export class NavBarComponent implements OnInit {
     },
     {
       label: "navbar.routes.services",
-      icon: "help",
+     Icon: "help",
       scrollToId: "services",
-      href: "#",
+      Href: "#",
       isButton: false,
       showOnMobile: true,
       showOnTablet: true,
@@ -46,9 +46,9 @@ export class NavBarComponent implements OnInit {
     },
     {
       label: "navbar.routes.projects",
-      icon: "help",
+     Icon: "help",
       scrollToId: "projects",
-      href: "#",
+      Href: "#",
       isButton: false,
       showOnMobile: true,
       showOnTablet: true,
@@ -56,9 +56,9 @@ export class NavBarComponent implements OnInit {
     },
     {
       label: "navbar.routes.testimonials",
-      icon: "help",
+     Icon: "help",
       scrollToId: "testimonials",
-      href: "#",
+      Href: "#",
       isButton: false,
       showOnMobile: true,
       showOnTablet: true,
@@ -66,9 +66,9 @@ export class NavBarComponent implements OnInit {
     },
     {
       label: "navbar.routes.contactMe",
-      icon: "help",
+     Icon: "help",
       scrollToId: "contact-me",
-      href: "#",
+      Href: "#",
       isButton: true,
       showOnMobile: true,
       showOnTablet: true,
@@ -79,21 +79,21 @@ export class NavBarComponent implements OnInit {
   menuItems2: MenuItem[] = [
     {
       label: 'navbar.routes',
-      icon: 'login',
+     Icon: 'login',
       showOnMobile: true,
       showOnTablet: true,
       showOnDesktop: true
     },
     {
       label: 'About',
-      icon: 'help',
+     Icon: 'help',
       showOnMobile: false,
       showOnTablet: true,
       showOnDesktop: true
     },
     {
       label: 'Pricing',
-      icon: 'attach_money',
+     Icon: 'attach_money',
       showOnMobile: false,
       showOnTablet: false,
       showOnDesktop: true

@@ -16,7 +16,7 @@ export class ContactDialog implements OnInit {
     public contactForm: FormGroup;
     isLoading = false;
 
-    constructor(@Inject(MAT_DIALOG_DATA) public data: { name: string },
+    constructor(@Inject(MAT_DIALOG_DATA) public data: {name: string },
         public dialogRef: MatDialogRef<ContactDialog>,
         private location: Location,
         private contactFormService: ContactFormService,
