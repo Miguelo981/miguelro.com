@@ -1,13 +1,24 @@
 {
     "meta": {
+        "homepage": {
+            "title": "▷ Web Developer Expert In Spain | Miguelo DEV",
         "description": "",
         "keywords": ["miguelo developer"]
+        },
+        "projectList": {
+            "title": "▷ My Web Projects | Miguelo DEV",
+            "description": "",
+            "keywords": [
+                "miguelo developer"
+            ]
+        }
     },
     "utils": {
         "knowMore": "To know more",
         "cancel": "Cancel",
         "reset": "Reset",
-        "comingsoon": "Coming Soon"
+        "comingsoon": "Coming Soon",
+        "goBack": "Go Back"
     },
     "loading": {
         "text": "Loading..."
@@ -17,19 +28,24 @@
     },
     "navbar": {
         "routes": {
-            "home": "About me",
+            "aboutMe": "About me",
             "services": "Services",
             "projects": "Projects",
             "contactMe": "Contact me",
             "testimonials": "Testimonials"
-        },
-        "test": {
-            "test": "This is su fucking crazy dude"
         }
     },
     "aboutMe": {
         "title": "About me",
-        "socialTitle": "My social networks"
+        "subTitle": "Who am I?",
+        "socialTitle": "My social networks",
+        "summary1": "My name is Miguel Ángel, my mission is to help brands establish an online presence so they ",
+        "summary2": "can effectively reach their audience and convert new customers.",
+        "description1": "As a programmer, I specialize in infractructure implementations and web development, such as landing pages or all kind of process automation.\n\nI have programamed everything, from web complete web apps to decentralized exchanges in record time. Our strong attention to details ",
+        "description2": "ensures that products are optimized for performance and usability across a multitude of devices",
+        "description3": " used by consumers today.",
+        "description4": "Let’s chat about your needs and see if we can help you digitalize your business!",
+        "projects": "Some of my works"
     },
     "services": {
         "title": "Services",
@@ -56,6 +72,7 @@
         "programs": "Programs"
     },
     "projects": {
+        "title": "My Projects",
         "visit": "Watch the website",
         "technologies": "Technologies",
         "clients": {
@@ -90,14 +107,14 @@
     "contact": {
         "chat": "Chat with me",
         "me": "Contact me",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s",
+        "description": "I am available from Monday through Saturday. For messages received during off hours, please expect a reply when normal business hours resume.",
         "label": {
             "fullname": "Fullname",
             "email": "Email",
             "message": "Message"
         },
         "placeholder": {
-            "fullname": "Miguel Rodríguez",
+            "fullname": "Miguel Ángel Rodríguez",
             "email": "miguel@gmail.com",
             "message": "Lorem Ipsum is simply dummy text..."
         },
@@ -123,8 +140,8 @@
     },
     "home": {
         "title": "Miguelo",
-        "subTitle": "Fast and clean websites",
-        "description": "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book."
+        "subTitle": "DIGITALIZE YOUR BUSINESS FROM SCRATCH",
+        "description": "We specialize in building and designing websites that look great, load fast, and are easy to manage, enticing users with clean, modern, and responsive designs."
     },
     "footer": {
         "copyright": "©",

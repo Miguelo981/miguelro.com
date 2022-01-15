@@ -2,8 +2,11 @@ import { Component, OnInit } from '@angular/core';
 import { fadeInDownOnEnterAnimation, fadeInRightOnEnterAnimation } from 'angular-animations';
 import { Observable, Subject } from 'rxjs';
 import { delay, first } from 'rxjs/operators';
+import { breakPoints } from 'src/config/breakpoints.config';
 import { mockedSkillList } from 'src/mocks/skills/skills.mock';
 import { Skill, SkillList } from '../models/skill.model';
+import { LocalStorageService } from '../services/local-storage.service';
+import { NavbarScrollService } from '../services/navbar-scroll.service';
 
 
 @Component({
@@ -18,8 +21,10 @@ import { Skill, SkillList } from '../models/skill.model';
 export class SkillsComponent implements OnInit {
   skillList: SkillList[] = mockedSkillList;
   show = false;
+  md = breakPoints.md;
 
-  constructor() { }
+  constructor(public _localStorageService: LocalStorageService,
+    private navbarScrollService: NavbarScrollService) { }
 
   ngOnInit(): void {
   }
@@ -39,7 +44,6 @@ export class SkillsComponent implements OnInit {
       .pipe(first(),
          delay(list[index].delay || 1000))
       .subscribe(data => {
-        console.log(data)
           result.next(true);
           result.complete();
         });
@@ -49,6 +53,14 @@ export class SkillsComponent implements OnInit {
   }
 
   isShow(state: boolean) {
-    this.show = state;
+    this._localStorageService.appData$
+      .pipe(first())
+      .subscribe(data => {
+        this.show = data!.layout.innerWidth >= this.md ? state : true;
+    });
+  }
+
+  swipe(index) {
+    this.navbarScrollService.changeScrollIndex(index, 750);
   }
 }

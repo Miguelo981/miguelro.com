@@ -1,9 +1,12 @@
+import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { LocalStorageService } from '../services/local-storage.service';
 import { NavbarScrollService } from '../services/navbar-scroll.service';
 
 export interface MenuItem {
   label: string;
-  icon: string;
+ Icon: string;
   showOnMobile?: boolean;
   showOnTablet?: boolean;
   showOnDesktop?: boolean;
@@ -16,16 +19,16 @@ export interface MenuItem {
 })
 export class NavBarComponent implements OnInit {
 
-  constructor(private navbarScrollService: NavbarScrollService) {
+  constructor(private navbarScrollService: NavbarScrollService, private scroller: ViewportScroller, private router: Router, public _localStorageService: LocalStorageService) {
       
   }
 
   menuItems = [
     {
-      label: "navbar.routes.home",
-      icon: "help",
-      scrollToId: "home",
-      href: "#",
+      label: "navbar.routes.aboutMe",
+     Icon: "help",
+      scrollToId: "about-me",
+      Href: "#",
       isButton: false,
       showOnMobile: true,
       showOnTablet: true,
@@ -33,9 +36,9 @@ export class NavBarComponent implements OnInit {
     },
     {
       label: "navbar.routes.services",
-      icon: "help",
+     Icon: "help",
       scrollToId: "services",
-      href: "#",
+      Href: "#",
       isButton: false,
       showOnMobile: true,
       showOnTablet: true,
@@ -43,9 +46,9 @@ export class NavBarComponent implements OnInit {
     },
     {
       label: "navbar.routes.projects",
-      icon: "help",
+     Icon: "help",
       scrollToId: "projects",
-      href: "#",
+      Href: "#",
       isButton: false,
       showOnMobile: true,
       showOnTablet: true,
@@ -53,9 +56,9 @@ export class NavBarComponent implements OnInit {
     },
     {
       label: "navbar.routes.testimonials",
-      icon: "help",
+     Icon: "help",
       scrollToId: "testimonials",
-      href: "#",
+      Href: "#",
       isButton: false,
       showOnMobile: true,
       showOnTablet: true,
@@ -63,9 +66,9 @@ export class NavBarComponent implements OnInit {
     },
     {
       label: "navbar.routes.contactMe",
-      icon: "help",
+     Icon: "help",
       scrollToId: "contact-me",
-      href: "#",
+      Href: "#",
       isButton: true,
       showOnMobile: true,
       showOnTablet: true,
@@ -76,34 +79,38 @@ export class NavBarComponent implements OnInit {
   menuItems2: MenuItem[] = [
     {
       label: 'navbar.routes',
-      icon: 'login',
+     Icon: 'login',
       showOnMobile: true,
       showOnTablet: true,
       showOnDesktop: true
     },
     {
       label: 'About',
-      icon: 'help',
+     Icon: 'help',
       showOnMobile: false,
       showOnTablet: true,
       showOnDesktop: true
     },
     {
       label: 'Pricing',
-      icon: 'attach_money',
+     Icon: 'attach_money',
       showOnMobile: false,
       showOnTablet: false,
       showOnDesktop: true
     },
   ];
 
-  ngOnInit() {
-   }
+  ngOnInit() {}
   
   swipe(index: number, delay?: number) {
     this.navbarScrollService.changeScrollIndex(index, delay);
 
     //this.sharedDirective.shared.swiperController.swiperRef.slideTo(index, delay || 500)
+  }
+
+  scrollTo(id: string) {
+    //this.scroller.scrollToAnchor(id);
+    this.router.navigate([], { fragment: id });
   }
 
 }

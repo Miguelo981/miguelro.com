@@ -1,20 +1,20 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ScrollToTopComponent } from './scroll-to-top.component';
+import { ProjectPreviewComponent } from './project-preview.component';
 
-describe('ScrollToTopComponent', () => {
-  let component: ScrollToTopComponent;
-  let fixture: ComponentFixture<ScrollToTopComponent>;
+describe('ProjectPreviewComponent', () => {
+  let component: ProjectPreviewComponent;
+  let fixture: ComponentFixture<ProjectPreviewComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ScrollToTopComponent ]
+      declarations: [ ProjectPreviewComponent ]
     })
     .compileComponents();
   });
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ScrollToTopComponent);
+    fixture = TestBed.createComponent(ProjectPreviewComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

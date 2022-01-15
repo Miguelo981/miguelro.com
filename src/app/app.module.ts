@@ -35,12 +35,14 @@ import { TestimonialsComponent } from './testimonials/testimonials.component';
 import { SkillsComponent } from './skills/skills.component';
 import { NewsletterComponent } from './newsletter/newsletter.component';
 import { AboutMeComponent } from './about-me/about-me.component';
-import { ScrollToTopComponent } from './scroll-to-top/scroll-to-top.component';
 import { FooterComponent } from './footer/footer.component';
 import { LastActionComponent } from './last-action/last-action.component';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { environment } from '../environments/environment';
 import { ApiKeyInterceptor } from './interceptors/api-key.interceptor';
+import { ChatWithMeComponent } from './chat-with-me/chat-with-me.component';
+import { ProjectPageComponent } from './project-page/project-page.component';
+import { ProjectPreviewComponent } from './project-preview/project-preview.component';
 
 @NgModule({
   declarations: [
@@ -63,9 +65,11 @@ import { ApiKeyInterceptor } from './interceptors/api-key.interceptor';
     SkillsComponent,
     NewsletterComponent,
     AboutMeComponent,
-    ScrollToTopComponent,
     FooterComponent,
     LastActionComponent,
+    ChatWithMeComponent,
+    ProjectPageComponent,
+    ProjectPreviewComponent,
   ],
   exports: [
   ],

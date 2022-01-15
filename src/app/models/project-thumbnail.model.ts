@@ -1,11 +1,15 @@
+import { Testimonial } from "./testimonial.model";
+
 export interface ProjectThumbnail {
-    title: string,
-    description: string,
-    usedTechnologies: {
-        name: string,
-        icon: string,
+    Id?: string,
+    Title: string,
+    Description: string,
+    UsedTechnologies: {
+       Name: string,
+       Icon: string,
     }[],
-    href: string,
-    isPublished: boolean,
-    thumbs: string[]
+    Href: string,
+    IsPublished: boolean,
+    Thumbs: string[],
+    Testimonials?: Testimonial[]
 }
