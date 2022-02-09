@@ -2,8 +2,8 @@
     <div [fxLayout]="(_localStorageService.appData$ | async)!.layout.innerWidth > md ? 'row' : 'column'" class="justify-center w-11/12" (nguiInview)="isShow(true)" (nguiOutview)="isShow(false)">
         <!-- fxLayout.lt-md="column" fxLayout.gt-lg="row" -->
             <div class="n:pr-0 lg:pr-24 justify-end" fxLayout="column" fxFlex.lt-lg="100%" fxFlex.gt-md="40%" *ngIf="show" [@fadeInLeftOnEnter]>
-                <h2 class="font-bold n:text-3xl lg:text-5xl mr-auto n:mb-4 lg: mb-10">{{ 'aboutMe.title' | translate }}</h2>
-                <div class="flex flex-row items-center space-x-5 n:mb-4 lg:mb-8">
+                <h2 class="font-bold n:text-3xl lg:text-5xl mr-auto n:ml-auto lg:ml-0 n:mb-4 lg: mb-10">{{ 'aboutMe.title' | translate }}</h2>
+                <div class="flex n:flex-col lg:flex-row justify-center items-center lg:space-x-5 n:mb-4 lg:mb-8">
                     <div class="relative">
                         <!--<div class="rounded-full w-48 h-48 bg-blue-600 absolute z-0"></div>
                         <div class="rounded-full w-44 h-44 bg-blue-800 absolute z-10"></div>-->
@@ -27,7 +27,7 @@
                     <h2 class="n:text-xl lg:text-3xl">{{ 'aboutMe.socialTitle' | translate }}:</h2>
                     <div class="flex flex-row space-x-8">
                         <div *ngFor="let social of socialMedias">
-                            <a [href]="social.href" target="_blank" class="pi n:text-2xl lg:text-4.5xl text-m-green transition ease-in hover:scale-125 duration-200" [ngClass]="'pi-' + social.icon"></a>
+                            <a [href]="social.Href" target="_blank" class="pi n:text-2xl lg:text-4.5xl text-m-green transition ease-in hover:scale-125 duration-200" [ngClass]="'pi-' + social.icon"></a>
                         </div>
                     </div>
                 </div>

@@ -22,7 +22,7 @@ export class HomeComponent implements OnInit, OnDestroy, AfterViewInit {
   backgroundVideoSrc = "assets/videos/bg-video.mp4";
 
   constructor(private navbarScrollService: NavbarScrollService,
-    private _localStorageService: LocalStorageService) {
+    public _localStorageService: LocalStorageService) {
    }
 
   ngOnInit(): void {

@@ -9,7 +9,7 @@ import { ProjectService } from '../services/project/project.service';
 SwiperCore.use([]);
 
 @Component({
-  selector: 'app-project-preview',
+  selector: 'project-preview',
   templateUrl: './project-preview.component.html',
   styleUrls: ['./project-preview.component.scss'],
   animations: [
@@ -49,9 +49,16 @@ export class ProjectPreviewComponent implements OnInit {
   }
 
   getProjects() {
-    this.projectService.getProjects()
+    this.projectService
+      .getProjects()
       .subscribe(data => {
         this.projectLists = data;
+        this.projectLists.map(pl => {
+          pl.Testimonials = [
+            { FullName: 'Javier', Image: 'https://www.fakepersongenerator.com/Face/male/male1084396422119.jpg', Summary: '', Message: 'Incredible work!' },
+            { FullName: 'Marcos', Image: 'https://www.fakepersongenerator.com/Face/male/male1084396422119.jpg', Summary: '', Message: 'Amazing work!!' },
+          ]
+        })
       });
   }
 

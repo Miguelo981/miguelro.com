@@ -16,11 +16,11 @@
                 </div>
             </div>
         </div>
-        <!-- <div *ngIf="show && (_localStorageService.appData$ | async)!.layout.innerWidth < md" [@fadeInUpOnEnter] [@fadeOutOnLeave]>
+        <div *ngIf="show && (_localStorageService.appData$ | async)!.layout.innerWidth < md" [@fadeInUpOnEnter] [@fadeOutOnLeave]>
             <swiper [config]="config">
                 <ng-template swiperSlide *ngFor="let col of getCols()">
                     <div fxLayout="column" class="gap-5 space-y-10 justify-center items-center">
-                        <div *ngFor="let i of [0, 1]" class="flex flex-col w-80 justify-center items-center bubble-box rounded-2xl shadow-md p-6 border-transparent border-2 transition ease-in hover:shadow-blue-800 hover:border-2 hover:border-blue-800 duration-400">
+                        <div *ngFor="let i of [0, 1]" class="flex flex-col w-80 justify-center items-center bubble-box rounded-2xl shadow-md p-6 border-transparent border-2 transition ease-in hover:shadow-m-green hover:border-2 hover:border-m-green duration-400">
                             <div class="rounded-full bg-gray-100 bg-opacity-50 n:w-10 lg:w-20 n:h-10 lg:h-20 flex items-center justify-center mb-8">
                                 <div class="pi n:text-xl md:text-2xl lg:text-4.5xl text-m-green mb-8 mt-8" [ngClass]="'pi-' + services[col + i].Icon"></div>
                             </div>
@@ -30,6 +30,6 @@
                     </div>
                 </ng-template>
             </swiper>
-        </div> -->
+        </div>
     </div>
 </div>
