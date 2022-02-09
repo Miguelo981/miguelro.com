@@ -16,7 +16,7 @@
                 </div>
             </div>
         </div>
-        <div *ngIf="show && (_localStorageService.appData$ | async)!.layout.innerWidth < md" [@fadeInUpOnEnter] [@fadeOutOnLeave]>
+        <!-- <div *ngIf="show && (_localStorageService.appData$ | async)!.layout.innerWidth < md" [@fadeInUpOnEnter] [@fadeOutOnLeave]>
             <swiper [config]="config">
                 <ng-template swiperSlide *ngFor="let col of getCols()">
                     <div fxLayout="column" class="gap-5 space-y-10 justify-center items-center">
@@ -30,6 +30,6 @@
                     </div>
                 </ng-template>
             </swiper>
-        </div>
+        </div> -->
     </div>
 </div>
