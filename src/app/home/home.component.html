@@ -5,7 +5,7 @@
         <mat-icon *ngIf="isVideoPlay">play_arrow</mat-icon>
     </button>-->
     <!--<div class="bg-no-repeat bg-cover absolute h-screen w-full z-30" [style.background-image]="'url(./assets/img/bgs/pattern-4.webp)'"></div> [ngStyle]="{ width: (_localStorageService.appData$ | async)!.layout.innerWidth + 'px' }"-->
-    <div class="bg-black bg-opacity-80 absolute h-screen w-screen z-20" [@fadeInOnEnter]>    
+    <div class="bg-black n:bg-opacity-60 lg:bg-opacity-80 absolute h-screen w-screen z-20" [@fadeInOnEnter]>    
     </div>
     <video preload="auto" autoplay muted loop id="bg-home-video" [poster]="'assets/img/profiles/poster.png'" class="absolute z-10" #bgVideo>
         <source [src]="backgroundVideoSrc" type="video/mp4">
