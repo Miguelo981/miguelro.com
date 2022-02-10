@@ -4,6 +4,7 @@ import { breakPoints } from 'src/config/breakpoints.config';
 import { services } from 'src/mocks/services/services.mock';
 import SwiperCore, { Navigation, SwiperOptions } from 'swiper';
 import { LocalStorageService } from '../services/local-storage.service';
+import { ServiceService } from '../services/services/service.service';
 
 SwiperCore.use([Navigation]);
 
@@ -19,8 +20,8 @@ SwiperCore.use([Navigation]);
 })
 export class ServicesComponent implements OnInit {
   show = false;
-  services = services;
-  md = breakPoints.md;
+  servicesList = services;
+  lg = breakPoints.lg;
 
   config: SwiperOptions = {
     slidesPerView: 1,
@@ -31,7 +32,10 @@ export class ServicesComponent implements OnInit {
     speed: 500
   };
 
-  constructor(public _localStorageService: LocalStorageService) { }
+  constructor(public _localStorageService: LocalStorageService,
+    private servicesService: ServiceService) {
+      this.getServices();
+    }
 
   ngOnInit(): void {
   }
@@ -42,6 +46,14 @@ export class ServicesComponent implements OnInit {
 
   getCols() {
     return [...Array(services.length / 2).keys()];
+  }
+
+  getServices() {
+    this.servicesService
+      .getServices()
+      .subscribe(data => {
+        this.servicesList = data;
+      });
   }
 
 }
