@@ -16,7 +16,7 @@ import { breakPoints } from 'src/config/breakpoints.config';
 })
 export class LandingPageComponent implements OnInit, SEOMetaTags {
   isLoading = true;
-  md = breakPoints.md;
+  lg = breakPoints.lg;
 
   constructor(private router: Router,
     private translate: TranslateService,

@@ -1,8 +1,8 @@
-<div class="flex flex-col n:h-full lg:h-screen justify-center items-center bg-no-repeat bg-cover relative text-white"
+<div class="flex flex-col n:h-full xl:h-screen justify-center items-center bg-no-repeat bg-cover relative text-white"
     (nguiInview)="isShow(true)" (nguiOutview)="isShow(false)">
     <!--[style.background-image]="'url(./assets/img/bgs/pattern-5.webp)'"-->
-    <div class="bg-black bg-opacity-50 absolute n:h-full lg:h-screen w-full z-10" *ngIf="show" [@fadeInOnEnter] [@fadeOutOnLeave]>
-    </div>
+    <!-- <div class="bg-black bg-opacity-50 absolute n:h-full xl:h-screen w-full z-10" *ngIf="show" [@fadeInOnEnter] [@fadeOutOnLeave]>
+    </div> -->
     <div fxLayout="column" fxFlex="85%" class="relative justify-center z-20">
         <div class="n:mb-6 lg:mb-12 mt-4">
             <h2 class="n:text-3xl md:text-4.5xl lg:text-6xl text-center font-bold">{{ 'projects.title' | translate }}</h2>

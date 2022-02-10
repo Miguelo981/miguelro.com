@@ -1,7 +1,7 @@
 <div id="about-me" class="min-h-screen flex flex-col justify-center items-center bg-no-repeat bg-cover n:space-y-2 lg:space-y-16" [style.background-image]="'url(./assets/img/bgs/waves-pattern.webp)'">
-    <div [fxLayout]="(_localStorageService.appData$ | async)!.layout.innerWidth > md ? 'row' : 'column'" class="justify-center w-11/12" (nguiInview)="isShow(true)" (nguiOutview)="isShow(false)">
-        <!-- fxLayout.lt-md="column" fxLayout.gt-lg="row" -->
-            <div class="n:pr-0 lg:pr-24 justify-end" fxLayout="column" fxFlex.lt-lg="100%" fxFlex.gt-md="40%" *ngIf="show" [@fadeInLeftOnEnter]>
+    <div [fxLayout]="(_localStorageService.appData$ | async)!.layout.innerWidth > lg ? 'row' : 'column'" class="justify-center w-11/12" (nguiInview)="isShow(true)" (nguiOutview)="isShow(false)">
+        <!-- fxLayout.lt-md="column" fxLayout.gt-lg="row" fxFlex.lt-lg="100%" fxFlex.gt-md="40%" -->
+            <div class="n:pr-0 lg:pr-24 justify-end" fxLayout="column" fxFlex.lg="100%" fxFlex="40%" *ngIf="show" [@fadeInLeftOnEnter]>
                 <h2 class="font-bold n:text-3xl lg:text-5xl mr-auto n:ml-auto lg:ml-0 n:mb-4 lg: mb-10">{{ 'aboutMe.title' | translate }}</h2>
                 <div class="flex n:flex-col lg:flex-row justify-center items-center lg:space-x-5 n:mb-4 lg:mb-8">
                     <div class="relative">
@@ -36,7 +36,7 @@
                     <mat-icon>keyboard_arrow_right</mat-icon>
                 </button> -->
             </div>
-            <div class="lg:border-l-2 n:pl-0 lg:pl-24 n:border-l-0" fxFlex.lt-lg="100%" fxFlex.gt-md="40%" [ngClass]="(_localStorageService.appData$ | async)!.theme.isDark ? '' : 'border-black'">
+            <div class="xl:border-l-2 n:pl-0 xl:pl-24 n:border-l-0" fxFlex.lg="100%" fxFlex="40%" [ngClass]="(_localStorageService.appData$ | async)!.theme.isDark ? '' : 'border-black'">
                 <skills></skills>
             </div>
     </div>

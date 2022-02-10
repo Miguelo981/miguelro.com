@@ -2,8 +2,8 @@
     <ng-container [share-comp]="landing"></ng-container>
 </nav-bar>-->
 <!-- <loading [show]="isLoading"></loading> -->
-<content-swiper *ngIf="(_localStorageService.appData$ | async)!.layout.innerWidth >= md"></content-swiper>
-<div class="flex flex-col" *ngIf="(_localStorageService.appData$ | async)!.layout.innerWidth < md">
+<content-swiper *ngIf="(_localStorageService.appData$ | async)!.layout.innerWidth >= lg"></content-swiper>
+<div class="flex flex-col" *ngIf="(_localStorageService.appData$ | async)!.layout.innerWidth < lg">
     <app-home></app-home>
     <about-me></about-me>
     <!-- <services-component></services-component> -->
