@@ -141,6 +141,7 @@ module.exports = {
       'base': '1rem',
       'lg': '1.125rem',
       'xl': '1.25rem',
+      '1.25xl': '1.3rem',
       '1.5xl': '1.375rem',
       '2xl': '1.5rem',
       '2.5xl': '1.7rem',

@@ -49,9 +49,9 @@
                     <mat-error *ngIf="hasError('message', 'required')">{{ 'contact.errors.required.message' | translate }}</mat-error>
                     <mat-error *ngIf="hasError('message', 'maxlength')">{{ 'contact.errors.length.message' | translate }}</mat-error>
                 </mat-form-field>
-                <div class="ml-auto mt-6 space-x-3">
+                <div class="ns:ml-auto mt-6 flex n:flex-col ns:flex-row n:space-y-3 ns:space-y-0 ns:space-x-4 items-center">
                     <button mat-raised-button class="bg-gray-900 text-white hover:bg-gray-700" (click)="reset()">{{ 'utils.reset' | translate }}</button>
-                    <button mat-raised-button [disabled]="!contactForm.valid" class="bg-blue-600 text-white hover:bg-blue-700"
+                    <button mat-raised-button [disabled]="!contactForm.valid" class="text-white bg-m-green hover:bg-opacity-75"
                     type="submit">{{ 'contact.buttons.submit' | translate }}</button>
                 </div>
             </form>

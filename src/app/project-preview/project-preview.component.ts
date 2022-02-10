@@ -1,5 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { fadeInOnEnterAnimation, fadeInUpOnEnterAnimation, fadeOutOnLeaveAnimation } from 'angular-animations';
+import { first } from 'rxjs/operators';
 import { breakPoints } from 'src/config/breakpoints.config';
 import SwiperCore, { SwiperOptions } from 'swiper';
 import { ProjectThumbnail } from '../models/project-thumbnail.model';
@@ -45,7 +46,11 @@ export class ProjectPreviewComponent implements OnInit {
   }
 
   isShow(state: boolean) {
-    this.show = state;
+    this._localStorageService.appData$
+      .pipe(first())
+      .subscribe(data => {
+        this.show = data!.layout.innerWidth >= breakPoints.lg ? state : true;
+      });
   }
 
   getProjects() {
