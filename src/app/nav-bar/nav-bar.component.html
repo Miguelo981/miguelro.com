@@ -1,7 +1,7 @@
 <div> 
     <mat-toolbar class="bg-transparent absolute z-50 mt-3 text-white">
       <!-- Website logo -->
-      <a [routerLink]="['/'+(_localStorageService.appData$ | async)!.language.lang]">
+      <a [routerLink]="['/'+(_localStorageService.appData$ | async)!.language.lang]" *ngIf="(_localStorageService.appData$ | async)!.layout.innerWidth > lg">
         <img class="n:w-1/2 lg:w-1/3" src="assets/img/logo/mdev-light-logo.png">
       </a>
 
@@ -28,14 +28,14 @@
       </div>
 
       <!-- Responsive menu bar toggler -->
-      <div fxShow="true" class="ml-auto" fxHide.gt-sm="true">
+      <!-- <div fxShow="true" class="ml-auto" fxHide.gt-sm="true">
         <button mat-icon-button [matMenuTriggerFor]="dropMenu">
           <mat-icon>menu</mat-icon>
         </button>
-      </div>
+      </div> -->
 
       <!-- Responsive Menu bar -->
-      <mat-menu #dropMenu="matMenu">
+      <!-- <mat-menu #dropMenu="matMenu">
         <ng-container *ngFor="let item of menuItems">
             <button mat-menu-item (click)="scrollTo(item.scrollToId)">
                 <mat-icon class="mr">{{item.Icon}}</mat-icon>
@@ -43,6 +43,6 @@
             </button>
             <mat-divider></mat-divider>
         </ng-container>
-      </mat-menu>
+      </mat-menu> -->
     </mat-toolbar>
 </div>

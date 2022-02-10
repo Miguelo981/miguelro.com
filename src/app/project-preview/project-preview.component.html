@@ -1,17 +1,17 @@
-<div class="flex flex-col h-screen justify-center items-center bg-no-repeat bg-cover relative text-white"
+<div class="flex flex-col n:h-full xl:h-screen justify-center items-center bg-no-repeat bg-cover relative text-white"
     (nguiInview)="isShow(true)" (nguiOutview)="isShow(false)">
     <!--[style.background-image]="'url(./assets/img/bgs/pattern-5.webp)'"-->
-    <div class="bg-black bg-opacity-50 absolute h-screen w-full z-10" *ngIf="show" [@fadeInOnEnter] [@fadeOutOnLeave]>
-    </div>
+    <!-- <div class="bg-black bg-opacity-50 absolute n:h-full xl:h-screen w-full z-10" *ngIf="show" [@fadeInOnEnter] [@fadeOutOnLeave]>
+    </div> -->
     <div fxLayout="column" fxFlex="85%" class="relative justify-center z-20">
-        <div class="n:mb-6 lg:mb-12">
-            <h2 class="n:text-3xl md:text-4.5xl lg:text-6xl text-center font-bold">{{ 'projects.title' | translate }}
-            </h2>
+        <div class="n:mb-6 lg:mb-12 mt-4">
+            <h2 class="n:text-3xl md:text-4.5xl lg:text-6xl text-center font-bold">{{ 'projects.title' | translate }}</h2>
         </div>
+        <!--[fxLayout]="(_localStorageService.appData$ | async)!.layout.innerWidth > md ? 'row wrap' : 'column'"-->
         <div fxLayout="row wrap" class="gap-5 justify-center" *ngIf="show" [@fadeInUpOnEnter] [@fadeOutOnLeave]>
-            <div *ngFor="let project of projectLists" fxFlex="25%">
-                <a [routerLink]="['/'+(_localStorageService.appData$ | async)!.language.lang, 'project', project.Id]" target="_blank">
-                    <div class="relative w-120 h-80 bubble-box rounded-2xl shadow-md border-transparent border-2 transition ease-in hover:shadow-m-green hover:border-2 hover:border-m-green duration-400">
+            <div *ngFor="let project of projectLists" class="mb-4">
+                <a [routerLink]="['/'+(_localStorageService.appData$ | async)!.language.lang, 'project', project.Id]">
+                    <div class="relative n:w-80 n:h-52 sm:w-120 sm:h-80 bubble-box rounded-2xl shadow-md border-transparent border-2 transition ease-in hover:shadow-m-green hover:border-2 hover:border-m-green duration-400">
                         <img [src]="project.Thumbs[0]" class="object-fill rounded-2xl w-full h-full absolute z-20">
                         <div class="w-full h-full bg-opacity-40 from-black to-transparent bg-gradient-to-t absolute z-30 rounded-bl-2xl rounded-br-2xl"></div>
                         <h3 class="absolute z-40 p-6 text-2xl -bottom-1 text-white">{{ project.Title | translate }}</h3>
@@ -19,6 +19,36 @@
                 </a>
             </div>
         </div>
+        <!-- <div swiperSlide *ngFor="let project of projectLists">
+            <div [fxLayout]="(_localStorageService.appData$ | async)!.layout.innerWidth > md ? 'row' : 'column'" class="justify-between w-11/12">
+                <div fxLayout="column" fxFlex.lt-md="100%" fxFlex.gt-lg="40%">
+                    <div class="relative w-120 h-96 bubble-box rounded-2xl shadow-md border-transparent border-2 transition ease-in hover:shadow-m-green hover:border-2 hover:border-m-green duration-400">
+                        <img [src]="project.Thumbs[0]" class="object-fill rounded-2xl w-full h-full absolute z-20">
+                        <div
+                            class="w-full h-full bg-opacity-40 from-black to-transparent bg-gradient-to-t absolute z-30 rounded-bl-2xl rounded-br-2xl">
+                        </div>
+                        <h3 class="absolute z-40 p-6 text-2xl -bottom-1 text-white">{{ project.Title | translate }}</h3>
+                    </div>
+                </div>
+                <div fxLayout="column" fxFlex.lt-md="100%" fxFlex.gt-lg="40%">
+                    <div *ngFor="let testimonial of project.Testimonials">
+                        <div class="flex flex-row items-center space-x-5 n:mb-4 lg:mb-8">
+                            <div class="relative">
+                                <img class="n:w-20 lg:w-40 h-auto rounded-full shadow-2xl relative z-20"
+                                    [src]="testimonial.Image"
+                                    alt="Miguel Angel Rodriguez profile pic">
+                            </div>
+                            <div
+                                class="bubble-box rounded-tl-2xl rounded-tr-2xl rounded-br-2xl p-4 shadow-2xl w-3/4">
+                                <h2 class="n:text-base lg:text-xl uppercase mb-2">{{ testimonial.Summary | translate }}</h2>
+                                <p class="n:text-xs lg:text-base">{{ testimonial.Message | translate }}</p>
+                                <small>{{ testimonial.FullName | translate }}</small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> -->
         <!-- <swiper [config]="config" #swiperController>
             <ng-template swiperSlide *ngFor="let project of projectLists">
                 <div [fxLayout]="(_localStorageService.appData$ | async)!.layout.innerWidth > md ? 'row' : 'column'" class="justify-center w-11/12">

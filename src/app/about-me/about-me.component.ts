@@ -18,22 +18,22 @@ export class AboutMeComponent implements OnInit {
   socialMedias: any[] = [
     {
       Href: "https://github.com/Miguelo981",
-     icon: "github"
+      icon: "github"
     },
     {
       Href: "https://www.linkedin.com/in/miguel-%C3%A1ngel-rodr%C3%ADguez-hernando-a20b27196/",
-     icon: "linkedin"
+      icon: "linkedin"
     },
-    {
+    /* {
       Href: "https://twitter.com/miguelo981",
-     icon: "twitter"
-    },
+      icon: "twitter"
+    }, */
     {
       Href: "https://t.me/miguelodev",
-     icon: "telegram"
+      icon: "telegram"
     }
   ]
-  md = breakPoints.md;
+  lg = breakPoints.lg;
 
   constructor(public _localStorageService: LocalStorageService) { }
 
@@ -49,7 +49,7 @@ export class AboutMeComponent implements OnInit {
     this._localStorageService.appData$
       .pipe(first())
       .subscribe(data => {
-        this.show = data!.layout.innerWidth >= this.md ? state : true;
-    });
+        this.show = data!.layout.innerWidth >= this.lg ? state : true;
+      });
   }
 }

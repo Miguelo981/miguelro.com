@@ -44,11 +44,11 @@
         "title": "Sobre mi",
         "subTitle": "¿Quién Soy?",
         "socialTitle": "Mis redes sociales",
-        "summary1": "Mi nombre es Miguel Ángel y mi objetivo es ayudar a las marcas a establecer una presencia en línea para que puedan ",
+        "summary1": "Mi nombre es Miguel Ángel y mi objetivo es ayudar a mis clientes a establecer una presencia en línea para que puedan ",
         "summary2": "llegar de manera efectiva a su audiencia y convertir nuevos clientes.",
-        "description1": "Como programador, me especializo en la implementación de infraestructuras y desarrollo web, como landing pages o toda clase de automatización de procesos.\n\nHe programado de todo, desde aplicaciones web completas hasta exchanges descentralizados en tiempo record. Nuestra gran atención a los detalles  ",
-        "description2": "garantiza que los productos estén optimizados para el rendimiento y la usabilidad en una multitud de dispositivos",
-        "description3": " utilizados por los consumidores en la actualidad.",
+        "description1": "Como programador, me especializo en la implementación de infraestructuras y desarrollo web, como landing pages o toda clase de automatización de procesos.\n\nHe programado de todo, desde aplicaciones web completas hasta exchanges descentralizados en poco tiempo. Presto gran atención a los detalles  ",
+        "description2": "para garantizar que los productos estén optimizados para el rendimiento y la usabilidad en una multitud de dispositivos",
+        "description3": " utilizados por los consumidores de hoy en día.",
         "description4": "¡Charlemos sobre sus necesidades y veamos si podemos ayudarlo a digitalizar tu negocio!",
         "projects": "Algunos de mis Trabajos"
     },
@@ -145,8 +145,8 @@
     },
     "home": {
         "title": "Miguelo",
-        "subTitle": "DIGITALICEMOS TU NEGOCIO DESDE CERO",
-        "description": "Me especializo en crear y maquetar sitios web que se ven geniales, cargan rápido y son fáciles de administrar, lo que atrae a los usuarios con diseños limpios, modernos y adaptables a cualquier dispositivo."
+        "subTitle": "DIGITALIZA TU NEGOCIO DESDE CERO",
+        "description": "Me especializo en crear y maquetar sitios web que se ven geniales, cargan rápido y son fáciles de administrar. Eso atrae a los usuarios con diseños limpios, modernos y adaptables a cualquier dispositivo."
     },
     "footer": {
         "copyright": "©",

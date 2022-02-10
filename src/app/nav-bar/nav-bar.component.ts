@@ -1,12 +1,13 @@
 import { ViewportScroller } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { breakPoints } from 'src/config/breakpoints.config';
 import { LocalStorageService } from '../services/local-storage.service';
 import { NavbarScrollService } from '../services/navbar-scroll.service';
 
 export interface MenuItem {
   label: string;
- Icon: string;
+  Icon: string;
   showOnMobile?: boolean;
   showOnTablet?: boolean;
   showOnDesktop?: boolean;
@@ -18,6 +19,7 @@ export interface MenuItem {
   styleUrls: ['./nav-bar.component.scss']
 })
 export class NavBarComponent implements OnInit {
+  lg = breakPoints.lg;
 
   constructor(private navbarScrollService: NavbarScrollService, private scroller: ViewportScroller, private router: Router, public _localStorageService: LocalStorageService) {
       

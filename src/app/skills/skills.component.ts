@@ -21,7 +21,7 @@ import { NavbarScrollService } from '../services/navbar-scroll.service';
 export class SkillsComponent implements OnInit {
   skillList: SkillList[] = mockedSkillList;
   show = false;
-  md = breakPoints.md;
+  lg = breakPoints.lg;
 
   constructor(public _localStorageService: LocalStorageService,
     private navbarScrollService: NavbarScrollService) { }
@@ -56,7 +56,7 @@ export class SkillsComponent implements OnInit {
     this._localStorageService.appData$
       .pipe(first())
       .subscribe(data => {
-        this.show = data!.layout.innerWidth >= this.md ? state : true;
+        this.show = data!.layout.innerWidth >= this.lg ? state : true;
     });
   }
 
