@@ -45,7 +45,7 @@ export class ServicesComponent implements OnInit {
   }
 
   getCols() {
-    return [...Array(services.length / 2).keys()];
+    return [...Array(this.servicesList.length / 2).keys()];
   }
 
   getServices() {
