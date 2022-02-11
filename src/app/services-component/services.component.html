@@ -17,7 +17,7 @@
             </div>
         </div>
         <div *ngIf="show && (_localStorageService.appData$ | async)!.layout.innerWidth < lg" class="h-90vh w-75-screen" [@fadeInUpOnEnter] [@fadeOutOnLeave]>
-            <swiper [config]="config" #projectSwiperController class="w-full h-full">
+            <!-- <swiper [config]="config" #projectSwiperController class="w-full h-full">
                 <ng-template swiperSlide *ngFor="let col of getCols()">
                     <div fxLayout="column" class="gap-5 space-y-10 justify-center items-center">
                         <div *ngFor="let i of [0, 1]" class="flex flex-col w-80 justify-center items-center bubble-box rounded-2xl shadow-md p-6 border-transparent border-2 transition ease-in hover:shadow-m-green hover:border-2 hover:border-m-green duration-400">
@@ -29,7 +29,7 @@
                         </div>
                     </div>
                 </ng-template>
-            </swiper>
+            </swiper> -->
         </div>
     </div>
 </div>
