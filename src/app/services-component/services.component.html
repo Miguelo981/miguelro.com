@@ -1,6 +1,6 @@
 
 <div class="flex flex-col min-h-screen justify-center items-center bg-no-repeat bg-cover relative text-white" (nguiInview)="isShow(true)" (nguiOutview)="isShow(false)"> <!--[style.background-image]="'url(./assets/img/bgs/pattern-5.webp)'"-->
-    <div class="bg-black bg-opacity-50 absolute h-screen w-full z-10" *ngIf="show" [@fadeInOnEnter] [@fadeOutOnLeave]></div>
+    <div class="bg-black bg-opacity-50 absolute min-h-screen w-full z-10" *ngIf="show" [@fadeInOnEnter] [@fadeOutOnLeave]></div>
     <div fxLayout="column" fxFlex="85%" class="relative justify-center z-20">
         <div class="n:mb-6 lg:mb-12">
             <h2 class="n:text-3xl md:text-4.5xl lg:text-6xl text-center font-bold">{{ 'services.title' | translate }}</h2>
@@ -16,20 +16,20 @@
                 </div>
             </div>
         </div>
-        <!-- <div *ngIf="show && (_localStorageService.appData$ | async)!.layout.innerWidth < lg" [@fadeInUpOnEnter] [@fadeOutOnLeave]>
-            <swiper [config]="config">
+        <div *ngIf="show && (_localStorageService.appData$ | async)!.layout.innerWidth < lg" [@fadeInUpOnEnter] [@fadeOutOnLeave]>
+            <swiper [config]="config" class="w-screen">
                 <ng-template swiperSlide *ngFor="let col of getCols()">
                     <div fxLayout="column" class="gap-5 space-y-10 justify-center items-center">
                         <div *ngFor="let i of [0, 1]" class="flex flex-col w-80 justify-center items-center bubble-box rounded-2xl shadow-md p-6 border-transparent border-2 transition ease-in hover:shadow-m-green hover:border-2 hover:border-m-green duration-400">
-                            <div class="rounded-full bg-gray-100 bg-opacity-50 n:w-10 lg:w-20 n:h-10 lg:h-20 flex items-center justify-center mb-8">
-                                <div class="pi n:text-xl md:text-2xl lg:text-4.5xl text-m-green mb-8 mt-8" [ngClass]="'pi-' + servicesList[col + i].Icon"></div>
+                            <div class="rounded-full bg-gray-100 bg-opacity-50 n:w-10 n:h-10 flex items-center justify-center mb-8">
+                                <div class="pi n:text-xl text-m-green mb-8 mt-8" [ngClass]="'pi-' + servicesList[col + i].Icon"></div>
                             </div>
-                            <h3 class="n:text-lg md:text-xl lg:text-2xl font-semibold mb-4">{{ servicesList[col + i].Title | translate }}</h3>
-                            <p class="n:text-xs md:text-tiny lg:text-base font-light text-center">{{ servicesList[col + i].Description | translate }}</p>
+                            <h3 class="text-lg font-semibold mb-4">{{ servicesList[col + i].Title | translate }}</h3>
+                            <p class="text-xs font-light text-center">{{ servicesList[col + i].Description | translate }}</p>
                         </div>
                     </div>
                 </ng-template>
             </swiper>
-        </div> -->
+        </div>
     </div>
 </div>
