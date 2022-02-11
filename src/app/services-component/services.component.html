@@ -1,6 +1,6 @@
 
-<div class="flex flex-col min-h-screen justify-center items-center bg-no-repeat bg-cover relative text-white" (nguiInview)="isShow(true)" (nguiOutview)="isShow(false)"> <!--[style.background-image]="'url(./assets/img/bgs/pattern-5.webp)'"-->
-    <div class="bg-black bg-opacity-50 absolute min-h-screen w-full z-10" *ngIf="show" [@fadeInOnEnter] [@fadeOutOnLeave]></div>
+<div class="flex flex-col h-screen justify-center items-center bg-no-repeat bg-cover relative text-white" (nguiInview)="isShow(true)" (nguiOutview)="isShow(false)"> <!--[style.background-image]="'url(./assets/img/bgs/pattern-5.webp)'"-->
+    <div class="bg-black bg-opacity-50 absolute h-screen w-full z-10" *ngIf="show" [@fadeInOnEnter] [@fadeOutOnLeave]></div>
     <div fxLayout="column" fxFlex="85%" class="relative justify-center z-20">
         <div class="n:mb-6 lg:mb-12">
             <h2 class="n:text-3xl md:text-4.5xl lg:text-6xl text-center font-bold">{{ 'services.title' | translate }}</h2>
@@ -16,8 +16,8 @@
                 </div>
             </div>
         </div>
-        <div *ngIf="show && (_localStorageService.appData$ | async)!.layout.innerWidth < lg" [@fadeInUpOnEnter] [@fadeOutOnLeave]>
-            <swiper [config]="config" class="w-screen">
+        <div *ngIf="show && (_localStorageService.appData$ | async)!.layout.innerWidth < lg" class="h-90vh w-75-screen" [@fadeInUpOnEnter] [@fadeOutOnLeave]>
+            <swiper [config]="config" #projectSwiperController class="w-full h-full">
                 <ng-template swiperSlide *ngFor="let col of getCols()">
                     <div fxLayout="column" class="gap-5 space-y-10 justify-center items-center">
                         <div *ngFor="let i of [0, 1]" class="flex flex-col w-80 justify-center items-center bubble-box rounded-2xl shadow-md p-6 border-transparent border-2 transition ease-in hover:shadow-m-green hover:border-2 hover:border-m-green duration-400">
