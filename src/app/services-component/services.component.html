@@ -17,19 +17,19 @@
             </div>
         </div>
         <div *ngIf="show && (_localStorageService.appData$ | async)!.layout.innerWidth < lg" class="h-90vh w-75-screen" [@fadeInUpOnEnter] [@fadeOutOnLeave]>
-            <!-- <swiper [config]="config" #projectSwiperController class="w-full h-full">
+            <swiper [config]="config" #projectSwiperController class="w-full h-full">
                 <ng-template swiperSlide *ngFor="let col of getCols()">
-                    <div fxLayout="column" class="gap-5 space-y-10 justify-center items-center">
-                        <div *ngFor="let i of [0, 1]" class="flex flex-col w-80 justify-center items-center bubble-box rounded-2xl shadow-md p-6 border-transparent border-2 transition ease-in hover:shadow-m-green hover:border-2 hover:border-m-green duration-400">
-                            <div class="rounded-full bg-gray-100 bg-opacity-50 n:w-10 n:h-10 flex items-center justify-center mb-8">
-                                <div class="pi n:text-xl text-m-green mb-8 mt-8" [ngClass]="'pi-' + servicesList[col + i].Icon"></div>
+                    <div fxLayout="column" class="gap-5 space-y-5 justify-center items-center">
+                        <div *ngFor="let i of [0, 1]" class="flex flex-col w-80 justify-center items-center bubble-box rounded-2xl shadow-md p-5 border-transparent border-2 transition ease-in hover:shadow-m-green hover:border-2 hover:border-m-green duration-400">
+                            <div class="rounded-full bg-gray-100 bg-opacity-50 w-9 h-9 flex items-center justify-center mb-4">
+                                <div class="pi n:text-xl text-m-green mb-6 mt-6" [ngClass]="'pi-' + servicesList[col + i].Icon"></div>
                             </div>
                             <h3 class="text-lg font-semibold mb-4">{{ servicesList[col + i].Title | translate }}</h3>
                             <p class="text-xs font-light text-center">{{ servicesList[col + i].Description | translate }}</p>
                         </div>
                     </div>
                 </ng-template>
-            </swiper> -->
+            </swiper>
         </div>
     </div>
 </div>
