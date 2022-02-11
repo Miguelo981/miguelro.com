@@ -22,13 +22,13 @@ export class NavBarComponent implements OnInit {
   lg = breakPoints.lg;
 
   constructor(private navbarScrollService: NavbarScrollService, private scroller: ViewportScroller, private router: Router, public _localStorageService: LocalStorageService) {
-      
+
   }
 
   menuItems = [
     {
       label: "navbar.routes.aboutMe",
-     Icon: "help",
+      Icon: "help",
       scrollToId: "about-me",
       Href: "#",
       isButton: false,
@@ -38,7 +38,7 @@ export class NavBarComponent implements OnInit {
     },
     {
       label: "navbar.routes.services",
-     Icon: "help",
+      Icon: "help",
       scrollToId: "services",
       Href: "#",
       isButton: false,
@@ -48,7 +48,7 @@ export class NavBarComponent implements OnInit {
     },
     {
       label: "navbar.routes.projects",
-     Icon: "help",
+      Icon: "help",
       scrollToId: "projects",
       Href: "#",
       isButton: false,
@@ -56,19 +56,19 @@ export class NavBarComponent implements OnInit {
       showOnTablet: true,
       showOnDesktop: true
     },
-    {
+    /* {
       label: "navbar.routes.testimonials",
-     Icon: "help",
+      Icon: "help",
       scrollToId: "testimonials",
       Href: "#",
       isButton: false,
       showOnMobile: true,
       showOnTablet: true,
       showOnDesktop: true
-    },
+    }, */
     {
       label: "navbar.routes.contactMe",
-     Icon: "help",
+      Icon: "help",
       scrollToId: "contact-me",
       Href: "#",
       isButton: true,
@@ -81,29 +81,29 @@ export class NavBarComponent implements OnInit {
   menuItems2: MenuItem[] = [
     {
       label: 'navbar.routes',
-     Icon: 'login',
+      Icon: 'login',
       showOnMobile: true,
       showOnTablet: true,
       showOnDesktop: true
     },
     {
       label: 'About',
-     Icon: 'help',
+      Icon: 'help',
       showOnMobile: false,
       showOnTablet: true,
       showOnDesktop: true
     },
     {
       label: 'Pricing',
-     Icon: 'attach_money',
+      Icon: 'attach_money',
       showOnMobile: false,
       showOnTablet: false,
       showOnDesktop: true
     },
   ];
 
-  ngOnInit() {}
-  
+  ngOnInit() { }
+
   swipe(index: number, delay?: number) {
     this.navbarScrollService.changeScrollIndex(index, delay);
 
